@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   product: [
@@ -26,8 +27,14 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href="/" className="text-xl font-bold text-slate-900">
-              AItomation Academy
+            <Link href="/" className="inline-block">
+              <Image
+                src="/images/creatives/aitomation_logo.png"
+                alt="AItomation Academy"
+                width={160}
+                height={40}
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-4 text-sm text-slate-600">
               Claude for real work. Practical workflows for non-technical professionals.
@@ -94,10 +101,10 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-slate-200">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-slate-500">
-              © {new Date().getFullYear()} AItomation Academy. All rights reserved.
+              \u00a9 {new Date().getFullYear()} AItomation Academy. All rights reserved.
             </p>
             <p className="text-sm text-slate-500">
-              AITOMATION LLC · Florida
+              AITOMATION LLC \u00b7 Florida
             </p>
           </div>
         </div>
