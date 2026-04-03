@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, Star, Zap } from "lucide-react";
+import { Users, Zap, Code } from "lucide-react";
 
 const stats = [
   {
@@ -14,8 +14,8 @@ const stats = [
     label: "Hours Saved Per Week",
   },
   {
-    icon: Star,
-    value: "0",
+    icon: Code,
+    value: "Zero",
     label: "Coding Required",
   },
 ];
@@ -37,7 +37,7 @@ export function SocialProof() {
           ))}
         </div>
 
-        {/* Trust badges / logos could go here */}
+        {/* Audience types */}
         <div className="mt-12 text-center">
           <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">
             Built for professionals
