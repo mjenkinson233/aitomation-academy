@@ -40,7 +40,7 @@ export function SocialProof() {
         {/* Trust badges / logos could go here */}
         <div className="mt-12 text-center">
           <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">
-            Join professionals from companies like
+            Built for professionals
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-8 opacity-50">
             <span className="text-lg font-semibold text-slate-700">Consultants</span>
