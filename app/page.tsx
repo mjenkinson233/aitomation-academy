@@ -2,6 +2,7 @@ import { Hero } from "./sections/hero";
 import { SocialProof } from "./sections/social-proof";
 import { WhatYouGet } from "./sections/what-you-get";
 import { HowItWorks } from "./sections/how-it-works";
+import { CommunityWins } from "./sections/community-wins";
 import { LeadMagnetSection } from "./sections/lead-magnet-section";
 import { FAQ } from "./sections/faq";
 import { FinalCTA } from "./sections/final-cta";
@@ -20,6 +21,7 @@ export default function Home() {
         <SocialProof />
         <WhatYouGet />
         <HowItWorks />
+        <CommunityWins />
         <LeadMagnetSection />
         <FAQ />
         <FinalCTA />
