@@ -1,0 +1,64 @@
+# AItomation Academy - Full LLM Reference
+
+## About
+AItomation Academy is a Claude-first education business built for non-technical professionals who want useful leverage from AI without becoming technical.
+
+## Positioning
+AItomation Academy helps non-technical professionals use Claude for real work so they can think better, create faster, and turn expertise into output.
+
+## Audience
+- marketers
+- consultants
+- creators
+- operators
+- founders
+- small business owners
+- non-technical professionals
+
+## What we teach
+- research and summarization workflows
+- writing workflows
+- content ideation and repurposing workflows
+- decision support workflows
+- knowledge capture workflows
+- repeatable Claude systems for business use
+
+## What makes this different
+- Claude-first, not generic AI-first
+- built for non-technical professionals, not coders
+- focused on real work and useful output, not AI novelty
+- practical workflows over random prompt dumps
+- business usefulness over hype
+
+## Lead magnet
+Claude Workflow Starter
+- 7 copy-paste Claude workflows
+- intended to save 5+ hours per week
+- designed for immediate implementation
+
+## Brand language to prefer
+- Claude for real work
+- practical workflows
+- save hours
+- second brain for work
+- useful output
+- non-technical
+- repeatable systems
+
+## Brand language to avoid
+- hype
+- disrupt everything
+- 10x prompts
+- generic automation buzzwords
+- overly technical jargon
+- vague learn-AI language
+
+## Canonical pages
+- https://aitomationacademy.com/
+- https://aitomationacademy.com/privacy
+- https://aitomationacademy.com/terms
+- https://aitomationacademy.com/support
+
+## Contact
+Support email: markosudar02@gmail.com
+Company: AITOMATION LLC

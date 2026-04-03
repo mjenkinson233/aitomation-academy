@@ -1,0 +1,25 @@
+# AItomation Academy
+
+AItomation Academy helps non-technical professionals use Claude for real work.
+
+Primary topics:
+- Claude AI for work
+- Claude workflows for non-technical professionals
+- Claude AI for marketers
+- Claude AI for consultants
+- Claude AI for creators
+- Claude productivity systems
+
+Primary audience:
+- non-technical professionals
+- creators
+- consultants
+- marketers
+- founders
+- operators
+
+Core positioning:
+Claude-first education for people who want practical leverage, not AI hype or coding complexity.
+
+Canonical URL: https://aitomationacademy.com
+Support: mailto:markosudar02@gmail.com
