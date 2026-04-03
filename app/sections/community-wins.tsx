@@ -47,7 +47,7 @@ export function CommunityWins() {
           <p className="text-slate-600">
             Want wins like these?{" "}
             <a href="#join" className="font-semibold text-orange-600 hover:text-orange-700">
-              Get the free workflow starter \u2192
+              Get the free workflow starter →
             </a>
           </p>
         </div>

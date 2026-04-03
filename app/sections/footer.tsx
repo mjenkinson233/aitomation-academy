@@ -27,7 +27,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-flex items-center gap-2">
               <Image
                 src="/images/creatives/aitomation_logo.png"
                 alt="AItomation Academy"
@@ -35,6 +35,7 @@ export function Footer() {
                 height={40}
                 className="h-8 w-auto"
               />
+              <span className="text-lg font-semibold text-slate-900">AiTomation Academy</span>
             </Link>
             <p className="mt-4 text-sm text-slate-600">
               Claude for real work. Practical workflows for non-technical professionals.
@@ -101,10 +102,10 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-slate-200">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-slate-500">
-              \u00a9 {new Date().getFullYear()} AItomation Academy. All rights reserved.
+              © {new Date().getFullYear()} AiTomation Academy. All rights reserved.
             </p>
             <p className="text-sm text-slate-500">
-              AITOMATION LLC \u00b7 Florida
+              AITOMATION LLC · Florida
             </p>
           </div>
         </div>
