@@ -1,54 +1,35 @@
 "use client";
 
-import { Users, Zap, Code } from "lucide-react";
-
-const stats = [
-  {
-    icon: Users,
-    value: "300+",
-    label: "Community Members",
-  },
-  {
-    icon: Zap,
-    value: "5+",
-    label: "Hours Saved Per Week",
-  },
-  {
-    icon: Code,
-    value: "Zero",
-    label: "Coding Required",
-  },
-];
-
 export function SocialProof() {
   return (
-    <section className="border-y border-slate-200 bg-slate-50 py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Stats */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center text-center">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm">
-                <stat.icon className="h-6 w-6 text-orange-600" />
-              </div>
-              <div className="text-3xl font-bold text-slate-900">{stat.value}</div>
-              <div className="text-sm font-medium text-slate-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+    <section className="relative py-10">
+      <div className="px-6 sm:px-12 lg:px-20">
+        <div className="rounded-2xl bg-slate-900 px-8 py-10">
 
-        {/* Audience types */}
-        <div className="mt-12 text-center">
-          <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">
-            Built for professionals
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-8 opacity-50">
-            <span className="text-lg font-semibold text-slate-700">Consultants</span>
-            <span className="text-lg font-semibold text-slate-700">Marketers</span>
-            <span className="text-lg font-semibold text-slate-700">Creators</span>
-            <span className="text-lg font-semibold text-slate-700">Founders</span>
-            <span className="text-lg font-semibold text-slate-700">Agencies</span>
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-700">
+            <div className="text-center py-6 sm:py-0">
+              <div className="text-5xl font-bold text-white tracking-tight">300+</div>
+              <div className="mt-2 text-sm text-slate-400 uppercase tracking-wider">Community Members</div>
+            </div>
+            <div className="text-center py-6 sm:py-0">
+              <div className="text-5xl font-bold text-orange-400 tracking-tight">5+</div>
+              <div className="mt-2 text-sm text-slate-400 uppercase tracking-wider">Hours Saved Per Week</div>
+            </div>
+            <div className="text-center py-6 sm:py-0">
+              <div className="text-5xl font-bold text-white tracking-tight">Zero</div>
+              <div className="mt-2 text-sm text-slate-400 uppercase tracking-wider">Coding Required</div>
+            </div>
           </div>
+
+          {/* Audience */}
+          <div className="mt-8 pt-7 border-t border-slate-700 text-center">
+            <span className="text-sm text-slate-500 uppercase tracking-widest">Built for&nbsp;&nbsp;</span>
+            <span className="text-sm font-medium text-slate-300">
+              Consultants&nbsp;&nbsp;·&nbsp;&nbsp;Marketers&nbsp;&nbsp;·&nbsp;&nbsp;Creators&nbsp;&nbsp;·&nbsp;&nbsp;Founders&nbsp;&nbsp;·&nbsp;&nbsp;Agencies
+            </span>
+          </div>
+
         </div>
       </div>
     </section>

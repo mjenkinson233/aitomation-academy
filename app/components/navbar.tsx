@@ -16,7 +16,7 @@ export function Navbar() {
             className="h-8 w-auto"
             priority
           />
-          <span className="text-lg font-semibold text-slate-900">AiTomation Academy</span>
+          <span className="hidden sm:inline text-lg font-semibold text-slate-900">AiTomation Academy</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">

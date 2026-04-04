@@ -6,7 +6,9 @@ import { ArrowRight, Check, Loader2 } from "lucide-react";
 export function LeadMagnetForm() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -14,11 +16,10 @@ export function LeadMagnetForm() {
     setStatus("loading");
 
     // TODO: Integrate with Brevo API
-    // For now, simulate submission
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setStatus("success");
-    } catch (error) {
+    } catch {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }
@@ -37,13 +38,13 @@ export function LeadMagnetForm() {
           Your Claude Workflow Starter is on its way to {email}
         </p>
         <p className="mt-4 text-sm text-green-600">
-          Join the free Skool community while you wait →
+          Join the free Skool community while you wait
         </p>
         <a
           href="https://www.skool.com/aitomation-academy"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center justify-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white hover:bg-green-700 transition-colors"
+          className="mt-4 inline-flex items-center justify-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white cursor-pointer hover:bg-green-700 transition-colors"
         >
           Join Free Community
           <ArrowRight className="ml-2 h-4 w-4" />
@@ -55,7 +56,10 @@ export function LeadMagnetForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-slate-700 mb-1"
+        >
           First Name
         </label>
         <input
@@ -71,7 +75,10 @@ export function LeadMagnetForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-slate-700 mb-1"
+        >
           Email Address
         </label>
         <input
@@ -95,7 +102,7 @@ export function LeadMagnetForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="group w-full inline-flex items-center justify-center rounded-xl bg-slate-900 px-8 py-4 text-base font-semibold text-white hover:bg-slate-800 transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+        className="group w-full inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "loading" ? (
           <>
