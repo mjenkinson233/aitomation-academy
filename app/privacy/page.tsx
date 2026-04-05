@@ -9,6 +9,9 @@ export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-white">
       <div className="container mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+        <a href="/" className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors mb-8">
+          ← Back
+        </a>
         <h1 className="mb-8 text-4xl font-bold text-slate-900">Privacy Policy</h1>
         <div className="prose prose-slate max-w-none">
           <p>Effective date: April 3, 2026</p>

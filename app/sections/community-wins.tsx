@@ -7,6 +7,7 @@ const wins = [
   { src: "/images/creatives/wins/win2.png", alt: "Community win from member" },
   { src: "/images/creatives/wins/win3.png", alt: "Community win from member" },
   { src: "/images/creatives/wins/win4.png", alt: "Community win from member" },
+  { src: "/images/creatives/wins/win5.png", alt: "Community win from member" },
 ];
 
 // Duplicate for seamless loop
@@ -26,7 +27,7 @@ export function CommunityWins() {
                 Community Wins
               </span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl leading-[1.1]">
+            <h2 className="text-3xl font-display tracking-tight text-slate-900 sm:text-4xl lg:text-5xl leading-[1.1]">
               Real Results from Real Members
             </h2>
             <p className="mt-5 text-lg text-slate-500">
@@ -36,7 +37,7 @@ export function CommunityWins() {
             <p className="mt-10 text-slate-600">
               Want wins like these?{" "}
               <a
-                href="#join"
+                href="/skool-redirect"
                 className="font-semibold text-orange-500 hover:text-orange-600 cursor-pointer transition-colors"
               >
                 Get the free workflow starter →

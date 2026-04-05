@@ -26,7 +26,7 @@ export function LeadMagnetSection() {
                 </span>
               </div>
 
-              <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl leading-[1.1]">
+              <h2 className="mb-6 text-3xl font-display tracking-tight sm:text-4xl lg:text-5xl leading-[1.1]">
                 Get the{" "}
                 <span className="text-orange-400">Claude Workflow Starter</span>
               </h2>

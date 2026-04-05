@@ -5,7 +5,8 @@ import Image from "next/image";
 
 const footerLinks = {
   product: [
-    { label: "Free Workflow Starter", href: "#join" },
+    { label: "Free Workflow Starter", href: "/skool-redirect" },
+    { label: "Blog", href: "/blog" },
     { label: "Community", href: "https://www.skool.com/aitomation-academy" },
     { label: "YouTube", href: "#" },
   ],
@@ -26,7 +27,7 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 text-center md:text-left">
             <Link href="/" className="inline-flex items-center gap-2">
               <Image
                 src="/images/creatives/aitomation_logo.png"
@@ -43,7 +44,7 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
               Product
             </h3>
@@ -61,7 +62,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
               Company
             </h3>
@@ -79,7 +80,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
               Legal
             </h3>

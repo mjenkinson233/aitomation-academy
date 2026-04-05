@@ -1,4 +1,5 @@
 import { siteConfig } from "./site";
+import type { BlogPost } from "./blog";
 
 export function organizationSchema() {
   return {
@@ -19,6 +20,48 @@ export function organizationSchema() {
         inLanguage: "en-US",
       },
     ],
+  };
+}
+
+export function articleSchema(post: BlogPost) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.companyName,
+      url: siteConfig.url,
+    },
+    datePublished: post.publishedAt,
+    ...(post.updatedAt && { dateModified: post.updatedAt }),
+    url: `${siteConfig.url}/blog/${post.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/blog/${post.slug}`,
+    },
+    keywords: post.tags,
+  };
+}
+
+export function blogIndexSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Blog — AItomation Academy",
+    description:
+      "Practical guides and workflows for using Claude AI in real work. Written for non-technical professionals.",
+    url: `${siteConfig.url}/blog`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 }
 

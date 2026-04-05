@@ -56,6 +56,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1, h2 {
+    @apply uppercase font-bold;
+  }
 }
 
 /* Subtle background grid — applied to body, sections overlay on top */

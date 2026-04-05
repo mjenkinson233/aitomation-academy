@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "Download the Workflows",
-    titleHref: "#join",
+    titleHref: "/skool-redirect",
     description:
       "Get 7 copy-paste Claude workflows instantly. Each one is designed for a specific job: research, writing, content creation, and decision-making.",
   },
@@ -55,7 +55,7 @@ export function HowItWorks() {
               How It Works
             </span>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl leading-[1.1]">
+          <h2 className="text-3xl font-display tracking-tight text-slate-900 sm:text-4xl lg:text-5xl leading-[1.1]">
             Three steps to start using Claude for real work
           </h2>
         </div>
@@ -110,9 +110,11 @@ export function HowItWorks() {
             ))}
           </div>
 
-          {/* Terminal button — centered on the line */}
+          {/* Terminal button */}
           <div className={`relative mt-8 ${isVisible ? "animate-fade-up" : "opacity-0"} delay-2`}>
-            <div className="absolute left-6 sm:left-8 top-0 -translate-x-1/2">
+            {/* Mobile: aligned with content column */}
+            <div className="flex lg:hidden gap-8 sm:gap-12">
+              <div className="shrink-0 w-12 sm:w-16" />
               <a
                 href="https://www.skool.com/aitomation-academy"
                 target="_blank"
@@ -123,8 +125,21 @@ export function HowItWorks() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
-            {/* spacer = button height so line ends under button */}
-            <div className="h-11" />
+            {/* Desktop: centered on the line */}
+            <div className="hidden lg:block">
+              <div className="absolute left-6 sm:left-8 top-0 -translate-x-1/2">
+                <a
+                  href="https://www.skool.com/aitomation-academy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors whitespace-nowrap"
+                >
+                  Get Free Access
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </div>
+              <div className="h-11" />
+            </div>
           </div>
         </div>
       </div>

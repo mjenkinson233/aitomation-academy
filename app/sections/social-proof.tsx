@@ -26,7 +26,7 @@ export function SocialProof() {
           <div className="mt-8 pt-7 border-t border-slate-700 text-center">
             <span className="text-sm text-slate-500 uppercase tracking-widest">Built for&nbsp;&nbsp;</span>
             <span className="text-sm font-medium text-slate-300">
-              Consultants&nbsp;&nbsp;·&nbsp;&nbsp;Marketers&nbsp;&nbsp;·&nbsp;&nbsp;Creators&nbsp;&nbsp;·&nbsp;&nbsp;Founders&nbsp;&nbsp;·&nbsp;&nbsp;Agencies
+              Consultants · Marketers · Creators · Founders · Agencies
             </span>
           </div>
 

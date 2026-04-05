@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
@@ -7,8 +7,9 @@ import { organizationSchema } from "@/lib/schema";
 import { StructuredData } from "@/components/structured-data";
 import { PostHogProvider } from "@/components/posthog-provider";
 import { AnalyticsEvents } from "@/components/analytics-events";
+import { EntryPopup } from "@/app/components/entry-popup";
 
-const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-barlow" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -55,7 +56,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${barlow.variable} ${barlow.className}`} suppressHydrationWarning>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CWZ738MZYH"
           strategy="afterInteractive"
@@ -68,6 +69,7 @@ export default function RootLayout({
             gtag('config', 'G-CWZ738MZYH');
           `}
         </Script>
+        <EntryPopup />
         <StructuredData data={organizationSchema()} />
         <PostHogProvider />
         <AnalyticsEvents />

@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <StructuredData data={homePageSchema()} />
-      <main className="min-h-screen bg-white bg-grid">
+      <main className="min-h-screen bg-white bg-grid overflow-x-hidden">
         <Navbar />
         <Hero />
         <SocialProof />

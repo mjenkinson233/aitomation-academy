@@ -30,7 +30,7 @@ export function AnalyticsEvents() {
         window.addEventListener("scroll", onScroll, { passive: true });
         cleanupFns.push(() => window.removeEventListener("scroll", onScroll));
 
-        document.querySelectorAll("a[href='#join'], button[type='submit']").forEach((el) => {
+        document.querySelectorAll("a[href='/skool-redirect'], button[type='submit']").forEach((el) => {
           const onClick = () => {
             posthog.capture("cta_click", {
               text: (el.textContent || "").trim(),
