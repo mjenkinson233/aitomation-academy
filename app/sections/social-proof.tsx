@@ -9,7 +9,7 @@ export function SocialProof() {
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-700">
             <div className="text-center py-6 sm:py-0">
-              <div className="text-5xl font-bold text-white tracking-tight">300+</div>
+              <div className="text-5xl font-bold text-white tracking-tight">400+</div>
               <div className="mt-2 text-sm text-slate-400 uppercase tracking-wider">Community Members</div>
             </div>
             <div className="text-center py-6 sm:py-0">

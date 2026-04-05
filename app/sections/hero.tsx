@@ -177,7 +177,7 @@ export function Hero() {
 
           {/* Trust signal */}
           <p className="mt-3 text-sm text-slate-500">
-            Join 300+ members. No credit card required.
+            Join 400+ members. No credit card required.
           </p>
 
         </div>
