@@ -125,7 +125,7 @@ export function Hero() {
                   ref={videoRef}
                   className="absolute inset-0 w-full h-full object-cover rounded-lg"
                   controls
-                  controlsList="nodownload"
+                  controlsList="nodownload nofullscreen"
                   disablePictureInPicture
                   playsInline
                   autoPlay
