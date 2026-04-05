@@ -37,7 +37,7 @@ export const post: BlogPost = {
         matter depending on what kind of work you do. This guide breaks down
         exactly what you get at each pricing tier so you can make an informed
         decision — whether you are a consultant, marketer, founder, freelancer,
-        or anyone else using AI for real work.
+        or anyone else <a href="/blog/claude-for-business">using Claude in your business</a>.
       </p>
 
       <h2>The quick answer: yes, Claude AI is free</h2>
@@ -80,7 +80,7 @@ export const post: BlogPost = {
             <span className="text-3xl font-bold text-slate-900">$0</span>
             <span className="text-sm text-slate-500">/mo</span>
           </div>
-          <ul className="mt-5 space-y-2 text-sm text-slate-600 flex-1">
+          <ul className="mt-5 space-y-3 text-sm text-slate-600 flex-1">
             <li className="flex items-start gap-2">
               <span className="mt-0.5 text-emerald-500 font-bold">&#10003;</span>
               Sonnet 4.5 access
@@ -102,12 +102,12 @@ export const post: BlogPost = {
               Memory across conversations
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 text-slate-300 font-bold">&#10007;</span>
-              <span className="text-slate-400">No extended thinking</span>
+              <span className="mt-0.5 text-emerald-500 font-bold">&#10003;</span>
+              Artifacts &amp; extended thinking (limited)
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-0.5 text-slate-300 font-bold">&#10007;</span>
-              <span className="text-slate-400">No Opus 4.6</span>
+              <span className="text-slate-400">No Opus 4.6 / no custom Styles</span>
             </li>
           </ul>
         </div>
@@ -125,7 +125,7 @@ export const post: BlogPost = {
             <span className="text-sm text-slate-500">/mo</span>
           </div>
           <p className="text-xs text-slate-400 mt-0.5">~$17/mo billed annually</p>
-          <ul className="mt-5 space-y-2 text-sm text-slate-600 flex-1">
+          <ul className="mt-5 space-y-3 text-sm text-slate-600 flex-1">
             <li className="flex items-start gap-2">
               <span className="mt-0.5 text-emerald-500 font-bold">&#10003;</span>
               5x more usage than free
@@ -167,7 +167,7 @@ export const post: BlogPost = {
             <span className="text-sm text-slate-500">/mo</span>
           </div>
           <p className="text-xs text-slate-400 mt-0.5">or $200/mo for 20x usage</p>
-          <ul className="mt-5 space-y-2 text-sm text-slate-600 flex-1">
+          <ul className="mt-5 space-y-3 text-sm text-slate-600 flex-1">
             <li className="flex items-start gap-2">
               <span className="mt-0.5 text-emerald-500 font-bold">&#10003;</span>
               5x more usage than Pro ($100)
@@ -270,10 +270,10 @@ export const post: BlogPost = {
       </p>
       <p>
         <strong>What you do NOT get on free:</strong> no access to Opus 4.6 (the
-        most powerful model), no extended thinking mode, no priority access during
-        peak times, no Artifacts, no custom Styles, and only 5 Projects. When
-        usage is high, free-tier users wait in a queue while paying users get
-        served first.
+        most powerful model), no priority access during peak times, no custom
+        Styles, and only 5 Projects. You do get Artifacts and extended thinking
+        on free, but with lower usage limits. When usage is high, free-tier
+        users wait in a queue while paying users get served first.
       </p>
 
       {/* --------------- Subtle CTA 1 --------------- */}
@@ -380,7 +380,7 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td className="py-3 px-4 sm:px-5 text-slate-600">Extended thinking</td>
-              <td className="py-3 px-3 sm:px-4 text-center text-slate-300">&#10007;</td>
+              <td className="py-3 px-3 sm:px-4 text-center text-slate-600">Limited</td>
               <td className="py-3 px-3 sm:px-4 text-center text-emerald-500 font-bold bg-orange-50/50">&#10003;</td>
               <td className="py-3 px-3 sm:px-4 text-center text-emerald-500 font-bold">&#10003;</td>
             </tr>
@@ -404,7 +404,7 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td className="py-3 px-4 sm:px-5 text-slate-600">Artifacts</td>
-              <td className="py-3 px-3 sm:px-4 text-center text-slate-300">&#10007;</td>
+              <td className="py-3 px-3 sm:px-4 text-center text-emerald-500 font-bold">&#10003;</td>
               <td className="py-3 px-3 sm:px-4 text-center text-emerald-500 font-bold bg-orange-50/50">&#10003;</td>
               <td className="py-3 px-3 sm:px-4 text-center text-emerald-500 font-bold">&#10003;</td>
             </tr>
@@ -664,7 +664,7 @@ export const post: BlogPost = {
         downloadable files. The most practical use for non-technical professionals:
         ask Claude to create a PowerPoint presentation, a Word document, or a
         spreadsheet, and it generates a downloadable file directly in the chat.
-        Artifacts require a Pro plan or higher.
+        Artifacts are available on all plans, including free.
       </p>
 
       <h3>Extended thinking</h3>
@@ -753,7 +753,7 @@ export const post: BlogPost = {
         Claude AI is free, and the free plan is genuinely good enough for light to
         moderate use. If you are a professional who relies on Claude as a daily
         work tool — for writing, analysis, strategy, client work, or content
-        creation — the $20/month Pro plan is the clear recommendation. You get
+        creation — the $20/month Pro plan is the clear recommendation. Wondering <a href="/blog/claude-vs-chatgpt-for-real-work">how Claude compares to ChatGPT</a> for real work? We break that down separately. You get
         Opus 4.6, extended thinking, priority access, unlimited Projects,
         Artifacts, and enough usage to work with Claude throughout your day
         without interruption.
@@ -764,7 +764,7 @@ export const post: BlogPost = {
       </p>
       <p>
         For everyone else: start free, use it for a week, and upgrade to Pro when
-        you are ready to make Claude a core part of how you work.
+        you are ready to make Claude a core part of how you work. If you are weighing Claude Pro against ChatGPT Plus specifically, see our <a href="/blog/claude-pro-vs-chatgpt-plus">Claude Pro vs ChatGPT Plus comparison</a>.
       </p>
 
       {/* --------------- CTA --------------- */}

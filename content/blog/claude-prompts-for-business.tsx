@@ -23,7 +23,7 @@ export const post: BlogPost = {
         Most "Claude prompt" lists give you surface-level templates like "write me an email" or "summarize this article." You paste them in, get a generic response, and wonder what the hype is about.
       </p>
       <p>
-        The problem isn't Claude. It's that shallow prompts produce shallow output. Claude is one of the most capable AI models available — but it needs real context, a clear job description, and constraints to produce work you'd actually use.
+        The problem isn't Claude. It's that shallow prompts produce shallow output. Claude is one of the most capable AI models available — but it needs real context, a clear job description, and constraints to produce work you'd actually use. (If you're still exploring <a href="/blog/claude-for-business">how businesses use Claude</a>, start there — then come back here for the templates.)
       </p>
       <p>
         These 15 prompts are different. Each one is long on purpose. They include the context framing, role definition, constraints, and output structure that make Claude produce genuinely useful business output. They're built for consultants, marketers, founders, freelancers, and operators who do real work — not people who want to demo AI at a dinner party.
@@ -34,7 +34,7 @@ export const post: BlogPost = {
 
       <h2>How to get the most out of these prompts</h2>
       <p>
-        Before you dive in, a few principles that make these work:
+        Before you dive in, a few principles that make these work. (For a deeper dive into the fundamentals, see <a href="/blog/claude-prompting-guide">our Claude prompting guide</a>.)
       </p>
       <ul>
         <li><strong>Replace every bracket.</strong> The bracketed sections are where you add your real context. The more specific you are, the better Claude's output. "Marketing consultant" is fine. "B2B SaaS marketing consultant who works with Series A startups in fintech" is 10x better.</li>
@@ -822,7 +822,7 @@ Be opinionated about priorities. If I listed 20 ideas but only 3 matter, tell me
 
       <h2>How to use these prompts as a system</h2>
       <p>
-        These prompts are most powerful when you don't treat them as one-offs. Here's how to build a system:
+        These prompts are most powerful when you don't treat them as one-offs. If you want ready-to-go versions you can use immediately, check out our <a href="/blog/5-claude-workflows-for-non-technical-professionals">5 ready-made Claude workflows</a>. Here's how to build a system:
       </p>
       <ol>
         <li><strong>Create a Claude Project for each area of your business.</strong> One for sales, one for marketing, one for operations, one for client work. Add the relevant prompts to each project's instructions.</li>
@@ -831,7 +831,7 @@ Be opinionated about priorities. If I listed 20 ideas but only 3 matter, tell me
         <li><strong>Iterate and customize.</strong> These prompts are starting points. After using each one 2-3 times, you'll know what to add or remove for your specific business. Edit the prompt in your Project Instructions to make it yours.</li>
       </ol>
       <p>
-        The goal isn't to have Claude do your thinking. It's to have Claude do the structured work so you can focus on the thinking that actually matters — strategy, relationships, and decisions that require your judgment.
+        The goal isn't to have Claude do your thinking. It's to have Claude do the structured work so you can focus on the thinking that actually matters — strategy, relationships, and decisions that require your judgment. For more on using <a href="/blog/how-to-use-claude-for-writing">Claude for writing</a> specifically, we have a dedicated walkthrough.
       </p>
     </>
   ),

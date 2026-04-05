@@ -28,7 +28,7 @@ export const post: BlogPost = {
         </p>
       </blockquote>
       <p>
-        Review the structure, adjust it if needed, then ask Claude to write the draft. You'll spend 15 minutes instead of 2 hours.
+        Review the structure, adjust it if needed, then ask Claude to write the draft. You'll spend 15 minutes instead of 2 hours. For the full version of this approach, see <a href="/blog/how-to-use-claude-for-writing">our writing guide</a>.
       </p>
 
       <h2>2. The Research Digest workflow</h2>
@@ -53,7 +53,7 @@ export const post: BlogPost = {
           "Here's a piece of content I've already created. I want to repurpose it into [LinkedIn posts / Twitter threads / email newsletter / short video scripts]. Create [number] versions, each with a different angle or hook. Keep my voice."
         </p>
       </blockquote>
-      <p>One long piece becomes a week of content. You wrote it once.</p>
+      <p>One long piece becomes a week of content. You wrote it once. For more on this, check out our <a href="/blog/claude-for-content-creation">content creation workflows</a>.</p>
 
       <h2>4. The Decision Clarity workflow</h2>
       <p><strong>Best for:</strong> making better decisions when you have too much in your head</p>
@@ -75,10 +75,10 @@ export const post: BlogPost = {
 
       <h2>The pattern behind all five</h2>
       <p>
-        Every workflow above follows the same structure: give Claude context, give it a clear job, and ask for structured output. That's it. No magic. No advanced prompt engineering. Just giving Claude what it needs to be useful.
+        Every workflow above follows the same structure: give Claude context, give it a clear job, and ask for structured output. That's it. No magic. No advanced prompt engineering — just <a href="/blog/claude-prompting-guide">prompting fundamentals</a>. Just giving Claude what it needs to be useful.
       </p>
       <p>
-        The Claude Workflow Starter has seven of these workflows in a format you can copy and reuse. It's free, and you can get it below.
+        The Claude Workflow Starter has seven of these workflows in a format you can copy and reuse — plus <a href="/blog/claude-prompts-for-business">more Claude prompts</a> for specific business tasks. It's free, and you can get it below. If you want to see how these workflows fit into a broader business context, read <a href="/blog/claude-for-business">how businesses use Claude</a>.
       </p>
     </>
   ),

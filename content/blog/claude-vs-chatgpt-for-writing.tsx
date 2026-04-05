@@ -157,45 +157,60 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Quality rating card: Blog post ── */}
-      <div className="my-8 rounded-lg border border-slate-200 bg-white p-4 sm:p-6">
-        <p className="font-semibold text-slate-900 mb-4">
+      <div className="my-8 rounded-xl border border-slate-200 bg-white p-4 sm:p-6 shadow-sm">
+        <p className="font-semibold text-slate-900 mb-5">
           Long-form blog post quality ratings
         </p>
-        <div className="space-y-4">
+        <div className="space-y-5">
           <div>
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-slate-700">Voice consistency</span>
-              <span className="text-xs text-slate-500">Claude 9/10 &middot; ChatGPT 5/10</span>
+            <p className="text-sm font-medium text-slate-700 mb-2">Voice consistency</p>
+            <div className="flex items-center gap-3 mb-1.5">
+              <span className="text-xs font-medium text-orange-600 w-16 shrink-0">Claude</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">9/10</span>
             </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
-            </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden mt-1">
-              <div className="h-full rounded-full bg-slate-400" style={{ width: "50%" }} />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-medium text-slate-500 w-16 shrink-0">ChatGPT</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-slate-600" style={{ width: "50%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">5/10</span>
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-slate-700">Argument structure</span>
-              <span className="text-xs text-slate-500">Claude 9/10 &middot; ChatGPT 6/10</span>
+            <p className="text-sm font-medium text-slate-700 mb-2">Argument structure</p>
+            <div className="flex items-center gap-3 mb-1.5">
+              <span className="text-xs font-medium text-orange-600 w-16 shrink-0">Claude</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">9/10</span>
             </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
-            </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden mt-1">
-              <div className="h-full rounded-full bg-slate-400" style={{ width: "60%" }} />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-medium text-slate-500 w-16 shrink-0">ChatGPT</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-slate-600" style={{ width: "60%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">6/10</span>
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-slate-700">Usable without heavy editing</span>
-              <span className="text-xs text-slate-500">Claude 8/10 &middot; ChatGPT 4/10</span>
+            <p className="text-sm font-medium text-slate-700 mb-2">Usable without heavy editing</p>
+            <div className="flex items-center gap-3 mb-1.5">
+              <span className="text-xs font-medium text-orange-600 w-16 shrink-0">Claude</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-orange-500" style={{ width: "80%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">8/10</span>
             </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-orange-500" style={{ width: "80%" }} />
-            </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden mt-1">
-              <div className="h-full rounded-full bg-slate-400" style={{ width: "40%" }} />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-medium text-slate-500 w-16 shrink-0">ChatGPT</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-slate-600" style={{ width: "40%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">4/10</span>
             </div>
           </div>
         </div>
@@ -352,7 +367,7 @@ export const post: BlogPost = {
       </p>
       <p>
         For anyone who writes proposals — consultants, agencies, freelancers
-        — this difference directly affects your close rate. A proposal that
+        — this difference directly affects your close rate. (See our <a href="/blog/how-to-use-claude-for-writing">step-by-step writing guide</a> for the exact workflow.) A proposal that
         demonstrates understanding of the client&apos;s specific situation
         wins over a polished template every time.
       </p>
@@ -464,45 +479,60 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Quality rating card: Editing ── */}
-      <div className="my-8 rounded-lg border border-slate-200 bg-white p-4 sm:p-6">
-        <p className="font-semibold text-slate-900 mb-4">
+      <div className="my-8 rounded-xl border border-slate-200 bg-white p-4 sm:p-6 shadow-sm">
+        <p className="font-semibold text-slate-900 mb-5">
           Editing and rewriting quality ratings
         </p>
-        <div className="space-y-4">
+        <div className="space-y-5">
           <div>
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-slate-700">Voice preservation</span>
-              <span className="text-xs text-slate-500">Claude 9/10 &middot; ChatGPT 4/10</span>
+            <p className="text-sm font-medium text-slate-700 mb-2">Voice preservation</p>
+            <div className="flex items-center gap-3 mb-1.5">
+              <span className="text-xs font-medium text-orange-600 w-16 shrink-0">Claude</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">9/10</span>
             </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
-            </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden mt-1">
-              <div className="h-full rounded-full bg-slate-400" style={{ width: "40%" }} />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-medium text-slate-500 w-16 shrink-0">ChatGPT</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-slate-600" style={{ width: "40%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">4/10</span>
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-slate-700">Key point retention</span>
-              <span className="text-xs text-slate-500">Claude 9/10 &middot; ChatGPT 7/10</span>
+            <p className="text-sm font-medium text-slate-700 mb-2">Key point retention</p>
+            <div className="flex items-center gap-3 mb-1.5">
+              <span className="text-xs font-medium text-orange-600 w-16 shrink-0">Claude</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">9/10</span>
             </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-orange-500" style={{ width: "90%" }} />
-            </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden mt-1">
-              <div className="h-full rounded-full bg-slate-400" style={{ width: "70%" }} />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-medium text-slate-500 w-16 shrink-0">ChatGPT</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-slate-600" style={{ width: "70%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">7/10</span>
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-slate-700">Appropriate restraint</span>
-              <span className="text-xs text-slate-500">Claude 8/10 &middot; ChatGPT 4/10</span>
+            <p className="text-sm font-medium text-slate-700 mb-2">Appropriate restraint</p>
+            <div className="flex items-center gap-3 mb-1.5">
+              <span className="text-xs font-medium text-orange-600 w-16 shrink-0">Claude</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-orange-500" style={{ width: "80%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">8/10</span>
             </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-orange-500" style={{ width: "80%" }} />
-            </div>
-            <div className="h-2 rounded-full bg-slate-100 overflow-hidden mt-1">
-              <div className="h-full rounded-full bg-slate-400" style={{ width: "40%" }} />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-medium text-slate-500 w-16 shrink-0">ChatGPT</span>
+              <div className="h-3 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-full rounded-full bg-slate-600" style={{ width: "40%" }} />
+              </div>
+              <span className="text-xs font-semibold text-slate-600 w-8 text-right shrink-0">4/10</span>
             </div>
           </div>
         </div>
@@ -548,10 +578,10 @@ export const post: BlogPost = {
 
       <h2>The context window advantage: holding your entire body of work</h2>
       <p>
-        Claude&apos;s context window can hold roughly 200,000 words in a
-        single conversation. That&apos;s an entire 50,000-word manuscript. A
-        full quarter&apos;s worth of blog posts. Your entire client proposal
-        archive.
+        Claude Opus 4.6 has a 1 million token context window — roughly
+        750,000 words in a single conversation. That&apos;s an entire
+        book-length manuscript. A full year&apos;s worth of blog posts. Your
+        entire client proposal archive. (We break down <a href="/blog/chatgpt-vs-claude-summarizing-transcripts">how they handle long documents</a> in a separate comparison.)
       </p>
       <p>
         Why does this matter for writing? Because good writing is consistent
@@ -563,10 +593,11 @@ export const post: BlogPost = {
         development, maintaining argument threads.
       </p>
       <p>
-        ChatGPT&apos;s context window is substantially smaller. For short
-        tasks, this doesn&apos;t matter. But for anyone working on long
-        documents — books, research papers, comprehensive reports, or even a
-        series of related blog posts — ChatGPT loses track. It forgets what
+        ChatGPT&apos;s standard context window is 272K tokens — roughly a
+        quarter of Claude&apos;s. For short tasks, this doesn&apos;t matter.
+        But for anyone working on long documents — books, research papers,
+        comprehensive reports, or even a series of related blog posts —
+        ChatGPT is more likely to lose track. It forgets what
         you established in earlier sections. It contradicts itself. You end up
         doing the consistency work manually, which defeats the purpose of
         using AI in the first place.
@@ -627,9 +658,9 @@ export const post: BlogPost = {
             <span>
               <strong>Writing that requires integrated web research</strong>{" "}
               — if you need to write about current events, market trends, or
-              recently published information, ChatGPT can browse the web and
-              weave research directly into the writing. Claude works from what
-              you provide.
+              recently published information, ChatGPT&apos;s Deep Research can
+              browse the web and weave research directly into the writing.
+              Claude has basic web search, but it&apos;s not as deep.
             </span>
           </li>
         </ul>
@@ -640,13 +671,13 @@ export const post: BlogPost = {
         quality isn&apos;t the primary concern or when you need web data
         inline. For the writing that actually represents you and your
         business — the writing clients see, the content your audience reads,
-        the proposals that win or lose deals — Claude is the better tool.
+        the proposals that win or lose deals — Claude is the better tool. For a <a href="/blog/claude-vs-chatgpt-for-real-work">full Claude vs ChatGPT breakdown</a> beyond writing, we cover that separately.
       </p>
 
       <h2>The verdict: Claude wins for professional writing, and it&apos;s not close</h2>
 
       {/* ── Final verdict box ── */}
-      <div className="my-10 rounded-xl border-2 border-orange-400 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 p-5 sm:p-8">
+      <div className="my-10 rounded-xl border-2 border-orange-400 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 p-6 sm:p-8">
         <p className="text-xl font-bold text-slate-900 mb-4">
           If writing quality matters to your business, Claude Pro is the clear
           choice.
@@ -667,7 +698,7 @@ export const post: BlogPost = {
         </p>
 
         {/* ── Scorecard summary ── */}
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
           <div className="rounded-lg bg-white/70 border border-orange-200 p-4 sm:p-5">
             <p className="text-sm font-semibold text-orange-700 mb-2">
               Claude wins
@@ -698,14 +729,14 @@ export const post: BlogPost = {
       <h2>How to get started: set up Claude for your best writing</h2>
       <p>
         If you&apos;re convinced — or even just curious — here&apos;s exactly
-        how to set up Claude so it writes like you from day one:
+        how to set up Claude so it writes like you from day one. (Wondering about the <a href="/blog/claude-pro-vs-chatgpt-plus">paid plan comparison</a>? We cover that too.)
       </p>
-      <div className="my-6 space-y-4">
+      <div className="my-6 space-y-5">
         <div className="flex items-start gap-4">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-700">
+          <span className="shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">
             1
           </span>
-          <p className="pt-0.5">
+          <p>
             <strong>
               Create a &quot;Writing&quot; Project at{" "}
               <a
@@ -721,10 +752,10 @@ export const post: BlogPost = {
           </p>
         </div>
         <div className="flex items-start gap-4">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-700">
+          <span className="shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">
             2
           </span>
-          <p className="pt-0.5">
+          <p>
             <strong>Upload 3-5 samples of your best writing</strong> — not
             everything you&apos;ve ever written. Your best work. The pieces
             that most represent your voice and the quality you want Claude to
@@ -732,10 +763,10 @@ export const post: BlogPost = {
           </p>
         </div>
         <div className="flex items-start gap-4">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-700">
+          <span className="shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">
             3
           </span>
-          <p className="pt-0.5">
+          <p>
             <strong>Add style instructions to the project</strong> — tell
             Claude the specifics: &quot;Write in first person. Keep sentences
             under 25 words on average. Never use the word &apos;leverage.&apos;
@@ -744,10 +775,10 @@ export const post: BlogPost = {
           </p>
         </div>
         <div className="flex items-start gap-4">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-700">
+          <span className="shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">
             4
           </span>
-          <p className="pt-0.5">
+          <p>
             <strong>Start with a rewrite, not a blank page</strong> — your
             first conversation should be giving Claude something you&apos;ve
             already written and asking it to improve or adapt it. This lets you
@@ -756,10 +787,10 @@ export const post: BlogPost = {
           </p>
         </div>
         <div className="flex items-start gap-4">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-700">
+          <span className="shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">
             5
           </span>
-          <p className="pt-0.5">
+          <p>
             <strong>Iterate on the instructions</strong> — after your first few
             conversations, refine the project instructions based on what Claude
             gets right and wrong. This is how you calibrate the tool to your
@@ -784,7 +815,7 @@ export const post: BlogPost = {
       <p>
         Inside AItomation Academy, we teach non-technical professionals how to
         build these exact systems. Not generic prompt tips — specific,
-        repeatable workflows built around Claude&apos;s strengths for
+        repeatable <a href="/blog/claude-for-content-creation">content creation workflows</a> built around Claude&apos;s strengths for
         professional writing. If writing is a meaningful part of how you earn
         a living, this is worth your time.
       </p>

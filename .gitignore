@@ -4,3 +4,7 @@ dist
 .env
 .env.local
 .mcp.json
+.vercel
+.env*.local
+public/videos/intro.mp4
+public/videos/intro-compressed.mp4

@@ -56,10 +56,11 @@ export const post: BlogPost = {
           structure loosens, and you spend more time editing than you saved.
         </li>
         <li>
-          <strong>No persistent knowledge.</strong> Every conversation starts
-          from zero. You re-explain your brand voice, your client context, your
-          industry terminology — every single time. Custom GPTs help a little,
-          but they&apos;re limited and clunky for real business use.
+          <strong>Weak persistent knowledge.</strong> Yes, ChatGPT has Projects
+          and memory now. But in practice, teams find themselves re-explaining
+          brand voice, client context, and industry terminology far more often
+          than they should. Custom GPTs help a little, but they&apos;re limited
+          for real business use.
         </li>
         <li>
           <strong>Output sounds like AI wrote it.</strong> The &quot;delve into
@@ -76,7 +77,7 @@ export const post: BlogPost = {
         Claude vs ChatGPT for business comes down to this: ChatGPT is a
         general-purpose assistant. Claude is a business writing and thinking
         partner. If your team&apos;s work is primarily text-based — and for
-        most non-technical teams, it is — Claude is the better tool.
+        most non-technical teams, it is — Claude is the better tool. (For a deeper look, see our <a href="/blog/claude-vs-chatgpt-for-real-work">Claude vs ChatGPT comparison</a>.)
       </p>
 
       <h2>What &quot;Claude for business&quot; actually means in 2026</h2>
@@ -87,7 +88,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Team Plan Feature Cards ── */}
-      <div className="my-8 grid gap-6 sm:grid-cols-2">
+      <div className="not-prose my-8 grid gap-6 sm:grid-cols-2">
         <div className="rounded-lg border-2 border-orange-200 bg-orange-50/50 p-4 sm:p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-orange-600 mb-2">
             Claude Team Plan
@@ -144,7 +145,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── 5 Business Functions Comparison Cards ── */}
-      <div className="my-8 space-y-6">
+      <div className="not-prose my-10 space-y-8">
         {/* Function 1: Writing & Comms */}
         <div className="rounded-xl border border-slate-200 overflow-hidden">
           <div className="bg-orange-50 px-4 sm:px-6 py-4 border-b border-orange-100">
@@ -315,7 +316,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── CTA 1 ── */}
-      <div className="my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
+      <div className="not-prose mt-10 mb-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-amber-900">
           See how 400+ professionals are using Claude for business workflows every day.{" "}
           <a
@@ -328,22 +329,26 @@ export const post: BlogPost = {
       </div>
 
       <h2>
-        Claude Projects: the business feature ChatGPT doesn&apos;t have
+        Claude Projects: why they work better for business than ChatGPT&apos;s
       </h2>
       <p>
-        If there is a single feature that makes Claude AI for business
-        genuinely different, it is Projects. And most teams are not using them
-        to their full potential.
+        Both Claude and ChatGPT have a Projects feature now. But they are not
+        the same. ChatGPT Projects are essentially conversation folders — useful
+        for organizing chats, but limited in what they can actually do.
+        Claude Projects are persistent workspaces where you upload full
+        documents as a knowledge base, set custom instructions that apply to
+        every conversation, and share them across your entire team on the Team
+        plan. That difference matters when you are doing real business work.
       </p>
       <p>
-        A Project in Claude is a persistent workspace with two things: custom
-        instructions (telling Claude how to behave) and uploaded files (giving
-        Claude knowledge to draw from). Every conversation inside that Project
-        inherits both. Here is how business teams should structure them:
+        A Claude Project combines two things: custom instructions (telling
+        Claude how to behave) and uploaded files (giving Claude knowledge to
+        draw from). Every conversation inside that Project inherits both. Here
+        is how business teams should structure them:
       </p>
 
       {/* ── Project Structure Cards ── */}
-      <div className="my-8 grid gap-6 sm:grid-cols-3">
+      <div className="not-prose my-8 grid gap-6 sm:grid-cols-3">
         <div className="rounded-lg border border-orange-200 bg-orange-50/30 p-4 sm:p-6">
           <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
             <span className="text-orange-600 font-bold text-lg">C</span>
@@ -551,7 +556,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Migration Checklist Diagram ── */}
-      <div className="my-8 rounded-xl border-2 border-orange-200 bg-gradient-to-b from-orange-50/50 to-white overflow-hidden">
+      <div className="not-prose my-10 rounded-xl border-2 border-orange-200 bg-gradient-to-b from-orange-50/50 to-white overflow-hidden">
         <div className="bg-orange-100/60 px-4 sm:px-6 py-4 border-b border-orange-200">
           <p className="font-bold text-slate-900 text-center">
             ChatGPT to Claude Migration Checklist
@@ -560,7 +565,7 @@ export const post: BlogPost = {
             Complete in one afternoon — no IT department required
           </p>
         </div>
-        <div className="p-4 sm:p-6 space-y-5">
+        <div className="p-5 sm:p-8 space-y-8">
           {/* Step 1 */}
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm mt-0.5">
@@ -622,7 +627,7 @@ export const post: BlogPost = {
                 Claude follows instructions differently than ChatGPT. You will
                 likely need less prompt engineering — Claude is better at
                 following natural language instructions. Simplify overly
-                complex prompts and test them.
+                complex prompts and test them. (Our <a href="/blog/claude-prompts-for-business">15 business prompt templates</a> can help.)
               </p>
             </div>
           </div>
@@ -704,17 +709,17 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Role-Based Use Case Cards ── */}
-      <div className="my-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="not-prose my-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Marketing Lead */}
         <div className="rounded-xl border border-slate-200 p-4 sm:p-6 bg-white">
-          <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-            <span className="text-lg">&#x1f4e3;</span>
+          <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center mb-4">
+            <span className="text-white font-bold text-lg">M</span>
           </div>
           <p className="font-semibold text-slate-900 mb-2">Marketing Lead</p>
           <p className="text-sm text-slate-600">
             Sets up a &quot;Brand Voice&quot; Project with style guidelines,
             past campaigns, and tone examples. Every blog post, email sequence,
-            and social campaign runs through this Project. Output is on-brand
+            and social campaign runs through this Project — see our <a href="/blog/claude-for-content-creation">content creation guide</a> for the full setup. Output is on-brand
             from the first draft. Uploads competitor analyses for positioning
             work. Uses Claude for campaign briefs, A/B test copy, and quarterly
             marketing reviews.
@@ -722,8 +727,8 @@ export const post: BlogPost = {
         </div>
         {/* Sales Manager */}
         <div className="rounded-xl border border-slate-200 p-4 sm:p-6 bg-white">
-          <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-            <span className="text-lg">&#x1f4bc;</span>
+          <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center mb-4">
+            <span className="text-white font-bold text-lg">S</span>
           </div>
           <p className="font-semibold text-slate-900 mb-2">Sales Manager</p>
           <p className="text-sm text-slate-600">
@@ -737,8 +742,8 @@ export const post: BlogPost = {
         </div>
         {/* Operations Manager */}
         <div className="rounded-xl border border-slate-200 p-4 sm:p-6 bg-white">
-          <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-            <span className="text-lg">&#x2699;&#xfe0f;</span>
+          <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center mb-4">
+            <span className="text-white font-bold text-lg">O</span>
           </div>
           <p className="font-semibold text-slate-900 mb-2">
             Operations Manager
@@ -754,8 +759,8 @@ export const post: BlogPost = {
         </div>
         {/* HR Manager */}
         <div className="rounded-xl border border-slate-200 p-4 sm:p-6 bg-white">
-          <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-            <span className="text-lg">&#x1f465;</span>
+          <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center mb-4">
+            <span className="text-white font-bold text-lg">H</span>
           </div>
           <p className="font-semibold text-slate-900 mb-2">HR Manager</p>
           <p className="text-sm text-slate-600">
@@ -770,8 +775,8 @@ export const post: BlogPost = {
         </div>
         {/* Finance Lead */}
         <div className="rounded-xl border border-slate-200 p-4 sm:p-6 bg-white">
-          <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-            <span className="text-lg">&#x1f4ca;</span>
+          <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center mb-4">
+            <span className="text-white font-bold text-lg">F</span>
           </div>
           <p className="font-semibold text-slate-900 mb-2">Finance Lead</p>
           <p className="text-sm text-slate-600">
@@ -793,7 +798,7 @@ export const post: BlogPost = {
       </p>
       <p>
         But for the work that non-technical business teams actually do most of
-        the day — writing, analyzing, planning, communicating, documenting —
+        the day — <a href="/blog/how-to-use-claude-for-writing">writing</a>, analyzing, planning, communicating, documenting —
         Claude is the better tool. The writing quality is higher. The context
         window is larger. Projects provide persistent knowledge that Custom
         GPTs cannot match. Memory makes it smarter over time. And the data
@@ -826,18 +831,18 @@ export const post: BlogPost = {
       <p>
         Or, if you want to learn how to get the most out of Claude for
         business — how to structure Projects, write effective prompts, and
-        build workflows that actually save your team hours every week — join
+        build <a href="/blog/5-claude-workflows-for-non-technical-professionals">practical Claude workflows</a> that actually save your team hours every week — join
         AItomation Academy. We teach non-technical professionals exactly how
         to use Claude as a business tool, not a toy.
       </p>
-      <p>
+      <div className="not-prose my-6">
         <a
           href="/skool-redirect"
           className="inline-flex items-center gap-2 rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 transition-colors no-underline"
         >
           Join AItomation Academy
         </a>
-      </p>
+      </div>
       <p>
         Your team is already using AI. The question is whether they are using
         the right AI. For non-technical business teams in 2026, that answer is

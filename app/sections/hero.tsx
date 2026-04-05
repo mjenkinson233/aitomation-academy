@@ -135,7 +135,7 @@ export function Hero() {
                   onEnded={handleEnded}
                   onContextMenu={(e) => e.preventDefault()}
                 >
-                  <source src="/videos/intro.mp4" type="video/mp4" />
+                  <source src="/videos/intro-web.mp4" type="video/mp4" />
                 </video>
 
                 {/* Unmute overlay */}

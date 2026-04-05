@@ -33,7 +33,7 @@ export const post: BlogPost = {
         genuinely excellent at content creation when you set it up correctly and
         give it the right inputs. It handles nuance, matches tone, and produces
         long-form work that doesn&apos;t read like a robot wrote it — if you
-        know how to work with it.
+        know how to work with it. (If you want to understand the fundamentals first, start with <a href="/blog/claude-prompting-guide">our prompting fundamentals guide</a>.)
       </p>
       <p>
         This guide walks through five complete content creation workflows, each
@@ -52,7 +52,7 @@ export const post: BlogPost = {
           <strong>Nuanced writing.</strong> Claude doesn&apos;t default to the
           breathless, exclamation-heavy tone that plagues most AI writing. It
           can match sophisticated, understated, or conversational voices without
-          constant correction.
+          constant correction. (This is a big reason <a href="/blog/claude-vs-chatgpt-for-writing">why Claude beats ChatGPT for writing</a>.)
         </li>
         <li>
           <strong>Long-form capability.</strong> Claude handles 3,000-word blog
@@ -94,9 +94,9 @@ export const post: BlogPost = {
           Content Creation Project Setup
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
+          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4 sm:p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
                 1
               </span>
               <span className="font-semibold text-slate-800">
@@ -108,9 +108,9 @@ export const post: BlogPost = {
               <li>Add custom instructions (see below)</li>
             </ul>
           </div>
-          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
+          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4 sm:p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
                 2
               </span>
               <span className="font-semibold text-slate-800">
@@ -124,9 +124,9 @@ export const post: BlogPost = {
               <li>Content calendar or pillar topics</li>
             </ul>
           </div>
-          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
+          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4 sm:p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
                 3
               </span>
               <span className="font-semibold text-slate-800">
@@ -148,7 +148,7 @@ export const post: BlogPost = {
         single most important step — it&apos;s what makes Claude consistently
         produce content that sounds like you instead of a generic AI:
       </p>
-      <pre><code>{`BRAND VOICE & CONTENT GUIDELINES
+      <pre className="overflow-x-auto"><code>{`BRAND VOICE & CONTENT GUIDELINES
 
 ABOUT US:
 - Company/Brand: [Your brand name]
@@ -188,7 +188,7 @@ AUDIENCE CONTEXT:
         <div className="flex flex-col gap-3 items-center">
           {/* Step 1 */}
           <div className="w-full max-w-md rounded-lg border border-blue-200 bg-blue-50 p-4 md:p-5 flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
               1
             </span>
             <div>
@@ -203,7 +203,7 @@ AUDIENCE CONTEXT:
           <div className="h-4 flex items-center justify-center text-slate-400">&darr;</div>
           {/* Step 2 */}
           <div className="w-full max-w-md rounded-lg border border-blue-200 bg-blue-50 p-4 md:p-5 flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
               2
             </span>
             <div>
@@ -218,7 +218,7 @@ AUDIENCE CONTEXT:
           <div className="h-4 flex items-center justify-center text-slate-400">&darr;</div>
           {/* Step 3 */}
           <div className="w-full max-w-md rounded-lg border border-blue-200 bg-blue-50 p-4 md:p-5 flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
               3
             </span>
             <div>
@@ -233,7 +233,7 @@ AUDIENCE CONTEXT:
           <div className="h-4 flex items-center justify-center text-slate-400">&darr;</div>
           {/* Step 4 */}
           <div className="w-full max-w-md rounded-lg border border-blue-200 bg-blue-50 p-4 md:p-5 flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
               4
             </span>
             <div>
@@ -267,7 +267,7 @@ AUDIENCE CONTEXT:
         Start with the outline. Paste this prompt into your Content Project —
         Claude will already have your brand voice from the Project Instructions:
       </p>
-      <pre><code>{`I'm writing a blog post and need your help developing it in stages. Do NOT write a draft yet — I only want an outline first.
+      <pre className="overflow-x-auto"><code>{`I'm writing a blog post and need your help developing it in stages. Do NOT write a draft yet — I only want an outline first.
 
 TOPIC: [Your topic]
 TARGET AUDIENCE: [Who will read this — be specific about their role, experience level, and what they already know]
@@ -297,7 +297,7 @@ After presenting the outline, explain your reasoning: why this structure, why th
         anything weak, and add points Claude missed. Then expand section by
         section:
       </p>
-      <pre><code>{`Good outline. Now expand Section [X]: "[Section title]"
+      <pre className="overflow-x-auto"><code>{`Good outline. Now expand Section [X]: "[Section title]"
 
 Write it to match the voice in my writing sample. Specific guidelines:
 - Lead with the most valuable insight, not background context
@@ -326,7 +326,7 @@ Do NOT write the other sections yet — just this one.`}</code></pre>
         This is where Claude for content creation becomes a genuine time
         multiplier. One long-form piece can become a week of content across
         platforms — but only if you maintain voice consistency and adapt
-        format properly for each channel.
+        format properly for each channel. Teams using this approach for broader operations can see <a href="/blog/claude-for-business">how businesses use Claude</a> across departments.
       </p>
 
       {/* ── Repurposing diagram ── */}
@@ -335,7 +335,7 @@ Do NOT write the other sections yet — just this one.`}</code></pre>
           Content Repurposing Pipeline
         </p>
         <div className="flex flex-col items-center gap-3">
-          <div className="w-full max-w-sm rounded-lg border-2 border-purple-300 bg-purple-50 p-4 md:p-5 text-center">
+          <div className="w-full max-w-sm rounded-lg border-2 border-purple-300 bg-purple-50 p-4 sm:p-6 text-center">
             <span className="text-sm font-bold text-purple-800">
               Source: Long-Form Content
             </span>
@@ -359,7 +359,7 @@ Do NOT write the other sections yet — just this one.`}</code></pre>
             ].map((item) => (
               <div
                 key={item.label}
-                className="rounded-lg border border-green-200 bg-green-50 p-4 text-center"
+                className="rounded-lg border border-green-200 bg-green-50 p-4 sm:p-6 text-center"
               >
                 <span className="text-xs font-semibold text-green-800 block">
                   {item.label}
@@ -373,7 +373,7 @@ Do NOT write the other sections yet — just this one.`}</code></pre>
         </div>
       </div>
 
-      <pre><code>{`I have a long-form piece of content that I want to repurpose across multiple platforms. The goal is to extract the most valuable ideas and repackage them for each platform's format and audience expectations — NOT to simply shorten the original.
+      <pre className="overflow-x-auto"><code>{`I have a long-form piece of content that I want to repurpose across multiple platforms. The goal is to extract the most valuable ideas and repackage them for each platform's format and audience expectations — NOT to simply shorten the original.
 
 SOURCE CONTENT:
 """
@@ -423,7 +423,7 @@ For each piece, explain which idea from the source content you chose to highligh
           Content Calendar Planning Flow
         </p>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
-          <div className="rounded-lg border-2 border-indigo-200 bg-indigo-50 p-4 text-center">
+          <div className="rounded-lg border-2 border-indigo-200 bg-indigo-50 p-4 sm:p-6 text-center">
             <span className="block text-xs font-bold text-indigo-800">
               Pillar Topics
             </span>
@@ -435,7 +435,7 @@ For each piece, explain which idea from the source content you chose to highligh
             <span className="hidden md:inline">&rarr;</span>
             <span className="md:hidden">&darr;</span>
           </div>
-          <div className="rounded-lg border-2 border-indigo-200 bg-indigo-50 p-4 text-center">
+          <div className="rounded-lg border-2 border-indigo-200 bg-indigo-50 p-4 sm:p-6 text-center">
             <span className="block text-xs font-bold text-indigo-800">
               Sub-Topics
             </span>
@@ -447,7 +447,7 @@ For each piece, explain which idea from the source content you chose to highligh
             <span className="hidden md:inline">&rarr;</span>
             <span className="md:hidden">&darr;</span>
           </div>
-          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4 text-center">
+          <div className="rounded-lg border-2 border-orange-200 bg-orange-50 p-4 sm:p-6 text-center">
             <span className="block text-xs font-bold text-orange-800">
               30-Day Calendar
             </span>
@@ -458,7 +458,7 @@ For each piece, explain which idea from the source content you chose to highligh
         </div>
       </div>
 
-      <pre><code>{`I need to plan a full month of social media content. Help me go from pillar topics to a complete, platform-specific content calendar.
+      <pre className="overflow-x-auto"><code>{`I need to plan a full month of social media content. Help me go from pillar topics to a complete, platform-specific content calendar.
 
 MY BUSINESS CONTEXT:
 - Brand/Business: [What you do and who you serve]
@@ -507,6 +507,19 @@ Pick the 5 strongest concepts from the calendar and write full, ready-to-publish
 - Instagram: Caption under 150 words, include a call to action, suggest a visual concept
 
 Present the calendar in a table format I can copy into a spreadsheet.`}</code></pre>
+
+      {/* ── Mid-article CTA 2 ── */}
+      <div className="my-8 rounded-xl border border-amber-200 bg-amber-50/60 p-4 md:p-6">
+        <p className="text-sm text-amber-900">
+          Want to see these workflows in action? Members get access to live walkthroughs and prompt libraries.{" "}
+          <a
+            href="/skool-redirect"
+            className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
+          >
+            Join AItomation Academy for free &rarr;
+          </a>
+        </p>
+      </div>
 
       <h2>Workflow 4: Email newsletter writing</h2>
       <p>
@@ -587,7 +600,7 @@ Present the calendar in a table format I can copy into a spreadsheet.`}</code></
         </div>
       </div>
 
-      <pre><code>{`I'm writing my weekly email newsletter and need help with this week's edition. This is NOT a marketing email — it's a relationship-building newsletter where I share insights with my audience.
+      <pre className="overflow-x-auto"><code>{`I'm writing my weekly email newsletter and need help with this week's edition. This is NOT a marketing email — it's a relationship-building newsletter where I share insights with my audience.
 
 NEWSLETTER CONTEXT:
 - Newsletter name: [Name]
@@ -644,7 +657,7 @@ The most important thing: this should NOT sound like an AI wrote it. Read my sam
         </p>
         <div className="flex flex-col items-center gap-3">
           <div className="w-full max-w-lg rounded-lg border border-teal-200 bg-teal-50 p-4 md:p-5 flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-500 text-sm font-bold text-white">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
               1
             </span>
             <div>
@@ -658,7 +671,7 @@ The most important thing: this should NOT sound like an AI wrote it. Read my sam
           </div>
           <div className="h-4 flex items-center justify-center text-slate-400">&darr;</div>
           <div className="w-full max-w-lg rounded-lg border border-teal-200 bg-teal-50 p-4 md:p-5 flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-500 text-sm font-bold text-white">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
               2
             </span>
             <div>
@@ -672,7 +685,7 @@ The most important thing: this should NOT sound like an AI wrote it. Read my sam
           </div>
           <div className="h-4 flex items-center justify-center text-slate-400">&darr;</div>
           <div className="w-full max-w-lg rounded-lg border border-teal-200 bg-teal-50 p-4 md:p-5 flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-500 text-sm font-bold text-white">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
               3
             </span>
             <div>
@@ -701,7 +714,7 @@ The most important thing: this should NOT sound like an AI wrote it. Read my sam
         </div>
       </div>
 
-      <pre><code>{`I need to create an SEO-optimized article that ranks well but actually provides value to readers. Help me go from keyword research to a complete, publish-ready draft.
+      <pre className="overflow-x-auto"><code>{`I need to create an SEO-optimized article that ranks well but actually provides value to readers. Help me go from keyword research to a complete, publish-ready draft.
 
 SEO INPUTS:
 - Primary keyword: [e.g., "email marketing for small business"]
@@ -756,24 +769,24 @@ Important: I'd rather rank position 4 with an article I'm proud of than rank pos
 
       {/* ── Before/After comparison ── */}
       <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="rounded-xl border-2 border-red-200 bg-red-50 p-5">
-          <p className="font-bold text-red-800 mb-3">What most people do</p>
-          <ul className="text-sm text-red-700 space-y-2">
-            <li>&quot;Write me a blog post about email marketing&quot;</li>
-            <li>Start a new chat every time</li>
-            <li>Accept the first draft as final</li>
-            <li>No voice samples or style guidance</li>
-            <li>One giant prompt, expect one perfect output</li>
+        <div className="rounded-xl border-2 border-red-200 bg-gradient-to-br from-red-50 to-slate-50 p-4 sm:p-6 shadow-sm">
+          <p className="font-bold text-red-800 mb-4 text-lg">What most people do</p>
+          <ul className="text-sm text-red-700 space-y-3 list-none pl-0">
+            <li className="flex items-start gap-2"><span className="shrink-0 text-red-400 mt-0.5">&#10007;</span>&quot;Write me a blog post about email marketing&quot;</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-red-400 mt-0.5">&#10007;</span>Start a new chat every time</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-red-400 mt-0.5">&#10007;</span>Accept the first draft as final</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-red-400 mt-0.5">&#10007;</span>No voice samples or style guidance</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-red-400 mt-0.5">&#10007;</span>One giant prompt, expect one perfect output</li>
           </ul>
         </div>
-        <div className="rounded-xl border-2 border-green-200 bg-green-50 p-5">
-          <p className="font-bold text-green-800 mb-3">What works</p>
-          <ul className="text-sm text-green-700 space-y-2">
-            <li>Structured brief with audience, goal, and angle</li>
-            <li>Use Projects to maintain context across sessions</li>
-            <li>Iterate within the same conversation</li>
-            <li>Upload writing samples and set a Custom Style</li>
-            <li>Work in stages: outline &rarr; sections &rarr; polish</li>
+        <div className="rounded-xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-orange-50 p-4 sm:p-6 shadow-sm">
+          <p className="font-bold text-green-800 mb-4 text-lg">What works</p>
+          <ul className="text-sm text-green-700 space-y-3 list-none pl-0">
+            <li className="flex items-start gap-2"><span className="shrink-0 text-green-500 mt-0.5">&#10003;</span>Structured brief with audience, goal, and angle</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-green-500 mt-0.5">&#10003;</span>Use Projects to maintain context across sessions</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-green-500 mt-0.5">&#10003;</span>Iterate within the same conversation</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-green-500 mt-0.5">&#10003;</span>Upload writing samples and set a Custom Style</li>
+            <li className="flex items-start gap-2"><span className="shrink-0 text-green-500 mt-0.5">&#10003;</span>Work in stages: outline &rarr; sections &rarr; polish</li>
           </ul>
         </div>
       </div>
@@ -830,12 +843,25 @@ Important: I'd rather rank position 4 with an article I'm proud of than rank pos
         </li>
       </ol>
 
+      {/* ── Mid-article CTA 3 ── */}
+      <div className="my-8 rounded-xl border border-amber-200 bg-amber-50/60 p-4 md:p-6">
+        <p className="text-sm text-amber-900">
+          These pro tips scratch the surface. Inside the community, members share their best-performing prompts and content systems daily.{" "}
+          <a
+            href="/skool-redirect"
+            className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
+          >
+            Join AItomation Academy for free &rarr;
+          </a>
+        </p>
+      </div>
+
       <h2>Putting it all together</h2>
       <p>
         The workflows above aren&apos;t theoretical — they&apos;re the exact
         processes that marketers, founders, and consultants use to produce
         a week&apos;s worth of content in a fraction of the time, without
-        sacrificing voice or quality.
+        sacrificing voice or quality. For more on <a href="/blog/how-to-use-claude-for-writing">writing with Claude</a> beyond content marketing, see our dedicated guide.
       </p>
       <p>
         The common thread across all five workflows: don&apos;t treat Claude
@@ -846,7 +872,7 @@ Important: I'd rather rank position 4 with an article I'm proud of than rank pos
       <p>
         Set up a Project. Upload your voice documentation. Work in stages. Give
         feedback. That&apos;s the entire system — and it works remarkably well
-        once you commit to it.
+        once you commit to it. If you want <a href="/blog/5-claude-workflows-for-non-technical-professionals">ready-made workflows</a> for tasks beyond content, we have those too.
       </p>
       <p>
         Inside AItomation Academy, we walk through these workflows live —

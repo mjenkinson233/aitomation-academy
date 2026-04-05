@@ -41,7 +41,7 @@ export const post: BlogPost = {
       </p>
       <p>
         So which tool does it better — ChatGPT or Claude? I tested both
-        extensively. The answer is clear, and it starts with one number.
+        extensively. The answer is clear, and it starts with one number. (For a <a href="/blog/claude-vs-chatgpt-for-real-work">full Claude vs ChatGPT comparison</a> across all work tasks, see our broader breakdown.)
       </p>
 
       <h2>Why this comparison matters for your daily work</h2>
@@ -67,63 +67,61 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Context window visualization ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-white p-4 sm:p-6 space-y-5">
-        <p className="text-sm font-semibold text-slate-700">
-          Context window comparison (what fits in a single conversation):
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-white p-5 sm:p-8">
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-6">
+          Context window: how much text fits in one conversation
         </p>
 
-        {/* Claude bar */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between text-sm">
-            <span className="font-semibold text-orange-600">
-              Claude Opus 4.6
-            </span>
-            <span className="text-slate-500">
-              1,000,000 tokens
-            </span>
+        {/* Side-by-side bars */}
+        <div className="space-y-8 mb-10">
+          {/* Claude */}
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm font-bold text-slate-900">Claude Opus 4.6</span>
+              <span className="text-sm font-semibold text-orange-600">1,000,000 tokens</span>
+            </div>
+            <div className="h-8 w-full rounded-lg bg-orange-500 flex items-center px-3">
+              <span className="text-xs font-bold text-white">~750K words / ~1,500 pages</span>
+            </div>
           </div>
-          <div className="h-8 w-full rounded-md bg-slate-100 overflow-hidden">
-            <div
-              className="h-full rounded-md bg-gradient-to-r from-orange-400 to-orange-500 flex items-center justify-end pr-3"
-              style={{ width: "100%" }}
-            >
-              <span className="text-xs font-bold text-white">
-                ~750K words / ~1,500 pages
-              </span>
+
+          {/* ChatGPT */}
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm font-bold text-slate-900">ChatGPT (GPT-5.4)</span>
+              <span className="text-sm font-semibold text-slate-500">272,000 tokens (standard)</span>
+            </div>
+            <div className="h-8 rounded-lg bg-slate-300 flex items-center px-3" style={{ width: "27%" }}>
+              <span className="text-xs font-bold text-white whitespace-nowrap">~200K words</span>
             </div>
           </div>
         </div>
 
-        {/* ChatGPT bar */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between text-sm">
-            <span className="font-semibold text-slate-600">
-              ChatGPT (GPT-5.4)
-            </span>
-            <span className="text-slate-500">
-              Significantly smaller
-            </span>
+        {/* Practical comparison */}
+        <div className="grid gap-5 sm:grid-cols-3 mb-8">
+          <div className="rounded-lg bg-slate-50 p-5 text-center">
+            <p className="text-2xl font-bold text-slate-900">90 min</p>
+            <p className="text-xs text-slate-500 mt-1.5">meeting transcript</p>
+            <p className="text-xs font-semibold text-orange-600 mt-3">Claude: full doc</p>
+            <p className="text-xs text-slate-400 mt-1">ChatGPT: may need chunking</p>
           </div>
-          <div className="h-8 w-full rounded-md bg-slate-100 overflow-hidden">
-            <div
-              className="h-full rounded-md bg-gradient-to-r from-slate-400 to-slate-500 flex items-center justify-end pr-3"
-              style={{ width: "13%" }}
-            >
-            </div>
+          <div className="rounded-lg bg-slate-50 p-5 text-center">
+            <p className="text-2xl font-bold text-slate-900">50 pg</p>
+            <p className="text-xs text-slate-500 mt-1.5">research paper</p>
+            <p className="text-xs font-semibold text-orange-600 mt-3">Claude: full doc</p>
+            <p className="text-xs text-slate-400 mt-1">ChatGPT: fits, but near limit</p>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-5 text-center">
+            <p className="text-2xl font-bold text-slate-900">300 pg</p>
+            <p className="text-xs text-slate-500 mt-1.5">quarterly report bundle</p>
+            <p className="text-xs font-semibold text-orange-600 mt-3">Claude: full doc</p>
+            <p className="text-xs text-slate-400 mt-1">ChatGPT: must split across sessions</p>
           </div>
         </div>
 
-        {/* What this means */}
-        <div className="rounded-lg border border-orange-200 bg-orange-50/60 p-4 sm:p-5">
-          <p className="text-sm text-slate-700">
-            <strong className="text-orange-700">What this means practically:</strong>{" "}
-            Claude can hold an entire 90-minute meeting transcript, a full
-            50-page research paper, or a 30-page contract in memory — all at
-            once, without losing a single detail. ChatGPT may need to chunk
-            the document, process it in pieces, or rely on retrieval
-            mechanisms that can miss context that spans multiple sections.
-          </p>
-        </div>
+        <p className="text-xs text-slate-400">
+          Note: GPT-5.4 supports up to 1M tokens via API/Codex, but the standard ChatGPT interface uses 272K. Claude&apos;s 1M context is available directly in the chat interface on Pro.
+        </p>
       </div>
 
       <p>
@@ -359,109 +357,36 @@ export const post: BlogPost = {
         summarization.
       </p>
 
-      {/* ── Prompt template box ── */}
-      <div className="my-8 rounded-lg border border-slate-300 bg-slate-50 p-4 sm:p-6">
-        <p className="text-sm font-bold text-slate-800 mb-4">
-          Prompt template: Meeting transcript summary
-        </p>
-        <div className="rounded-md bg-slate-900 text-slate-100 p-4 sm:p-5 text-sm font-mono leading-relaxed overflow-x-auto space-y-3">
-          <p className="text-orange-300">// Paste your full transcript above, then use this prompt:</p>
-          <p>
-            Analyze this meeting transcript and produce a structured summary with
-            the following sections:
-          </p>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">1.</strong>
-            <p>
-              <strong className="text-orange-300">DECISIONS MADE</strong> — List every decision that was explicitly
-              agreed upon. Include who agreed and any conditions attached.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">2.</strong>
-            <p>
-              <strong className="text-orange-300">ACTION ITEMS</strong> — List every action item with: the specific
-              task, the person responsible, and the deadline (stated or implied).
-              Flag any action items where ownership was unclear.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">3.</strong>
-            <p>
-              <strong className="text-orange-300">OPEN QUESTIONS</strong> — List questions that were raised but not
-              resolved. Note who raised them.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">4.</strong>
-            <p>
-              <strong className="text-orange-300">KEY DISAGREEMENTS</strong> — Identify any points where participants
-              disagreed. Summarize each position.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">5.</strong>
-            <p>
-              <strong className="text-orange-300">PARKING LOT</strong> — Topics that were mentioned but deferred for
-              future discussion.
-            </p>
-          </div>
-          <p className="pt-1 border-t border-slate-700">
-            Important: If any decision made earlier in the meeting was
-            contradicted or reversed later, flag it explicitly. Do not
-            summarize the meeting chronologically — organize by topic.
-          </p>
-        </div>
-      </div>
+      <h3>Prompt template: Meeting transcript summary</h3>
+      <pre className="overflow-x-auto"><code>{`Analyze this meeting transcript and produce a structured summary with the following sections:
 
-      <div className="my-8 rounded-lg border border-slate-300 bg-slate-50 p-4 sm:p-6">
-        <p className="text-sm font-bold text-slate-800 mb-4">
-          Prompt template: Contract review
-        </p>
-        <div className="rounded-md bg-slate-900 text-slate-100 p-4 sm:p-5 text-sm font-mono leading-relaxed overflow-x-auto space-y-3">
-          <p className="text-orange-300">// Paste your full contract above, then use this prompt:</p>
-          <p>
-            Review this contract from the perspective of [YOUR ROLE — e.g.,
-            &quot;the tenant&quot; or &quot;the service provider&quot;]. Produce:
-          </p>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">1.</strong>
-            <p>
-              <strong className="text-orange-300">NON-STANDARD CLAUSES</strong> — Identify every clause that deviates
-              from standard [contract type] terms. For each, explain what is
-              standard, what this contract says instead, and the practical impact.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">2.</strong>
-            <p>
-              <strong className="text-orange-300">RISK MATRIX</strong> — Rank each non-standard clause by risk level
-              (High / Medium / Low) with a one-sentence justification.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">3.</strong>
-            <p>
-              <strong className="text-orange-300">INTERNAL INCONSISTENCIES</strong> — Flag any places where different
-              sections of the contract contradict each other.
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <strong className="text-orange-300 shrink-0">4.</strong>
-            <p>
-              <strong className="text-orange-300">MISSING PROTECTIONS</strong> — Note any standard protections for [your
-              role] that are absent from this contract.
-            </p>
-          </div>
-          <p className="pt-1 border-t border-slate-700">
-            Be specific — reference section numbers and quote exact language
-            when identifying issues.
-          </p>
-        </div>
-      </div>
+1. DECISIONS MADE — List every decision that was explicitly agreed upon. Include who agreed and any conditions attached.
+
+2. ACTION ITEMS — List every action item with: the specific task, the person responsible, and the deadline (stated or implied). Flag any action items where ownership was unclear.
+
+3. OPEN QUESTIONS — List questions that were raised but not resolved. Note who raised them.
+
+4. KEY DISAGREEMENTS — Identify any points where participants disagreed. Summarize each position.
+
+5. PARKING LOT — Topics that were mentioned but deferred for future discussion.
+
+Important: If any decision made earlier in the meeting was contradicted or reversed later, flag it explicitly. Do not summarize the meeting chronologically — organize by topic.`}</code></pre>
+
+      <h3>Prompt template: Contract review</h3>
+      <pre className="overflow-x-auto"><code>{`Review this contract from the perspective of [YOUR ROLE — e.g., "the tenant" or "the service provider"]. Produce:
+
+1. NON-STANDARD CLAUSES — Identify every clause that deviates from standard [contract type] terms. For each, explain what is standard, what this contract says instead, and the practical impact.
+
+2. RISK MATRIX — Rank each non-standard clause by risk level (High / Medium / Low) with a one-sentence justification.
+
+3. INTERNAL INCONSISTENCIES — Flag any places where different sections of the contract contradict each other.
+
+4. MISSING PROTECTIONS — Note any standard protections for [your role] that are absent from this contract.
+
+Be specific — reference section numbers and quote exact language when identifying issues.`}</code></pre>
 
       {/* ── CTA 2 ── */}
-      <div className="my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-5">
+      <div className="not-prose mt-10 mb-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-5">
         <p className="text-sm text-slate-700">
           <a
             href="/skool-redirect"
@@ -476,7 +401,7 @@ export const post: BlogPost = {
         These prompts work because they give Claude a specific structure to
         fill and explicit instructions about what to watch for. Generic
         prompts like &quot;summarize this document&quot; produce generic
-        results regardless of which tool you use.
+        results regardless of which tool you use. For more on getting better results from your prompts, check out our <a href="/blog/how-to-use-claude-for-writing">practical Claude writing guide</a>.
       </p>
 
       <h2>Feature comparison: the full picture</h2>
@@ -506,7 +431,7 @@ export const post: BlogPost = {
                 <strong className="text-orange-600">1M tokens (~1,500 pages)</strong>
               </td>
               <td className="py-3 px-4 text-slate-600">
-                Significantly smaller
+                272K standard (1M via API)
               </td>
             </tr>
             <tr>
@@ -558,7 +483,7 @@ export const post: BlogPost = {
                 Web-supplemented research
               </td>
               <td className="py-3 px-4 text-slate-600">
-                Not available natively
+                Basic web search
               </td>
               <td className="py-3 px-4 text-slate-600">
                 <strong>Deep Research with live browsing</strong>
@@ -608,8 +533,8 @@ export const post: BlogPost = {
           <strong>When you need web context alongside the document.</strong>{" "}
           If you&apos;re reading a research paper and need to know what other
           researchers have said about the same topic, ChatGPT&apos;s Deep
-          Research can pull in that supplementary context. Claude works only
-          with what you give it.
+          Research can pull in that supplementary context with more depth
+          than Claude&apos;s basic web search.
         </li>
         <li>
           <strong>When the document is short.</strong> For a 2-page email
@@ -788,7 +713,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── Final verdict ── */}
-      <div className="my-8 rounded-xl border-2 border-orange-400 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 p-6 sm:p-8">
+      <div className="not-prose my-10 rounded-xl border-2 border-orange-400 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 p-6 sm:p-8">
         <p className="text-xl font-bold text-slate-900 mb-4">
           For summarizing transcripts and long documents, Claude is the
           significantly better tool in 2026.
@@ -803,7 +728,7 @@ export const post: BlogPost = {
         <p className="text-slate-700 mb-4">
           ChatGPT&apos;s strengths — web research, multimedia generation,
           speed on short tasks — are genuine, but they&apos;re not
-          summarization strengths. If summarizing long documents is a
+          summarization strengths. (Curious <a href="/blog/claude-vs-chatgpt-for-writing">how they compare for writing</a>? We tested that too.) If summarizing long documents is a
           significant part of your work (and for most consultants, marketers,
           and founders, it is), Claude should be your primary tool.
         </p>
@@ -816,7 +741,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── CTA 3 ── */}
-      <div className="my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-5">
+      <div className="not-prose mt-10 mb-10 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-5">
         <p className="text-sm text-slate-700">
           <a
             href="/skool-redirect"
@@ -833,7 +758,7 @@ export const post: BlogPost = {
         Building the prompts, templates, and workflows that turn that
         capability into hours saved every week — that&apos;s where the value
         is. The prompt templates in this article are a starting point, but
-        they&apos;re just scratching the surface.
+        they&apos;re just scratching the surface. (And if you want to see <a href="/blog/claude-vs-chatgpt-vs-gemini">how Gemini fits in</a> to the picture, we cover that in our three-way comparison.)
       </p>
       <p>
         Inside AItomation Academy, we teach non-technical professionals how

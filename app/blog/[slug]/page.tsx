@@ -7,6 +7,10 @@ import { articleSchema } from "@/lib/schema";
 import { Navbar } from "@/app/components/navbar";
 import { Footer } from "@/app/sections/footer";
 import { BlogPostLayout } from "@/app/components/blog-post-layout";
+import { RelatedArticles } from "@/app/components/related-articles";
+import { CodeCopyEnhancer } from "@/app/components/code-copy-enhancer";
+import { NewsletterForm } from "@/app/components/newsletter-form";
+import { LeadCaptureTrigger } from "@/app/components/lead-capture-trigger";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -90,12 +94,29 @@ export default async function BlogPostPage({
               </div>
             </header>
 
+            {/* Workflow CTA — near top */}
+            <div className="mb-10 rounded-2xl bg-slate-900 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-lg font-display text-white mb-1 normal-case">
+                  Get the Claude Workflow Starter
+                </h2>
+                <p className="text-sm text-slate-400">
+                  7 copy-paste workflows for writing, research, content, and more. Free.
+                </p>
+              </div>
+              <LeadCaptureTrigger className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors shrink-0 cursor-pointer">
+                Download Free PDF
+              </LeadCaptureTrigger>
+            </div>
+
             {/* TOC sidebar + content */}
             <BlogPostLayout>
               {/* Post body */}
-              <div className="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:tracking-tight prose-a:text-orange-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-orange-400 prose-blockquote:bg-slate-50 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:px-6">
-                {post.body}
-              </div>
+              <CodeCopyEnhancer>
+                <div className="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:tracking-tight prose-a:text-orange-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-orange-400 prose-blockquote:bg-slate-50 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:px-6">
+                  {post.body}
+                </div>
+              </CodeCopyEnhancer>
 
               {/* Tags */}
               {post.tags.length > 0 && (
@@ -113,22 +134,11 @@ export default async function BlogPostPage({
                 </div>
               )}
 
-              {/* CTA */}
-              <div className="mt-12 rounded-2xl bg-slate-900 p-8 sm:p-10 text-center sm:text-left">
-                <h2 className="text-xl font-display text-white mb-3 normal-case">
-                  Get the Claude Workflow Starter
-                </h2>
-                <p className="text-slate-400 mb-6">
-                  7 copy-paste workflows for writing, research, content, and
-                  more. Free.
-                </p>
-                <Link
-                  href="/skool-redirect"
-                  className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white hover:bg-orange-600 transition-colors"
-                >
-                  Get Free Access
-                </Link>
-              </div>
+              {/* Newsletter signup */}
+              <NewsletterForm />
+
+              {/* Related articles */}
+              <RelatedArticles current={post} />
             </BlogPostLayout>
           </div>
         </article>

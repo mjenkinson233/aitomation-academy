@@ -23,7 +23,7 @@ export const post: BlogPost = {
         Claude is trained to be helpful, harmless, and honest — but what that actually produces is a model that's unusually good at nuanced, long-form writing. It can hold context across a long document. It adjusts tone when you ask. It doesn't just rephrase — it restructures.
       </p>
       <p>
-        For writing tasks, that matters a lot. The difference between a first draft that sounds like you and one that sounds like a bot is usually how much context you gave Claude upfront.
+        For writing tasks, that matters a lot. The difference between a first draft that sounds like you and one that sounds like a bot is usually how much context you gave Claude upfront. (If you want the fundamentals first, start with <a href="/blog/claude-prompting-guide">our prompting guide</a>.)
       </p>
 
       <h2>The writing workflow that actually works</h2>
@@ -48,7 +48,7 @@ export const post: BlogPost = {
 
       <h2>Common mistakes to avoid</h2>
       <ul>
-        <li><strong>Asking too vaguely.</strong> "Write me a blog post about productivity" gives Claude nothing to work with. Tell it your angle, your audience, and what you actually want to say.</li>
+        <li><strong>Asking too vaguely.</strong> "Write me a blog post about productivity" gives Claude nothing to work with. Tell it your angle, your audience, and what you actually want to say. Our <a href="/blog/claude-prompts-for-business">business prompt templates</a> show you exactly how.</li>
         <li><strong>Starting from scratch instead of from your material.</strong> Claude is better at shaping what you already have than inventing from nothing.</li>
         <li><strong>Asking for a final draft in one go.</strong> Break it into structure → draft → refinement. You'll get better output and stay in control.</li>
       </ul>
@@ -58,12 +58,12 @@ export const post: BlogPost = {
         A consultant I know uses this workflow to write client-facing summaries after every engagement. She pastes her meeting notes and voice memo transcript into Claude, tells it the audience is a senior executive who wasn't in the room, and asks for a structured summary. It takes her 10 minutes instead of 90.
       </p>
       <p>
-        That's the point. Claude isn't replacing her judgment or her expertise. It's handling the part that used to eat her time.
+        That's the point. Claude isn't replacing her judgment or her expertise. It's handling the part that used to eat her time. (For more examples like this, see <a href="/blog/claude-vs-chatgpt-for-writing">why Claude beats ChatGPT for writing</a>.)
       </p>
 
       <h2>Get started</h2>
       <p>
-        The Claude Workflow Starter includes a copy-paste writing workflow you can use today. No setup, no configuration — just the prompt structure and instructions you need to start getting useful output from Claude.
+        The Claude Workflow Starter includes a copy-paste writing workflow you can use today — plus <a href="/blog/5-claude-workflows-for-non-technical-professionals">5 ready-made workflows</a> for writing, research, content, decisions, and meeting prep. No setup, no configuration — just the prompt structure and instructions you need to start getting useful output from Claude. You can also explore our <a href="/blog/claude-for-content-creation">content creation with Claude</a> guide for repurposing and scaling what you write.
       </p>
     </>
   ),

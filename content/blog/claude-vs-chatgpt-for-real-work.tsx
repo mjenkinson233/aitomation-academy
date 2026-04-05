@@ -21,7 +21,7 @@ export const post: BlogPost = {
 
       <h3>Long, nuanced writing</h3>
       <p>
-        Claude handles long-form writing better. It holds tone and voice more consistently across a long document, makes fewer strange word choices, and produces output that sounds less like it was written by a bot. For anything over 500 words — articles, reports, client deliverables — Claude is the better default.
+        Claude handles long-form writing better. It holds tone and voice more consistently across a long document, makes fewer strange word choices, and produces output that sounds less like it was written by a bot. For anything over 500 words — articles, reports, client deliverables — Claude is the better default. We go deep on this in our <a href="/blog/claude-vs-chatgpt-for-writing">writing-specific comparison</a>.
       </p>
 
       <h3>Following complex instructions</h3>
@@ -38,7 +38,7 @@ export const post: BlogPost = {
 
       <h3>Plugins and integrations</h3>
       <p>
-        ChatGPT has a bigger ecosystem of integrations. If you need to connect AI to other tools you're already using, ChatGPT's plugin library is larger.
+        ChatGPT has a bigger ecosystem of integrations. If you need to connect AI to other tools you're already using, ChatGPT's plugin library is larger. (For a <a href="/blog/claude-pro-vs-chatgpt-plus">paid plan comparison</a>, we break down exactly what you get for your money.)
       </p>
 
       <h3>Image generation</h3>
@@ -53,13 +53,13 @@ export const post: BlogPost = {
 
       <h2>The honest answer</h2>
       <p>
-        For writing, research, reasoning, and day-to-day professional work, Claude is the better tool. For image generation and broad integrations, ChatGPT has advantages.
+        For writing, research, reasoning, and day-to-day professional work, Claude is the better tool. For image generation and broad integrations, ChatGPT has advantages. You can also see <a href="/blog/claude-vs-chatgpt-vs-gemini">how Gemini compares too</a> in our three-way breakdown.
       </p>
       <p>
-        AItomation Academy is Claude-first because for the kind of work most non-technical professionals actually do — writing, thinking, communicating, creating — Claude is better at it. Not marginally. Noticeably.
+        AItomation Academy is Claude-first because for the kind of work most non-technical professionals actually do — writing, thinking, communicating, creating — Claude is better at it. Not marginally. Noticeably. See <a href="/blog/claude-for-business">Claude for business use cases</a> for how teams are putting this into practice.
       </p>
       <p>
-        That's why the workflows here are built specifically around Claude's strengths instead of being generic AI advice that works okay with any model.
+        That's why the workflows here are built specifically around Claude's strengths instead of being generic AI advice that works okay with any model. We also compared <a href="/blog/chatgpt-vs-claude-summarizing-transcripts">how they handle long documents</a> if that's a key part of your workflow.
       </p>
     </>
   ),

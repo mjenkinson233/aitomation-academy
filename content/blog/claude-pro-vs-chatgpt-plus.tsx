@@ -37,7 +37,7 @@ export const post: BlogPost = {
         falls short, and which one you should pick based on what you actually
         do. No benchmarks. No academic tests. Just what matters for
         consultants, marketers, founders, and freelancers doing real work in
-        April 2026.
+        April 2026. (Want the <a href="/blog/claude-vs-chatgpt-vs-gemini">three-way comparison with Gemini</a>? We have that too.)
       </p>
 
       <h2>What you get for $20/month: side by side</h2>
@@ -230,27 +230,27 @@ export const post: BlogPost = {
         If your work involves proposals, reports, articles, client
         deliverables, strategy documents, or any long-form writing —
         Claude Pro is significantly better at producing output you can actually
-        use without heavy editing.
+        use without heavy editing. We go deeper in our <a href="/blog/claude-vs-chatgpt-for-writing">Claude vs ChatGPT writing comparison</a>.
       </p>
 
       {/* ── Head-to-head card: Writing ── */}
-      <div className="my-8 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg border-2 border-orange-200 bg-orange-50/50 p-4 sm:p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-orange-600 mb-2">
+      <div className="not-prose my-10 grid gap-6 sm:grid-cols-2">
+        <div className="rounded-lg border-2 border-orange-200 bg-orange-50/50 p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-orange-600 mb-3">
             Claude Pro
           </p>
-          <ul className="space-y-1.5 text-sm text-slate-700">
+          <ul className="space-y-2.5 text-sm text-slate-700">
             <li>Holds tone and voice across long documents</li>
             <li>Follows multi-part style instructions accurately</li>
             <li>Output reads like a competent human, not a bot</li>
             <li>Excellent at matching your specific writing style</li>
           </ul>
         </div>
-        <div className="rounded-lg border border-slate-200 bg-slate-50/50 p-4 sm:p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+        <div className="rounded-lg border border-slate-200 bg-slate-50/50 p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
             ChatGPT Plus
           </p>
-          <ul className="space-y-1.5 text-sm text-slate-700">
+          <ul className="space-y-2.5 text-sm text-slate-700">
             <li>Faster for short-form content and brainstorms</li>
             <li>Tends toward generic, slightly enthusiastic tone</li>
             <li>Drops constraints on complex style prompts</li>
@@ -260,7 +260,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── CTA: Writing workflows ── */}
-      <div className="my-8 rounded-lg border border-orange-200 bg-amber-50/60 p-4 sm:p-6">
+      <div className="not-prose mt-10 mb-8 rounded-lg border border-orange-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-slate-700">
           See the exact Claude writing workflows 400+ professionals use daily.{" "}
           <a
@@ -679,7 +679,7 @@ export const post: BlogPost = {
         Yes, and some people do. At $40/month total, you could use Claude Pro
         for writing and analysis and ChatGPT Plus for image generation and web
         research. If your budget supports it and you need both capabilities
-        regularly, this is a reasonable approach.
+        regularly, this is a reasonable approach. For a <a href="/blog/claude-vs-chatgpt-for-real-work">full Claude vs ChatGPT breakdown</a> beyond just the paid plans, we cover that too.
       </p>
       <p>
         But if you&apos;re choosing one — and most people should start with
@@ -859,7 +859,7 @@ export const post: BlogPost = {
         The real productivity gains come from building workflows around
         Claude&apos;s strengths — not from using it as a generic chatbot. Most
         people who try Claude Pro and don&apos;t see results are using it the
-        same way they used the free tier.
+        same way they used the free tier. For a <a href="/blog/is-claude-ai-free-pricing-guide">full pricing breakdown</a> of every Claude plan including Max, Team, and Enterprise, see our pricing guide.
       </p>
 
       <h2>Learn to use Claude Pro effectively</h2>

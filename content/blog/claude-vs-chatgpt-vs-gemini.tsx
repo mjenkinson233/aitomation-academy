@@ -109,7 +109,7 @@ export const post: BlogPost = {
               <td className="py-3 px-4 font-medium text-slate-700">
                 Web browsing
               </td>
-              <td className="py-3 px-4 text-slate-600">No</td>
+              <td className="py-3 px-4 text-slate-600">Basic search</td>
               <td className="py-3 px-4 text-slate-600">
                 <strong className="text-emerald-600">Deep Research</strong>
               </td>
@@ -190,7 +190,7 @@ export const post: BlogPost = {
         holds tone across long documents. It follows complex style
         instructions without dropping half of them three paragraphs in. It
         doesn&apos;t default to that slightly enthusiastic, filler-heavy
-        voice that screams &quot;AI wrote this.&quot;
+        voice that screams &quot;AI wrote this.&quot; (For a <a href="/blog/claude-vs-chatgpt-for-writing">writing-specific comparison</a>, we tested both tools head to head on real deliverables.)
       </p>
       <p>
         ChatGPT is fast for short-form content — quick emails, brainstorm
@@ -207,7 +207,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Writing verdict card ── */}
-      <div className="my-8 grid gap-4 sm:grid-cols-3">
+      <div className="not-prose my-10 grid gap-6 sm:grid-cols-3">
         <div className="rounded-lg border-2 border-orange-200 bg-orange-50/50 p-4 sm:p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-orange-600 mb-1">
             Claude
@@ -247,7 +247,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── Subtle CTA 1 ── */}
-      <div className="my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
+      <div className="not-prose mt-10 mb-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-amber-900">
           Want to see Claude in action? 400+ professionals are already using these workflows.{" "}
           <a
@@ -272,12 +272,13 @@ export const post: BlogPost = {
         structure of ChatGPT&apos;s Deep Research reports.
       </p>
       <p>
-        Claude doesn&apos;t browse the web at all in chat. Full stop. If your
-        research requires current web data, Claude is not the tool. However —
-        and this is a big however — if your research involves analyzing
-        documents you already have, Claude&apos;s 1M token context window
-        makes it dramatically better than either competitor. You can paste an
-        entire 300-page report and Claude will work through every page.
+        Claude does have web search, but it&apos;s basic compared to
+        ChatGPT&apos;s Deep Research — it can look things up, but it
+        doesn&apos;t produce the structured, multi-source research reports
+        that Deep Research delivers. Where Claude dominates is analyzing
+        documents you already have. Its 1M token context window means you can
+        paste an entire 300-page report and Claude will work through every
+        page with remarkable thoroughness.
       </p>
       <p>
         The distinction matters: &quot;What&apos;s happening in the
@@ -342,7 +343,7 @@ export const post: BlogPost = {
       <p>
         For consultants, analysts, lawyers, and anyone who works with large
         volumes of text — Claude&apos;s document handling is a genuine
-        superpower.
+        superpower. We tested this extensively in our <a href="/blog/chatgpt-vs-claude-summarizing-transcripts">document summarization comparison</a>.
       </p>
 
       <h2>Image and video creation: ChatGPT wins (no contest)</h2>
@@ -449,7 +450,7 @@ export const post: BlogPost = {
       <h2>Value for money: it depends on what you do</h2>
       <p>
         At the standard $20/month tier, all three offer good value — but for
-        different reasons:
+        different reasons. (If you are specifically weighing the two paid plans, see our <a href="/blog/claude-pro-vs-chatgpt-plus">Claude Pro vs ChatGPT Plus</a> deep dive.)
       </p>
 
       {/* ── Value comparison ── */}
@@ -652,7 +653,7 @@ export const post: BlogPost = {
         Count it up: Claude wins 5 out of 10 categories, ChatGPT wins 3,
         Gemini wins 2. But more importantly for non-technical professionals,
         Claude wins the categories that matter most for knowledge work —
-        writing, analysis, strategy, proposals, and consistency.
+        writing, analysis, strategy, proposals, and consistency. For a <a href="/blog/claude-vs-chatgpt-for-real-work">detailed Claude vs ChatGPT comparison</a> that goes even deeper on these two, we have a dedicated article.
       </p>
 
       <h2>Which one is for you: the decision flowchart</h2>
@@ -661,127 +662,53 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Decision flowchart ── */}
-      <div className="my-8 space-y-4">
+      <div className="not-prose my-10">
         {/* Step 1 */}
-        <div className="rounded-xl border-2 border-slate-200 bg-white p-4 sm:p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-800 text-sm font-bold text-white">
-              1
-            </div>
-            <div className="flex-1">
-              <p className="font-semibold text-slate-900">
-                Does your work live entirely in Google Workspace (Gmail, Docs,
-                Sheets, Drive)?
-              </p>
-              <div className="mt-3 flex flex-wrap gap-3">
-                <div className="rounded-lg border border-blue-300 bg-blue-50 p-4">
-                  <p className="text-sm font-semibold text-blue-700">
-                    Yes &rarr; Start with Gemini AI Pro
-                  </p>
-                  <p className="text-xs text-blue-600 mt-1">
-                    The native integration saves enough friction to justify it,
-                    even though writing quality is weaker
-                  </p>
-                </div>
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-sm font-medium text-slate-600">
-                    No &rarr; Continue to question 2
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="rounded-xl border border-slate-200 bg-white p-5 sm:p-7 mb-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-blue-500 mb-2">Question 1</p>
+          <p className="font-semibold text-slate-900 mb-4">Does your work live entirely in Google Workspace (Gmail, Docs, Sheets, Drive)?</p>
+          <div className="rounded-lg border-2 border-blue-200 bg-blue-50 p-4">
+            <p className="text-sm font-bold text-blue-700">Yes — Start with Gemini AI Pro</p>
+            <p className="text-xs text-blue-600 mt-1.5">The native integration saves enough friction to justify it, even though writing quality is weaker.</p>
           </div>
+          <p className="text-sm text-slate-400 mt-3">No? Keep going.</p>
         </div>
 
         {/* Step 2 */}
-        <div className="rounded-xl border-2 border-slate-200 bg-white p-4 sm:p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-800 text-sm font-bold text-white">
-              2
-            </div>
-            <div className="flex-1">
-              <p className="font-semibold text-slate-900">
-                Do you regularly need AI-generated images or videos as part of
-                your work?
-              </p>
-              <div className="mt-3 flex flex-wrap gap-3">
-                <div className="rounded-lg border border-emerald-300 bg-emerald-50 p-4">
-                  <p className="text-sm font-semibold text-emerald-700">
-                    Yes &rarr; Start with ChatGPT Plus
-                  </p>
-                  <p className="text-xs text-emerald-600 mt-1">
-                    DALL-E and Sora are capabilities Claude and Gemini simply
-                    don&apos;t have
-                  </p>
-                </div>
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-sm font-medium text-slate-600">
-                    No &rarr; Continue to question 3
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="rounded-xl border border-slate-200 bg-white p-5 sm:p-7 mb-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-emerald-500 mb-2">Question 2</p>
+          <p className="font-semibold text-slate-900 mb-4">Do you regularly need AI-generated images or videos as part of your work?</p>
+          <div className="rounded-lg border-2 border-emerald-200 bg-emerald-50 p-4">
+            <p className="text-sm font-bold text-emerald-700">Yes — Start with ChatGPT Plus</p>
+            <p className="text-xs text-emerald-600 mt-1.5">DALL-E and Sora are capabilities Claude and Gemini simply don&apos;t have.</p>
           </div>
+          <p className="text-sm text-slate-400 mt-3">No? Keep going.</p>
         </div>
 
         {/* Step 3 */}
-        <div className="rounded-xl border-2 border-slate-200 bg-white p-4 sm:p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-800 text-sm font-bold text-white">
-              3
-            </div>
-            <div className="flex-1">
-              <p className="font-semibold text-slate-900">
-                Is your primary need live web research and trend monitoring?
-              </p>
-              <div className="mt-3 flex flex-wrap gap-3">
-                <div className="rounded-lg border border-emerald-300 bg-emerald-50 p-4">
-                  <p className="text-sm font-semibold text-emerald-700">
-                    Yes &rarr; Start with ChatGPT Plus
-                  </p>
-                  <p className="text-xs text-emerald-600 mt-1">
-                    Deep Research is the strongest web research tool available
-                  </p>
-                </div>
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-sm font-medium text-slate-600">
-                    No &rarr; Continue to question 4
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="rounded-xl border border-slate-200 bg-white p-5 sm:p-7 mb-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-emerald-500 mb-2">Question 3</p>
+          <p className="font-semibold text-slate-900 mb-4">Is your primary need live web research and trend monitoring?</p>
+          <div className="rounded-lg border-2 border-emerald-200 bg-emerald-50 p-4">
+            <p className="text-sm font-bold text-emerald-700">Yes — Start with ChatGPT Plus</p>
+            <p className="text-xs text-emerald-600 mt-1.5">Deep Research is the strongest web research tool available.</p>
           </div>
+          <p className="text-sm text-slate-400 mt-3">No? That means...</p>
         </div>
 
         {/* Step 4 — final */}
-        <div className="rounded-xl border-2 border-orange-300 bg-orange-50/50 p-4 sm:p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-600 text-sm font-bold text-white">
-              4
-            </div>
-            <div className="flex-1">
-              <p className="font-semibold text-slate-900">
-                Everything else — writing, analysis, strategy, client work,
-                document review, decision-making?
-              </p>
-              <div className="mt-3">
-                <div className="rounded-lg border-2 border-orange-300 bg-orange-100 p-4">
-                  <p className="text-sm font-bold text-orange-700">
-                    Start with Claude Pro
-                  </p>
-                  <p className="text-xs text-orange-600 mt-1">
-                    For the core work that non-technical professionals do every
-                    day, Claude is the strongest tool available
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="rounded-xl border-2 border-orange-300 bg-orange-50/50 p-5 sm:p-7 mb-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-orange-500 mb-2">Your answer</p>
+          <p className="font-semibold text-slate-900 mb-4">Everything else — writing, analysis, strategy, client work, document review, decision-making?</p>
+          <div className="rounded-lg border-2 border-orange-300 bg-orange-100 p-5">
+            <p className="text-base font-bold text-orange-700">Start with Claude Pro</p>
+            <p className="text-sm text-orange-600 mt-1.5">For the core work that non-technical professionals do every day, Claude is the strongest tool available.</p>
           </div>
         </div>
       </div>
 
       {/* ── Subtle CTA 2 ── */}
-      <div className="my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
+      <div className="not-prose mt-10 mb-10 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-amber-900">
           Not sure which to start with? Our free community can help you decide.{" "}
           <a
@@ -806,13 +733,13 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Combo recommendation ── */}
-      <div className="my-8 rounded-xl border-2 border-slate-300 bg-gradient-to-br from-slate-50 to-gray-50 p-4 sm:p-6">
+      <div className="not-prose my-10 rounded-xl border-2 border-slate-300 bg-gradient-to-br from-slate-50 to-gray-50 p-5 sm:p-8">
         <p className="text-lg font-bold text-slate-800 mb-4">
           The power-user stack
         </p>
-        <div className="space-y-3">
-          <div className="flex items-start gap-3">
-            <span className="mt-0.5 shrink-0 rounded-full bg-orange-100 px-2.5 py-0.5 text-xs font-bold text-orange-700">
+        <div className="divide-y divide-slate-200">
+          <div className="flex items-start gap-4 py-5">
+            <span className="mt-0.5 shrink-0 rounded-full bg-orange-100 px-3 py-1 text-xs font-bold text-orange-700">
               Primary
             </span>
             <p className="text-sm text-slate-700">
@@ -821,8 +748,8 @@ export const post: BlogPost = {
               80% of your AI time.
             </p>
           </div>
-          <div className="flex items-start gap-3">
-            <span className="mt-0.5 shrink-0 rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-700">
+          <div className="flex items-start gap-4 py-5">
+            <span className="mt-0.5 shrink-0 rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700">
               Add-on
             </span>
             <p className="text-sm text-slate-700">
@@ -831,8 +758,8 @@ export const post: BlogPost = {
               valuable when you do.
             </p>
           </div>
-          <div className="flex items-start gap-3">
-            <span className="mt-0.5 shrink-0 rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-bold text-blue-700">
+          <div className="flex items-start gap-4 py-5">
+            <span className="mt-0.5 shrink-0 rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700">
               Free tier
             </span>
             <p className="text-sm text-slate-700">
@@ -850,7 +777,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── Subtle CTA 3 ── */}
-      <div className="my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
+      <div className="not-prose mt-10 mb-10 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-amber-900">
           Already using Claude? Learn the advanced workflows that save professionals 5+ hours per week.{" "}
           <a

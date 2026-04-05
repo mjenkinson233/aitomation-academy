@@ -166,7 +166,7 @@ export function BlogPostLayout({ children }: { children: ReactNode }) {
                 {[120, 90, 140, 100, 110].map((w, i) => (
                   <li key={i}>
                     <div
-                      className="h-4 rounded bg-slate-100 animate-pulse ml-3 my-2"
+                      className="h-4 rounded bg-slate-200 animate-pulse ml-3 my-2"
                       style={{ width: w }}
                     />
                   </li>

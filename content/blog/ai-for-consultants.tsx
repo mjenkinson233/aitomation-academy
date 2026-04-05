@@ -57,7 +57,7 @@ export const post: BlogPost = {
         The result is a consultant who is perpetually busy but
         underutilizing their highest-value skill: thinking clearly about
         hard problems. AI for consultants is not about replacing that
-        thinking. It is about reclaiming the hours you need to do more of it.
+        thinking. It is about reclaiming the hours you need to do more of it. To understand <a href="/blog/claude-for-business">how businesses use Claude</a> across teams and functions, see our broader guide.
       </p>
 
       <h2>Time audit: where your 35 hours actually go</h2>
@@ -67,73 +67,27 @@ export const post: BlogPost = {
         advisor working a 35-hour client-facing week:
       </p>
 
-      {/* ── Time Audit Visualization ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
-        <p className="text-center font-semibold text-slate-800 mb-6 text-lg">
-          Typical Consultant Week: 35 Hours
-        </p>
-        <div className="space-y-4">
-          {/* Writing Deliverables */}
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span className="font-medium text-slate-700">Writing Deliverables (reports, frameworks, strategies)</span>
-              <span className="font-semibold text-slate-800">10h</span>
-            </div>
-            <div className="h-5 w-full rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-red-400" style={{ width: "28.6%" }} />
-            </div>
-          </div>
-          {/* Research */}
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span className="font-medium text-slate-700">Research &amp; Competitive Analysis</span>
-              <span className="font-semibold text-slate-800">8h</span>
-            </div>
-            <div className="h-5 w-full rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-orange-400" style={{ width: "22.9%" }} />
-            </div>
-          </div>
-          {/* Admin */}
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span className="font-medium text-slate-700">Admin (invoicing, scheduling, CRM)</span>
-              <span className="font-semibold text-slate-800">5h</span>
-            </div>
-            <div className="h-5 w-full rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-yellow-400" style={{ width: "14.3%" }} />
-            </div>
-          </div>
-          {/* Client Comms */}
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span className="font-medium text-slate-700">Client Communications (emails, updates, Slack)</span>
-              <span className="font-semibold text-slate-800">5h</span>
-            </div>
-            <div className="h-5 w-full rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-green-400" style={{ width: "14.3%" }} />
-            </div>
-          </div>
-          {/* Strategic Thinking */}
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span className="font-medium text-slate-700">Strategic Thinking &amp; Problem-Solving</span>
-              <span className="font-semibold text-slate-800">4h</span>
-            </div>
-            <div className="h-5 w-full rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-blue-400" style={{ width: "11.4%" }} />
-            </div>
-          </div>
-          {/* Biz Dev */}
-          <div>
-            <div className="flex justify-between text-sm mb-1">
-              <span className="font-medium text-slate-700">Business Development (content, networking, outreach)</span>
-              <span className="font-semibold text-slate-800">3h</span>
-            </div>
-            <div className="h-5 w-full rounded-full bg-slate-100 overflow-hidden">
-              <div className="h-full rounded-full bg-purple-400" style={{ width: "8.6%" }} />
-            </div>
-          </div>
-        </div>
+      {/* ── Time Audit Table ── */}
+      <div className="not-prose my-10 overflow-x-auto rounded-xl border border-slate-200">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-slate-50 border-b-2 border-slate-200">
+              <th className="text-left py-4 px-6 font-semibold text-slate-900">Activity</th>
+              <th className="text-center py-4 px-6 font-semibold text-slate-900">Hours/week</th>
+              <th className="text-center py-4 px-6 font-semibold text-slate-900">% of week</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            <tr><td className="py-4 px-6 text-slate-700">Writing Deliverables (reports, frameworks, strategies)</td><td className="py-4 px-6 text-center font-semibold text-slate-900">10h</td><td className="py-4 px-6 text-center text-slate-500">29%</td></tr>
+            <tr><td className="py-4 px-6 text-slate-700">Research &amp; Competitive Analysis</td><td className="py-4 px-6 text-center font-semibold text-slate-900">8h</td><td className="py-4 px-6 text-center text-slate-500">23%</td></tr>
+            <tr><td className="py-4 px-6 text-slate-700">Admin (invoicing, scheduling, CRM)</td><td className="py-4 px-6 text-center font-semibold text-slate-900">5h</td><td className="py-4 px-6 text-center text-slate-500">14%</td></tr>
+            <tr><td className="py-4 px-6 text-slate-700">Client Communications (emails, updates, Slack)</td><td className="py-4 px-6 text-center font-semibold text-slate-900">5h</td><td className="py-4 px-6 text-center text-slate-500">14%</td></tr>
+            <tr><td className="py-4 px-6 text-slate-700">Strategic Thinking &amp; Problem-Solving</td><td className="py-4 px-6 text-center font-semibold text-slate-900">4h</td><td className="py-4 px-6 text-center text-slate-500">11%</td></tr>
+            <tr><td className="py-4 px-6 text-slate-700">Business Development (content, networking, outreach)</td><td className="py-4 px-6 text-center font-semibold text-slate-900">3h</td><td className="py-4 px-6 text-center text-slate-500">9%</td></tr>
+            <tr className="bg-slate-50 border-t-2 border-slate-200"><td className="py-4 px-6 font-bold text-slate-900">Total</td><td className="py-4 px-6 text-center font-bold text-slate-900">35h</td><td className="py-4 px-6 text-center font-bold text-slate-900">100%</td></tr>
+          </tbody>
+        </table>
+      </div>
 
         <div className="mt-6 rounded-lg border border-red-200 bg-red-50 p-4 md:p-5">
           <p className="text-sm font-semibold text-red-800 mb-1">
@@ -145,13 +99,12 @@ export const post: BlogPost = {
             admin, and communication. AI for consultants targets those 31 hours.
           </p>
         </div>
-      </div>
 
       <p>
         With the five workflows below, a typical consultant can claw back
-        5-8 hours per week from the red, orange, and purple bars above —
-        and redirect that time into the blue bar (strategic thinking) or
-        into taking on an additional client.
+        5+ hours per week from execution and admin — and redirect that
+        time into strategic thinking or into taking on an additional
+        client.
       </p>
 
       <h2>How AI shifts your weekly time allocation</h2>
@@ -336,7 +289,7 @@ LENGTH: 4-6 pages when formatted.`}</code></pre>
         minutes for Claude to generate, and 30 minutes for you to customize
         the strategic framing, add your pricing, and refine the approach
         based on your expertise. You are not outsourcing the thinking — you
-        are outsourcing the first-draft writing.
+        are outsourcing the first-draft writing. For more templates like this, check out our <a href="/blog/claude-prompts-for-business">business prompt templates</a>.
       </p>
 
       {/* ── CTA 1 ── */}
@@ -529,7 +482,7 @@ OUTPUT 2: INTERNAL ENGAGEMENT NOTES
         posts, case studies, articles, thought leadership — but it always
         falls to the bottom of the priority list because client work takes
         precedence. AI tools for consultants make it possible to maintain a
-        consistent content presence without dedicating hours you do not have.
+        consistent content presence without dedicating hours you do not have. For a full walkthrough of <a href="/blog/claude-for-content-creation">content creation with Claude</a>, see our dedicated guide.
       </p>
 
       <p><strong>Prompt template — Business Development Content:</strong></p>
@@ -587,12 +540,13 @@ ALSO GENERATE:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg border-2 border-blue-200 bg-blue-50 p-4 md:p-5">
-            <p className="font-semibold text-blue-800 mb-2">200K Context Window</p>
+            <p className="font-semibold text-blue-800 mb-2">1M Token Context Window</p>
             <p className="text-sm text-blue-700">
               Upload 50-page RFPs, annual reports, and multi-document research
-              decks. Claude processes the full context without truncating or
-              losing details — critical for consulting work where nuance in a
-              single paragraph can change a recommendation.
+              decks. Claude Opus 4.6 can hold up to 1 million tokens (~1,500
+              pages) in a single conversation without truncating or losing
+              details — critical for consulting work where nuance in a single
+              paragraph can change a recommendation.
             </p>
           </div>
           <div className="rounded-lg border-2 border-green-200 bg-green-50 p-4 md:p-5">
@@ -862,7 +816,7 @@ ALSO GENERATE:
         building a sustainable AI-powered consulting practice — prompt
         chaining for complex deliverables, using Claude for financial
         modeling, advanced Project setups for multi-stakeholder engagements,
-        and building your own reusable prompt library.
+        and building your own reusable prompt library. For additional <a href="/blog/5-claude-workflows-for-non-technical-professionals">copy-paste workflows</a> beyond consulting, we have a collection built for non-technical professionals.
       </p>
       <p>
         Inside the{" "}

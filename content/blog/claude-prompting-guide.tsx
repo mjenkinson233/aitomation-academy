@@ -40,7 +40,7 @@ export const post: BlogPost = {
         founders, project managers, and operators who want better output from
         Claude without becoming prompt engineers. Every technique below uses
         plain English and comes with real examples you can adapt to your own
-        work.
+        work. (If you want ready-to-go templates instead of building your own, jump straight to our <a href="/blog/claude-prompts-for-business">15 copy-paste business prompts</a>.)
       </p>
 
       <h2>Why prompting matters more than people think</h2>
@@ -59,12 +59,12 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Generic vs Great output diagram ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 sm:p-6 md:p-8">
         <p className="text-center font-semibold text-slate-800 mb-6 text-lg">
           The Prompting Gap
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-lg border-2 border-red-200 bg-red-50 p-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="rounded-lg border-2 border-red-200 bg-red-50 p-4 sm:p-6">
             <p className="font-semibold text-red-700 mb-2">Generic prompt</p>
             <p className="text-sm text-slate-700 italic mb-3">
               &quot;Help me write a project update.&quot;
@@ -74,7 +74,7 @@ export const post: BlogPost = {
               any audience. You spend 30 minutes rewriting it.
             </p>
           </div>
-          <div className="rounded-lg border-2 border-green-200 bg-green-50 p-5">
+          <div className="rounded-lg border-2 border-green-200 bg-green-50 p-4 sm:p-6">
             <p className="font-semibold text-green-700 mb-2">Great prompt</p>
             <p className="text-sm text-slate-700 italic mb-3">
               &quot;Write a weekly project update for my CMO. The project is a
@@ -104,7 +104,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── 5 Elements Framework Diagram ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="text-center font-semibold text-slate-800 mb-6 text-lg">
           The 5-Element Prompt Framework
         </p>
@@ -117,28 +117,28 @@ export const post: BlogPost = {
             <p className="text-xs text-slate-600 mt-1">Who should Claude be?</p>
           </div>
           <div className="rounded-lg border-2 border-blue-200 bg-blue-50 p-4 md:p-5 text-center">
-            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white mb-3">
+            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white mb-3">
               2
             </span>
             <p className="font-semibold text-slate-800 text-sm">Context</p>
             <p className="text-xs text-slate-600 mt-1">What does Claude need to know?</p>
           </div>
           <div className="rounded-lg border-2 border-purple-200 bg-purple-50 p-4 md:p-5 text-center">
-            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-purple-500 text-sm font-bold text-white mb-3">
+            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white mb-3">
               3
             </span>
             <p className="font-semibold text-slate-800 text-sm">Task</p>
             <p className="text-xs text-slate-600 mt-1">What should Claude do?</p>
           </div>
           <div className="rounded-lg border-2 border-green-200 bg-green-50 p-4 md:p-5 text-center">
-            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-green-500 text-sm font-bold text-white mb-3">
+            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white mb-3">
               4
             </span>
             <p className="font-semibold text-slate-800 text-sm">Constraints</p>
             <p className="text-xs text-slate-600 mt-1">What are the limits?</p>
           </div>
           <div className="rounded-lg border-2 border-amber-200 bg-amber-50 p-4 md:p-5 text-center">
-            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-white mb-3">
+            <span className="flex mx-auto h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white mb-3">
               5
             </span>
             <p className="font-semibold text-slate-800 text-sm">Output Format</p>
@@ -197,7 +197,7 @@ export const post: BlogPost = {
         near-final output on the first try. You don&apos;t need all five every
         time &mdash; a quick question doesn&apos;t need a role and output
         format. But for any real work task, three or more elements will
-        dramatically improve what Claude gives you.
+        dramatically improve what Claude gives you. For a deeper dive into applying these principles to writing tasks specifically, see <a href="/blog/how-to-use-claude-for-writing">our writing guide</a>.
       </p>
 
       <h2>Before and after: 5 real business prompts transformed</h2>
@@ -209,8 +209,9 @@ export const post: BlogPost = {
         practical, not theoretical.
       </p>
 
+      <div className="not-prose my-10 flex flex-col gap-8">
       {/* ── Before/After 1: Strategy Memo ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="font-semibold text-slate-800 mb-4 text-lg">
           Scenario 1: Preparing a strategy memo
         </p>
@@ -248,7 +249,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── Before/After 2: Client Feedback ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="font-semibold text-slate-800 mb-4 text-lg">
           Scenario 2: Responding to client feedback
         </p>
@@ -286,7 +287,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── Before/After 3: Process Documentation ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="font-semibold text-slate-800 mb-4 text-lg">
           Scenario 3: Creating process documentation
         </p>
@@ -324,7 +325,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── Before/After 4: Job Description ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="font-semibold text-slate-800 mb-4 text-lg">
           Scenario 4: Writing a job description
         </p>
@@ -364,7 +365,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── Before/After 5: Meeting Prep ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="font-semibold text-slate-800 mb-4 text-lg">
           Scenario 5: Analyzing survey results
         </p>
@@ -399,9 +400,10 @@ export const post: BlogPost = {
           </div>
         </div>
       </div>
+      </div>
 
       {/* ── CTA 1 ── */}
-      <div className="my-8 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4 md:p-6">
+      <div className="not-prose mt-10 mb-10 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-5 md:p-6">
         <p className="text-sm md:text-base text-slate-800">
           Get 7 ready-to-use Claude prompts built on these principles &mdash; plus access to a library of templates for every business function.
         </p>
@@ -429,7 +431,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Projects Setup Diagram ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="text-center font-semibold text-slate-800 mb-6 text-lg">
           Claude Projects: Set Up Once, Use Forever
         </p>
@@ -562,18 +564,22 @@ export const post: BlogPost = {
         complex tasks that require analysis, strategy, or multi-step
         reasoning, Claude&apos;s{" "}
         <a
-          href="https://support.claude.ai/hc/en-us/articles/28787933989523-Use-extended-thinking"
+          href="https://support.claude.com/en/articles/10574485-using-extended-thinking"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
         >
           extended thinking
         </a>{" "}
-        feature is a significant upgrade.
+        feature is a significant upgrade. (On the latest Opus 4.6 and Sonnet
+        4.6 models, this has evolved into &quot;adaptive thinking&quot; where
+        Claude automatically decides how deeply to think based on the
+        complexity of your request.)
       </p>
       <p>
-        When you turn on extended thinking (the lightbulb icon in the Claude
-        interface), Claude reasons through the problem step by step before
-        writing its response. You can actually see the thinking process. This
-        produces better output for:
+        When extended thinking is active, Claude reasons through the problem
+        step by step before writing its response. You can see a summary of its
+        thinking process. This produces better output for:
       </p>
       <ul>
         <li>Strategy memos where you need Claude to weigh tradeoffs</li>
@@ -584,7 +590,7 @@ export const post: BlogPost = {
       </ul>
 
       {/* ── Extended Thinking Diagram ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="text-center font-semibold text-slate-800 mb-6 text-lg">
           When to Use Extended Thinking
         </p>
@@ -633,7 +639,7 @@ export const post: BlogPost = {
       </ol>
 
       {/* ── Prompt Improver Before/After ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="text-center font-semibold text-slate-800 mb-6 text-lg">
           The Claude Prompt Improver in Action
         </p>
@@ -717,10 +723,10 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Mistakes Diagram ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
-        <div className="space-y-4">
-          <div className="rounded-lg border border-red-200 bg-red-50 p-4 md:p-5">
-            <p className="font-semibold text-red-700 mb-2">
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
+        <div className="space-y-6">
+          <div className="rounded-lg border border-red-200 bg-red-50 p-5 md:p-6 mb-6">
+            <p className="font-semibold text-red-700 mb-3">
               Mistake 1: Being too vague
             </p>
             <p className="text-sm text-slate-700">
@@ -731,8 +737,8 @@ export const post: BlogPost = {
               everything better.
             </p>
           </div>
-          <div className="rounded-lg border border-red-200 bg-red-50 p-4 md:p-5">
-            <p className="font-semibold text-red-700 mb-2">
+          <div className="rounded-lg border border-red-200 bg-red-50 p-5 md:p-6 mb-6">
+            <p className="font-semibold text-red-700 mb-3">
               Mistake 2: Not providing context
             </p>
             <p className="text-sm text-slate-700">
@@ -743,8 +749,8 @@ export const post: BlogPost = {
               minutes of editing.
             </p>
           </div>
-          <div className="rounded-lg border border-red-200 bg-red-50 p-4 md:p-5">
-            <p className="font-semibold text-red-700 mb-2">
+          <div className="rounded-lg border border-red-200 bg-red-50 p-5 md:p-6 mb-6">
+            <p className="font-semibold text-red-700 mb-3">
               Mistake 3: Starting over instead of iterating
             </p>
             <p className="text-sm text-slate-700">
@@ -757,8 +763,8 @@ export const post: BlogPost = {
               feedback.
             </p>
           </div>
-          <div className="rounded-lg border border-red-200 bg-red-50 p-4 md:p-5">
-            <p className="font-semibold text-red-700 mb-2">
+          <div className="rounded-lg border border-red-200 bg-red-50 p-5 md:p-6 mb-6">
+            <p className="font-semibold text-red-700 mb-3">
               Mistake 4: Asking for too much at once
             </p>
             <p className="text-sm text-slate-700">
@@ -774,7 +780,7 @@ export const post: BlogPost = {
       </div>
 
       {/* ── CTA 3 ── */}
-      <div className="my-8 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4 md:p-6">
+      <div className="not-prose mt-10 mb-10 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-5 md:p-6">
         <p className="text-sm md:text-base text-slate-800">
           Want a done-for-you Claude setup? Inside AItomation Academy we build your Projects, Styles, and prompt templates together step by step.
         </p>
@@ -811,7 +817,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── Outcome Delegation Before/After ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="rounded-lg border-2 border-slate-200 bg-white p-4 md:p-5">
             <p className="text-xs font-bold uppercase text-slate-500 mb-2">
@@ -840,7 +846,7 @@ export const post: BlogPost = {
         Outcome delegation often leads Claude to suggest an approach you
         hadn&apos;t considered &mdash; maybe a short email to existing
         customers would work better than a blog post, or maybe a comparison
-        chart would be more effective than a narrative.
+        chart would be more effective than a narrative. For <a href="/blog/5-claude-workflows-for-non-technical-professionals">practical Claude workflows</a> that put these techniques into action, see our workflow collection.
       </p>
 
       <h3>Giving Claude permission to push back</h3>
@@ -875,7 +881,7 @@ export const post: BlogPost = {
       </p>
 
       {/* ── System Summary Diagram ── */}
-      <div className="my-8 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+      <div className="not-prose my-10 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-5 md:p-8">
         <p className="text-center font-semibold text-slate-800 mb-6 text-lg">
           Your Claude Prompting System
         </p>
@@ -960,7 +966,7 @@ export const post: BlogPost = {
         This system works because it addresses the real reason most people
         underperform with Claude: not lack of technical skill, but lack of
         structure. You don&apos;t need to become a prompt engineer. You need
-        a repeatable system for giving Claude what it needs to help you.
+        a repeatable system for giving Claude what it needs to help you. If you want to see how this applies to <a href="/blog/claude-for-business">using Claude for business</a> more broadly, we cover that in a separate guide.
       </p>
       <p>
         Inside AItomation Academy, we build this entire system together
