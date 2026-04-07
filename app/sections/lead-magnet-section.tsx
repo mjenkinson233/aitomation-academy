@@ -12,7 +12,7 @@ const benefits = [
 
 export function LeadMagnetSection() {
   return (
-    <section id="join" className="relative py-28 bg-slate-900">
+    <section id="join" data-section="lead_magnet" className="relative py-28 bg-slate-900">
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">

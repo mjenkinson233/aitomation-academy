@@ -1,6 +1,17 @@
 "use client";
 
-export function NewsletterForm() {
+import { useRef } from "react";
+import posthog from "posthog-js";
+
+export function NewsletterForm({ blogSlug }: { blogSlug?: string } = {}) {
+  const emailRef = useRef<HTMLInputElement>(null);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const email = emailRef.current?.value || "";
+    posthog.capture("newsletter_subscribe_clicked", { email, source: "blog_newsletter", blog_slug: blogSlug });
+  };
+
   return (
     <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-8 sm:p-10">
       <h2 className="text-xl font-display text-slate-900 mb-2 normal-case">
@@ -11,10 +22,11 @@ export function NewsletterForm() {
         professionals. No spam, no hype — just useful stuff.
       </p>
       <form
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={handleSubmit}
         className="flex flex-col sm:flex-row gap-3"
       >
         <input
+          ref={emailRef}
           type="email"
           placeholder="Your email address"
           className="flex-1 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"

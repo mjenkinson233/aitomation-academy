@@ -45,7 +45,7 @@ export function HowItWorks() {
   }, []);
 
   return (
-    <section className="relative py-28" ref={sectionRef}>
+    <section data-section="how_it_works" className="relative py-28" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-20">

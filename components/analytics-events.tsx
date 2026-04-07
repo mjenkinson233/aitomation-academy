@@ -32,8 +32,10 @@ export function AnalyticsEvents() {
 
         document.querySelectorAll("a[href='/skool-redirect'], button[type='submit']").forEach((el) => {
           const onClick = () => {
+            const sectionEl = el.closest("[data-section]");
             posthog.capture("cta_click", {
               text: (el.textContent || "").trim(),
+              section: sectionEl?.getAttribute("data-section") || "unknown",
             });
           };
 

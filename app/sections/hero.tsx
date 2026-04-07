@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Volume2, X } from "lucide-react";
+import posthog from "posthog-js";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -22,11 +23,25 @@ export function Hero() {
     video.currentTime = 0;
     video.play();
     setShowUnmute(false);
+    posthog.capture("video_unmuted");
   };
 
   const handleCanPlay = () => setVideoReady(true);
-  const handleEnded = () => { setVideoEnded(true); setIsPip(false); };
+  const handleEnded = () => { setVideoEnded(true); setIsPip(false); posthog.capture("video_progress", { percent: 100 }); };
   const dismissPip = () => { setPipDismissed(true); setIsPip(false); };
+
+  const videoProgressRef = useRef(new Set<number>());
+  const handleTimeUpdate = () => {
+    const video = videoRef.current;
+    if (!video || !video.duration) return;
+    const pct = Math.round((video.currentTime / video.duration) * 100);
+    [25, 50, 75].forEach((mark) => {
+      if (pct >= mark && !videoProgressRef.current.has(mark)) {
+        videoProgressRef.current.add(mark);
+        posthog.capture("video_progress", { percent: mark });
+      }
+    });
+  };
 
   // rAF-throttled scroll check
   const rafRef = useRef(0);
@@ -81,7 +96,7 @@ export function Hero() {
   }, [isPip]);
 
   return (
-    <section className="relative">
+    <section data-section="hero" className="relative">
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
         <div className="mx-auto max-w-4xl text-center">
 
@@ -133,6 +148,7 @@ export function Hero() {
                   preload="auto"
                   onCanPlay={handleCanPlay}
                   onEnded={handleEnded}
+                  onTimeUpdate={handleTimeUpdate}
                   onContextMenu={(e) => e.preventDefault()}
                 >
                   <source src="/videos/intro-web.mp4" type="video/mp4" />

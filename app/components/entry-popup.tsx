@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X, ArrowRight, Loader2, Check } from "lucide-react";
+import posthog from "posthog-js";
 
 const PDF_URL =
   "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
@@ -17,11 +18,15 @@ export function EntryPopup() {
     const dismissed = localStorage.getItem("popup_dismissed");
     if (dismissed) return;
 
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      posthog.capture("popup_shown");
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
   const handleDismiss = () => {
+    posthog.capture("popup_dismissed");
     setIsVisible(false);
     localStorage.setItem("popup_dismissed", "1");
   };
@@ -32,6 +37,8 @@ export function EntryPopup() {
 
     // TODO: wire up to Brevo
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    posthog.identify(email, { name, email, phone: phone || undefined });
+    posthog.capture("popup_form_submitted", { name, email, source: "entry_popup" });
     setStatus("success");
     localStorage.setItem("popup_dismissed", "1");
     // Trigger PDF download

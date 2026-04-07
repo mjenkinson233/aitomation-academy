@@ -15,7 +15,7 @@ const loopedWins = [...wins, ...wins];
 
 export function CommunityWins() {
   return (
-    <section className="relative py-28 bg-slate-100">
+    <section data-section="community_wins" className="relative py-28 bg-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 

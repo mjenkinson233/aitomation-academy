@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X, ArrowRight, Loader2, Check } from "lucide-react";
+import posthog from "posthog-js";
 
 const PDF_URL =
   "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
@@ -9,9 +10,11 @@ const PDF_URL =
 export function LeadCaptureTrigger({
   children,
   className,
+  blogSlug,
 }: {
   children: React.ReactNode;
   className?: string;
+  blogSlug?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -25,6 +28,8 @@ export function LeadCaptureTrigger({
 
     // TODO: wire up to Brevo
     await new Promise((r) => setTimeout(r, 1200));
+    posthog.identify(email, { name, email, phone: phone || undefined });
+    posthog.capture("blog_lead_capture_submitted", { name, email, source: "blog_cta", blog_slug: blogSlug });
     setStatus("success");
     // Trigger PDF download
     const link = document.createElement("a");
@@ -40,7 +45,7 @@ export function LeadCaptureTrigger({
 
   return (
     <>
-      <button onClick={() => setOpen(true)} className={className}>
+      <button onClick={() => { setOpen(true); posthog.capture("blog_lead_capture_opened", { blog_slug: blogSlug }); }} className={className}>
         {children}
       </button>
 

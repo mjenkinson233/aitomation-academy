@@ -104,7 +104,7 @@ export default async function BlogPostPage({
                   The complete system to turn Claude into your content machine. Free PDF.
                 </p>
               </div>
-              <LeadCaptureTrigger className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors shrink-0 cursor-pointer">
+              <LeadCaptureTrigger blogSlug={slug} className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors shrink-0 cursor-pointer">
                 Download Free PDF
               </LeadCaptureTrigger>
             </div>
@@ -135,7 +135,7 @@ export default async function BlogPostPage({
               )}
 
               {/* Newsletter signup */}
-              <NewsletterForm />
+              <NewsletterForm blogSlug={slug} />
 
               {/* Related articles */}
               <RelatedArticles current={post} />

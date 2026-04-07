@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, Check, Download, Loader2 } from "lucide-react";
+import posthog from "posthog-js";
 
 const PDF_URL =
   "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
@@ -21,6 +22,8 @@ export function LeadMagnetForm() {
     // TODO: Integrate with Brevo API
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
+      posthog.identify(email, { name, email });
+      posthog.capture("lead_form_submitted", { name, email, source: "lead_magnet_section" });
       setStatus("success");
       // Trigger PDF download
       const link = document.createElement("a");
