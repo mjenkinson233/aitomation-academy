@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 const faqs = [
   {
@@ -85,7 +86,7 @@ export function FAQ() {
             <p className="text-slate-500">
               Still have questions?{" "}
               <a
-                href="mailto:contact@markosudar.com"
+                href={`mailto:${siteConfig.email}`}
                 className="font-medium text-orange-500 hover:text-orange-600 cursor-pointer transition-colors"
               >
                 Email me directly

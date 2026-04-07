@@ -12,8 +12,8 @@ const footerLinks = {
     { label: "YouTube", href: siteConfig.social.youtube },
   ],
   company: [
-    { label: "About", href: "#" },
-    { label: "Contact", href: "mailto:contact@markosudar.com" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: `mailto:${siteConfig.email}` },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

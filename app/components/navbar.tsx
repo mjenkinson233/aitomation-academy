@@ -26,7 +26,7 @@ export function Navbar() {
           <Link href="/blog" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
             Blog
           </Link>
-          <Link href="#about" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+          <Link href="/about" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
             About
           </Link>
         </nav>
