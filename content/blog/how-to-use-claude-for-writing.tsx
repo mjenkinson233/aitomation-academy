@@ -2,8 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "how-to-use-claude-for-writing",
-  title: "How to Use Claude for Writing: A Practical Guide for Non-Technical Professionals",
-  description: "Stop staring at blank pages. Learn how to use Claude to turn rough notes and scattered ideas into polished drafts — no coding, no prompting expertise needed.",
+  title: "Claude for Writing: A Practical Guide",
+  description: "Learn how to use Claude to turn rough notes into polished drafts. No coding or prompting expertise needed.",
   publishedAt: "2026-04-04",
   author: "Marko Sudar",
   category: "Claude Workflows",

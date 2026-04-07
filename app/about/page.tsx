@@ -9,6 +9,7 @@ export const metadata = {
   title: `About Marko | ${siteConfig.name}`,
   description:
     "Meet Marko Sudar — software engineer, AI researcher, and the instructor behind AItomation Academy. Learn why he built this community.",
+  alternates: { canonical: `${siteConfig.url}/about` },
 };
 
 const credentials = [

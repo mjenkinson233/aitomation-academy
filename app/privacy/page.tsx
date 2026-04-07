@@ -2,7 +2,8 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata = {
   title: `Privacy Policy | ${siteConfig.name}`,
-  description: `Privacy Policy for ${siteConfig.name}`,
+  description: "How AItomation Academy collects, uses, and protects your personal information. Read our full privacy policy.",
+  alternates: { canonical: `${siteConfig.url}/privacy` },
 };
 
 export default function PrivacyPage() {

@@ -2,7 +2,8 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata = {
   title: `Terms of Service | ${siteConfig.name}`,
-  description: `Terms of Service for ${siteConfig.name}`,
+  description: "Terms and conditions for using AItomation Academy, including community access, courses, and digital products.",
+  alternates: { canonical: `${siteConfig.url}/terms` },
 };
 
 export default function TermsPage() {

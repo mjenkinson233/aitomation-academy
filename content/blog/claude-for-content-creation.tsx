@@ -2,10 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "claude-for-content-creation",
-  title:
-    "How to Use Claude for Content Creation: A Step-by-Step Guide (2026)",
-  description:
-    "Five detailed workflows for using Claude for content creation — blog posts, social media, newsletters, content repurposing, and SEO drafts. Includes long, copy-paste prompt templates for each.",
+  title: "Claude for Content Creation: 5 Workflows",
+  description: "Five Claude workflows for content creation — blogs, social media, newsletters, repurposing, and SEO drafts. Copy-paste prompts included.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Claude Workflows",

@@ -2,9 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "claude-prompts-for-business",
-  title: "Claude Prompts for Business: 15 Copy-Paste Templates That Actually Work",
-  description:
-    "Skip the generic prompt dumps. These 15 Claude prompts are built for real business work — research, writing, strategy, and operations. Copy, paste, customize.",
+  title: "15 Claude Prompts for Business That Work",
+  description: "15 Claude prompts built for real business work — research, writing, strategy, and operations. Copy, paste, customize.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Claude Prompts",

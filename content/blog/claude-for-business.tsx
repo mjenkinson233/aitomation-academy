@@ -2,10 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "claude-for-business",
-  title:
-    "Claude for Business: Why Non-Technical Teams Are Switching from ChatGPT (2026)",
-  description:
-    "Non-technical teams are switching from ChatGPT to Claude for business in 2026. See exactly why — better writing, Projects, memory, security, and a step-by-step migration guide for your whole team.",
+  title: "Claude for Business: Why Teams Switch",
+  description: "Why non-technical teams switch from ChatGPT to Claude. Better writing, Projects, memory, security, and a migration guide.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Claude Guides",

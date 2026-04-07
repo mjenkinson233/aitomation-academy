@@ -2,10 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "claude-vs-chatgpt-vs-gemini",
-  title:
-    "Claude vs ChatGPT vs Gemini: The Non-Technical Professional's Guide (2026)",
-  description:
-    "An opinionated, no-fluff comparison of Claude, ChatGPT, and Gemini for consultants, marketers, founders, and freelancers. Real verdict per use case with comparison tables and a decision flowchart.",
+  title: "Claude vs ChatGPT vs Gemini (2026)",
+  description: "An honest comparison of Claude, ChatGPT, and Gemini for professionals. Real verdict per use case with comparison tables.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Comparisons",

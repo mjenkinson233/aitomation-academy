@@ -59,8 +59,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "your-keyword-as-slug",
-  title: "Title That Naturally Includes the Target Keyword",
-  description: "Under 160 chars. Includes keyword. Makes people want to click.",
+  title: "Short Punchy Title With Keyword",
+  description: "Under 155 chars. Includes keyword. Makes people want to click.",
   publishedAt: "YYYY-MM-DD",  // today's date
   author: "Marko Sudar",
   category: "Category",  // Claude Guides | Comparisons | Claude Workflows | Claude Prompts | Use Cases
@@ -68,6 +68,21 @@ export const post: BlogPost = {
   body: ( <> ... </> ),
 };
 ```
+
+### Metadata rules (CRITICAL for SEO)
+
+Google truncates titles and descriptions that are too long. These limits are strict:
+
+- **Title: MAXIMUM 50 characters.** The site appends " — AItomation Academy" (~24 chars), so the total displayed in Google is ~74 chars. Going over 50 means Google cuts off your title mid-sentence. Count characters before saving.
+- **Description: MAXIMUM 155 characters.** Google truncates at ~160. Stay under 155 to be safe. Include the primary keyword and a reason to click.
+- **Include the target keyword** in both title and description.
+- **Make titles punchy** — drop filler words like "A Complete Guide", "Everything You Need to Know". Use specifics: numbers, comparisons, years.
+
+Examples of good vs bad titles:
+- BAD: "How to Use Claude for Writing: A Practical Guide for Non-Technical Professionals" (81 chars)
+- GOOD: "Claude for Writing: A Practical Guide" (37 chars)
+- BAD: "Is Claude AI Free? Everything You Need to Know About Claude Pricing in 2026" (76 chars)
+- GOOD: "Claude Pricing in 2026: Free vs Pro" (35 chars)
 
 ### Content rules
 

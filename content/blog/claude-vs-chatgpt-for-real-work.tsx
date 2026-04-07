@@ -2,8 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "claude-vs-chatgpt-for-real-work",
-  title: "Claude vs ChatGPT for Real Work: What's Actually Different",
-  description: "Not a benchmark. A practical comparison for non-technical professionals who want to know which AI actually helps with writing, research, and day-to-day work.",
+  title: "Claude vs ChatGPT: What's Actually Different",
+  description: "A practical comparison for professionals who want to know which AI helps more with writing, research, and daily work.",
   publishedAt: "2026-04-03",
   author: "Marko Sudar",
   category: "Claude vs ChatGPT",

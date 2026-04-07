@@ -2,10 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "ai-for-consultants",
-  title:
-    "How Consultants Use AI to Save 5+ Hours Per Week (2026 Guide)",
-  description:
-    "Five specific AI workflows for consultants, freelancers, and advisors — research, proposals, deliverables, meeting prep, and business development. Includes long prompt templates, time-savings calculations, and ROI math for using AI tools for consultants.",
+  title: "AI for Consultants: Save 5+ Hours Per Week",
+  description: "Five AI workflows for consultants — research, proposals, deliverables, meeting prep, and biz dev. Includes prompt templates and ROI math.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Use Cases",

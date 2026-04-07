@@ -2,8 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "5-claude-workflows-for-non-technical-professionals",
-  title: "5 Claude Workflows for Non-Technical Professionals (Copy-Paste Ready)",
-  description: "Five practical Claude workflows for writing, research, content, decisions, and meeting prep. No coding. No setup. Just copy, paste, and get useful output.",
+  title: "5 Claude Workflows You Can Copy-Paste Today",
+  description: "Five practical Claude workflows for writing, research, content, decisions, and meeting prep. Copy, paste, and get useful output.",
   publishedAt: "2026-04-02",
   author: "Marko Sudar",
   category: "Claude Workflows",

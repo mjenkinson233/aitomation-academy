@@ -2,7 +2,8 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata = {
   title: `Support | ${siteConfig.name}`,
-  description: `Support information for ${siteConfig.name}`,
+  description: "Get help with The Claude Content System, community access, billing, or technical issues at AItomation Academy.",
+  alternates: { canonical: `${siteConfig.url}/support` },
 };
 
 export default function SupportPage() {

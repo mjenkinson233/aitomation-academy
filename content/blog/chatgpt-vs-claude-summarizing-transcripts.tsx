@@ -2,10 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "chatgpt-vs-claude-summarizing-transcripts",
-  title:
-    "ChatGPT vs Claude for Summarizing Transcripts and Long Documents (2026)",
-  description:
-    "A hands-on comparison of ChatGPT and Claude for summarizing meeting transcripts, research papers, legal contracts, and call recordings. Real tests, real prompts, clear winner.",
+  title: "ChatGPT vs Claude for Summarizing Documents",
+  description: "Hands-on comparison of ChatGPT and Claude for summarizing transcripts, research papers, and contracts. Real tests, clear winner.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Comparisons",

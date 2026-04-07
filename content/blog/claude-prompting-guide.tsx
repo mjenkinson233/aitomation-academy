@@ -2,10 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "claude-prompting-guide",
-  title:
-    "The Claude Prompting Guide for Non-Technical Professionals (2026)",
-  description:
-    "A practical claude prompting guide with the 5 elements of great prompts, before/after examples, the claude prompt improver technique, and advanced strategies for business professionals.",
+  title: "Claude Prompting Guide for Professionals",
+  description: "The 5 elements of great Claude prompts, before/after examples, and the prompt improver technique. Built for business professionals.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Claude Guides",

@@ -2,10 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "claude-pro-vs-chatgpt-plus",
-  title:
-    "Claude Pro vs ChatGPT Plus: Which Paid AI Plan Is Actually Worth It in 2026?",
-  description:
-    "A no-fluff comparison of Claude Pro and ChatGPT Plus for non-technical professionals. Real differences in writing quality, context handling, research, and daily work — with a clear verdict.",
+  title: "Claude Pro vs ChatGPT Plus: Which Is Worth It?",
+  description: "A no-fluff comparison of Claude Pro and ChatGPT Plus. Real differences in writing, context, and daily work — with a clear verdict.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Comparisons",

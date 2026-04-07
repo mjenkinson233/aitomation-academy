@@ -2,9 +2,8 @@ import type { BlogPost } from "@/lib/blog";
 
 export const post: BlogPost = {
   slug: "is-claude-ai-free-pricing-guide",
-  title: "Is Claude AI Free? Everything You Need to Know About Claude Pricing in 2026",
-  description:
-    "A clear breakdown of Claude AI's free plan, Pro, Max, Team, and Enterprise pricing. What you get at each tier, what the limits actually mean, and whether upgrading is worth it for your work.",
+  title: "Claude Pricing in 2026: Free vs Pro vs Max",
+  description: "A clear breakdown of Claude AI pricing: free plan, Pro, Max, Team, and Enterprise. What each tier includes and whether upgrading is worth it.",
   publishedAt: "2026-04-05",
   author: "Marko Sudar",
   category: "Claude Guides",
