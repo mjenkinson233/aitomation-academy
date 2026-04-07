@@ -76,11 +76,16 @@ Published articles:
 
 ## Canonical pages
 - https://aitomationacademy.com/
+- https://aitomationacademy.com/about
 - https://aitomationacademy.com/blog
 - https://aitomationacademy.com/privacy
 - https://aitomationacademy.com/terms
 - https://aitomationacademy.com/support
 
+## About the instructor
+Marko Sudar — AI Engineer at AUVSI. Founding Engineer behind a GenAI startup acquired for $1.8M. Former Cloud Engineer at Oracle. BS in Computer Science (4.0 GPA) from Catawba College. Published researcher on Generative AI for uncrewed systems. Writes production code with Claude daily.
+About page: https://aitomationacademy.com/about
+
 ## Contact
-Support email: markosudar02@gmail.com
+Support email: contact@markosudar.com
 Company: AITOMATION LLC

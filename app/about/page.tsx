@@ -31,7 +31,6 @@ const credentials = [
 ];
 
 const highlights = [
-  "Full Stack Engineer at Vectal (Next.js, FastAPI)",
   "AWS Machine Learning for NLP certified",
   "Published researcher on Generative AI for uncrewed systems",
   "Hosted Generative AI panel at AUVSI XPONENTIAL 2025",
@@ -67,6 +66,15 @@ export default function AboutPage() {
                       className="relative rounded-2xl shadow-xl"
                       priority
                     />
+                    <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1.5 shadow-md">
+                      <Image
+                        src="/images/creatives/aitomation_logo.png"
+                        alt="AItomation Academy"
+                        width={100}
+                        height={25}
+                        className="h-8 w-auto"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -79,7 +87,7 @@ export default function AboutPage() {
                     Hey, I&apos;m Marko Sudar
                   </h1>
                   <p className="text-lg text-slate-500 leading-relaxed mb-8">
-                    Software engineer from Serbia, living in the US. I build
+                    Software engineer based in the US. I build
                     AI-powered production systems at AUVSI by day and teach
                     non-technical professionals how to use Claude for real work
                     at AItomation Academy.
@@ -186,7 +194,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-28 bg-slate-900">
+        <section data-section="about_cta" className="py-28 bg-slate-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-display tracking-tight text-white sm:text-4xl mb-4">
@@ -208,7 +216,7 @@ export default function AboutPage() {
         </section>
 
         {/* Connect */}
-        <section className="py-20">
+        <section data-section="about_connect" className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
               <h2 className="text-3xl font-display tracking-tight text-slate-900 mb-8">
@@ -248,19 +256,17 @@ export default function AboutPage() {
                   </div>
                 </a>
                 <a
-                  href="https://www.markosudar.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/skool-redirect"
                   className="flex items-center gap-4 rounded-xl border border-slate-200 p-5 hover:border-orange-300 hover:bg-orange-50/50 transition-colors"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-600 text-lg font-bold">
-                    M
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100 text-green-600 text-lg font-bold">
+                    S
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900">
-                      markosudar.com
+                      Skool Community
                     </div>
-                    <div className="text-sm text-slate-500">Personal site</div>
+                    <div className="text-sm text-slate-500">Join for free</div>
                   </div>
                 </a>
                 <a

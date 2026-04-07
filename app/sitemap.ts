@@ -7,14 +7,14 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const staticRoutes = ["", "/privacy", "/terms", "/support", "/blog"].map(
+  const staticRoutes = ["", "/about", "/privacy", "/terms", "/support", "/blog"].map(
     (route) => ({
       url: `${siteConfig.url}${route}`,
       lastModified: now,
       changeFrequency: (route === "" ? "weekly" : "monthly") as
         | "weekly"
         | "monthly",
-      priority: route === "" ? 1 : route === "/blog" ? 0.9 : 0.7,
+      priority: route === "" ? 1 : route === "/blog" ? 0.9 : route === "/about" ? 0.8 : 0.7,
     })
   );
 
