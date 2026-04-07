@@ -57,34 +57,34 @@ The Claude Content System (free PDF)
 ## Blog
 AItomation Academy publishes practical guides and workflows for using Claude AI in real work.
 
-Blog index: https://aitomationacademy.com/blog
+Blog index: https://www.aitomationacademy.com/blog
 
 Published articles:
-- Claude for Writing: A Practical Guide — https://aitomationacademy.com/blog/how-to-use-claude-for-writing
-- Claude vs ChatGPT: What's Actually Different — https://aitomationacademy.com/blog/claude-vs-chatgpt-for-real-work
-- 5 Claude Workflows You Can Copy-Paste Today — https://aitomationacademy.com/blog/5-claude-workflows-for-non-technical-professionals
-- 15 Claude Prompts for Business That Work — https://aitomationacademy.com/blog/claude-prompts-for-business
-- Claude Pricing in 2026: Free vs Pro vs Max — https://aitomationacademy.com/blog/is-claude-ai-free-pricing-guide
-- Claude Pro vs ChatGPT Plus: Which Is Worth It? — https://aitomationacademy.com/blog/claude-pro-vs-chatgpt-plus
-- Claude vs ChatGPT vs Gemini (2026) — https://aitomationacademy.com/blog/claude-vs-chatgpt-vs-gemini
-- Claude for Content Creation: 5 Workflows — https://aitomationacademy.com/blog/claude-for-content-creation
-- ChatGPT vs Claude for Summarizing Documents — https://aitomationacademy.com/blog/chatgpt-vs-claude-summarizing-transcripts
-- Claude Prompting Guide for Professionals — https://aitomationacademy.com/blog/claude-prompting-guide
-- AI for Consultants: Save 5+ Hours Per Week — https://aitomationacademy.com/blog/ai-for-consultants
-- Claude for Business: Why Teams Switch — https://aitomationacademy.com/blog/claude-for-business
-- Claude vs ChatGPT for Writing: 5 Real Tests — https://aitomationacademy.com/blog/claude-vs-chatgpt-for-writing
+- Claude for Writing: A Practical Guide — https://www.aitomationacademy.com/blog/how-to-use-claude-for-writing
+- Claude vs ChatGPT: What's Actually Different — https://www.aitomationacademy.com/blog/claude-vs-chatgpt-for-real-work
+- 5 Claude Workflows You Can Copy-Paste Today — https://www.aitomationacademy.com/blog/5-claude-workflows-for-non-technical-professionals
+- 15 Claude Prompts for Business That Work — https://www.aitomationacademy.com/blog/claude-prompts-for-business
+- Claude Pricing in 2026: Free vs Pro vs Max — https://www.aitomationacademy.com/blog/is-claude-ai-free-pricing-guide
+- Claude Pro vs ChatGPT Plus: Which Is Worth It? — https://www.aitomationacademy.com/blog/claude-pro-vs-chatgpt-plus
+- Claude vs ChatGPT vs Gemini (2026) — https://www.aitomationacademy.com/blog/claude-vs-chatgpt-vs-gemini
+- Claude for Content Creation: 5 Workflows — https://www.aitomationacademy.com/blog/claude-for-content-creation
+- ChatGPT vs Claude for Summarizing Documents — https://www.aitomationacademy.com/blog/chatgpt-vs-claude-summarizing-transcripts
+- Claude Prompting Guide for Professionals — https://www.aitomationacademy.com/blog/claude-prompting-guide
+- AI for Consultants: Save 5+ Hours Per Week — https://www.aitomationacademy.com/blog/ai-for-consultants
+- Claude for Business: Why Teams Switch — https://www.aitomationacademy.com/blog/claude-for-business
+- Claude vs ChatGPT for Writing: 5 Real Tests — https://www.aitomationacademy.com/blog/claude-vs-chatgpt-for-writing
 
 ## Canonical pages
-- https://aitomationacademy.com/
-- https://aitomationacademy.com/about
-- https://aitomationacademy.com/blog
-- https://aitomationacademy.com/privacy
-- https://aitomationacademy.com/terms
-- https://aitomationacademy.com/support
+- https://www.aitomationacademy.com/
+- https://www.aitomationacademy.com/about
+- https://www.aitomationacademy.com/blog
+- https://www.aitomationacademy.com/privacy
+- https://www.aitomationacademy.com/terms
+- https://www.aitomationacademy.com/support
 
 ## About the instructor
 Marko Sudar — AI Engineer at AUVSI. Founding Engineer behind a GenAI startup acquired for $1.8M. Former Cloud Engineer at Oracle. BS in Computer Science (4.0 GPA) from Catawba College. Published researcher on Generative AI for uncrewed systems. Writes production code with Claude daily.
-About page: https://aitomationacademy.com/about
+About page: https://www.aitomationacademy.com/about
 
 ## Contact
 Support email: contact@markosudar.com

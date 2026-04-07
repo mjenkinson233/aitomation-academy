@@ -21,9 +21,9 @@ Primary audience:
 Core positioning:
 Claude-first education for people who want practical leverage, not AI hype or coding complexity.
 
-About the instructor: https://aitomationacademy.com/about
-Blog: https://aitomationacademy.com/blog
+About the instructor: https://www.aitomationacademy.com/about
+Blog: https://www.aitomationacademy.com/blog
 Blog topics: Claude prompts for business, Claude pricing, Claude vs ChatGPT, Claude vs Gemini, Claude for writing, Claude for content creation, Claude for consultants, Claude for business, Claude prompting guide, Claude summarization workflows
 
-Canonical URL: https://aitomationacademy.com
+Canonical URL: https://www.aitomationacademy.com
 Support: mailto:contact@markosudar.com

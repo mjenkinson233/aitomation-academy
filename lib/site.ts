@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "AItomation Academy",
   shortName: "AItomation",
-  url: "https://aitomationacademy.com",
+  url: "https://www.aitomationacademy.com",
   title: "AItomation Academy — Claude for Real Work",
   description:
     "Practical Claude workflows for non-technical professionals who want to think better, create faster, and turn expertise into output.",
