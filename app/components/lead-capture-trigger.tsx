@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { X, ArrowRight, Loader2, Check } from "lucide-react";
+import { X, ArrowRight, Loader2, Mail } from "lucide-react";
 import posthog from "posthog-js";
-
-const PDF_URL =
-  "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
 
 export function LeadCaptureTrigger({
   children,
@@ -33,21 +30,11 @@ export function LeadCaptureTrigger({
       });
       if (!res.ok) throw new Error("Subscribe failed");
     } catch {
-      // Still show success and deliver PDF even if Brevo fails
+      // Still show success — email might arrive even if response failed
     }
     posthog.identify(email, { name, email });
     posthog.capture("blog_lead_capture_submitted", { name, email, source: "blog_cta", blog_slug: blogSlug });
     setStatus("success");
-    // Trigger PDF download
-    const link = document.createElement("a");
-    link.href = PDF_URL;
-    link.download = "The-Claude-Content-System.pdf";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setTimeout(() => setOpen(false), 2000);
   };
 
   return (
@@ -81,17 +68,18 @@ export function LeadCaptureTrigger({
                 Get The Claude Content System
               </h3>
               <p className="text-sm text-slate-500 mt-1">
-                The complete system to turn Claude into your content machine. Instant download.
+                The complete system to turn Claude into your content machine. Delivered to your inbox.
               </p>
             </div>
 
             {status === "success" ? (
               <div className="text-center py-8">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
-                  <Check className="h-6 w-6 text-green-600" />
+                  <Mail className="h-6 w-6 text-green-600" />
                 </div>
-                <p className="font-semibold text-slate-900">Downloading now!</p>
-                <p className="text-sm text-slate-500 mt-1">Your Claude Content System PDF is downloading.</p>
+                <p className="font-semibold text-slate-900">Check your email!</p>
+                <p className="text-sm text-slate-500 mt-1">The PDF is on its way to <strong>{email}</strong>.</p>
+                <p className="mt-2 text-xs text-slate-400">Check spam if you don&apos;t see it in a few minutes.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">
@@ -120,7 +108,7 @@ export function LeadCaptureTrigger({
                     <Loader2 className="h-4 w-4 animate-spin" />
                   ) : (
                     <>
-                      Get Free Access
+                      Get Free PDF
                       <ArrowRight className="h-4 w-4" />
                     </>
                   )}

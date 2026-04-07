@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const BREVO_API_URL = "https://api.brevo.com/v3/contacts";
+const BREVO_CONTACTS_URL = "https://api.brevo.com/v3/contacts";
+const BREVO_EMAIL_URL = "https://api.brevo.com/v3/smtp/email";
 
 const LIST_IDS: Record<string, number[]> = {
   lead_magnet: [6],   // Website Lead Magnet
   newsletter: [5],    // Website Newsletter
+};
+
+// Template IDs in Brevo
+const TEMPLATE_IDS = {
+  lead_magnet_welcome: 1,   // Welcome 1 - delivers PDF link
+  newsletter_welcome: 12,   // Newsletter welcome
 };
 
 export async function POST(request: NextRequest) {
@@ -32,12 +39,20 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const listIds = LIST_IDS[source === "newsletter" ? "newsletter" : "lead_magnet"];
+  const isNewsletter = source === "newsletter";
+  const listIds = LIST_IDS[isNewsletter ? "newsletter" : "lead_magnet"];
 
   const firstName = name?.split(" ")[0] || "";
   const lastName = name?.split(" ").slice(1).join(" ") || "";
 
-  const brevoPayload = {
+  const headers = {
+    "api-key": apiKey,
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  };
+
+  // 1. Create/update contact in Brevo
+  const contactPayload = {
     email,
     attributes: {
       FIRSTNAME: firstName,
@@ -51,23 +66,42 @@ export async function POST(request: NextRequest) {
   };
 
   try {
-    const response = await fetch(BREVO_API_URL, {
+    const contactRes = await fetch(BREVO_CONTACTS_URL, {
       method: "POST",
-      headers: {
-        "api-key": apiKey,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(brevoPayload),
+      headers,
+      body: JSON.stringify(contactPayload),
     });
 
-    if (!response.ok) {
-      const error = await response.text();
-      console.error("Brevo API error:", response.status, error);
+    if (!contactRes.ok) {
+      const error = await contactRes.text();
+      console.error("Brevo contact API error:", contactRes.status, error);
       return NextResponse.json(
         { error: "Failed to subscribe" },
         { status: 502 }
       );
+    }
+
+    // 2. Send welcome email
+    const templateId = isNewsletter
+      ? TEMPLATE_IDS.newsletter_welcome
+      : TEMPLATE_IDS.lead_magnet_welcome;
+
+    const emailPayload = {
+      templateId,
+      to: [{ email, name: firstName || undefined }],
+    };
+
+    const emailRes = await fetch(BREVO_EMAIL_URL, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(emailPayload),
+    });
+
+    if (!emailRes.ok) {
+      const error = await emailRes.text();
+      console.error("Brevo email API error:", emailRes.status, error);
+      // Contact was created successfully, so still return success
+      // The welcome email can be retried via Brevo automation
     }
 
     return NextResponse.json({ success: true });

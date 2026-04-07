@@ -1,11 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, ArrowRight, Loader2, Check } from "lucide-react";
+import { X, ArrowRight, Loader2, Mail } from "lucide-react";
 import posthog from "posthog-js";
-
-const PDF_URL =
-  "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
 
 export function EntryPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,21 +39,12 @@ export function EntryPopup() {
       });
       if (!res.ok) throw new Error("Subscribe failed");
     } catch {
-      // Still show success and deliver PDF even if Brevo fails
+      // Still show success — email might arrive even if response failed
     }
     posthog.identify(email, { name, email });
     posthog.capture("popup_form_submitted", { name, email, source: "entry_popup" });
     setStatus("success");
     localStorage.setItem("popup_dismissed", "1");
-    // Trigger PDF download
-    const link = document.createElement("a");
-    link.href = PDF_URL;
-    link.download = "The-Claude-Content-System.pdf";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   if (!isVisible) return null;
@@ -86,10 +74,11 @@ export function EntryPopup() {
           {status === "success" ? (
             <div className="text-center py-4">
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
-                <Check className="h-7 w-7 text-green-600" />
+                <Mail className="h-7 w-7 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Downloading now!</h3>
-              <p className="text-slate-500">Your Claude Content System PDF is downloading.</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Check your email!</h3>
+              <p className="text-slate-500">The Claude Content System PDF is on its way to <strong>{email}</strong>.</p>
+              <p className="mt-2 text-sm text-slate-400">Check your spam folder if you don&apos;t see it in a few minutes.</p>
             </div>
           ) : (
             <>
@@ -99,7 +88,7 @@ export function EntryPopup() {
                   Get The Claude Content System
                 </h2>
                 <p className="text-sm text-slate-500">
-                  The complete system to turn Claude into your content machine. Instant download.
+                  The complete system to turn Claude into your content machine. Delivered to your inbox.
                 </p>
               </div>
 
@@ -133,7 +122,7 @@ export function EntryPopup() {
                     </>
                   ) : (
                     <>
-                      Get Free Access
+                      Get Free PDF
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </>
                   )}

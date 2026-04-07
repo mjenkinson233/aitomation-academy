@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Check, Download, Loader2 } from "lucide-react";
+import { ArrowRight, Check, Loader2, Mail } from "lucide-react";
 import posthog from "posthog-js";
-
-const PDF_URL =
-  "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
 
 export function LeadMagnetForm() {
   const [email, setEmail] = useState("");
@@ -29,15 +26,6 @@ export function LeadMagnetForm() {
       posthog.identify(email, { name, email });
       posthog.capture("lead_form_submitted", { name, email, source: "lead_magnet_section" });
       setStatus("success");
-      // Trigger PDF download
-      const link = document.createElement("a");
-      link.href = PDF_URL;
-      link.download = "The-Claude-Content-System.pdf";
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
     } catch {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
@@ -48,30 +36,20 @@ export function LeadMagnetForm() {
     return (
       <div className="rounded-2xl bg-green-50 border border-green-200 p-8 text-center">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-          <Check className="h-8 w-8 text-green-600" />
+          <Mail className="h-8 w-8 text-green-600" />
         </div>
         <h3 className="mb-2 text-xl font-semibold text-green-900">
-          Your download has started!
+          Check your email!
         </h3>
         <p className="text-green-700">
-          The Claude Content System is downloading now.
+          The Claude Content System PDF is on its way to <strong>{email}</strong>.
         </p>
         <p className="mt-2 text-sm text-green-600">
-          Didn&apos;t start?{" "}
-          <a
-            href={PDF_URL}
-            download="The-Claude-Content-System.pdf"
-            className="underline font-medium"
-          >
-            Click here to download
-          </a>
-        </p>
-        <p className="mt-4 text-sm text-green-600">
-          Join the free Skool community to get help using it
+          Check your spam folder if you don&apos;t see it in a few minutes.
         </p>
         <a
           href="/skool-redirect"
-          className="mt-4 inline-flex items-center justify-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white cursor-pointer hover:bg-green-700 transition-colors"
+          className="mt-6 inline-flex items-center justify-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white cursor-pointer hover:bg-green-700 transition-colors"
         >
           Join Free Community
           <ArrowRight className="ml-2 h-4 w-4" />
@@ -138,7 +116,7 @@ export function LeadMagnetForm() {
           </>
         ) : (
           <>
-            Download Free PDF
+            Get Free PDF
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </>
         )}
