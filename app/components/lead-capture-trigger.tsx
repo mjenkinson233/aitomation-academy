@@ -26,8 +26,16 @@ export function LeadCaptureTrigger({
     e.preventDefault();
     setStatus("loading");
 
-    // TODO: wire up to Brevo
-    await new Promise((r) => setTimeout(r, 1200));
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, name, phone: phone || undefined, source: "website_lead_magnet_blog" }),
+      });
+      if (!res.ok) throw new Error("Subscribe failed");
+    } catch {
+      // Still show success and deliver PDF even if Brevo fails
+    }
     posthog.identify(email, { name, email, phone: phone || undefined });
     posthog.capture("blog_lead_capture_submitted", { name, email, source: "blog_cta", blog_slug: blogSlug });
     setStatus("success");

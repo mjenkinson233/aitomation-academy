@@ -19,9 +19,13 @@ export function LeadMagnetForm() {
     e.preventDefault();
     setStatus("loading");
 
-    // TODO: Integrate with Brevo API
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, name, source: "website_lead_magnet" }),
+      });
+      if (!res.ok) throw new Error("Subscribe failed");
       posthog.identify(email, { name, email });
       posthog.capture("lead_form_submitted", { name, email, source: "lead_magnet_section" });
       setStatus("success");

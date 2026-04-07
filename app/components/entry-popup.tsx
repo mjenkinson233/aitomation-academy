@@ -35,8 +35,16 @@ export function EntryPopup() {
     e.preventDefault();
     setStatus("loading");
 
-    // TODO: wire up to Brevo
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, name, phone: phone || undefined, source: "website_lead_magnet_popup" }),
+      });
+      if (!res.ok) throw new Error("Subscribe failed");
+    } catch {
+      // Still show success and deliver PDF even if Brevo fails
+    }
     posthog.identify(email, { name, email, phone: phone || undefined });
     posthog.capture("popup_form_submitted", { name, email, source: "entry_popup" });
     setStatus("success");

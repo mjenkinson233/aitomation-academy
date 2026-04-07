@@ -1,15 +1,29 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import posthog from "posthog-js";
 
 export function NewsletterForm({ blogSlug }: { blogSlug?: string } = {}) {
   const emailRef = useRef<HTMLInputElement>(null);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const email = emailRef.current?.value || "";
-    posthog.capture("newsletter_subscribe_clicked", { email, source: "blog_newsletter", blog_slug: blogSlug });
+    if (!email) return;
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, source: "newsletter" }),
+      });
+      if (!res.ok) throw new Error("Subscribe failed");
+      posthog.capture("newsletter_subscribe_clicked", { email, source: "blog_newsletter", blog_slug: blogSlug });
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -33,14 +47,20 @@ export function NewsletterForm({ blogSlug }: { blogSlug?: string } = {}) {
         />
         <button
           type="submit"
-          className="rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors shrink-0 cursor-pointer"
+          disabled={status === "loading" || status === "success"}
+          className="rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors shrink-0 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Subscribe
+          {status === "loading" ? "Subscribing..." : status === "success" ? "Subscribed!" : "Subscribe"}
         </button>
       </form>
-      <p className="text-xs text-slate-400 mt-3">
-        Join 400+ professionals already subscribed.
-      </p>
+      {status === "error" && (
+        <p className="text-xs text-red-500 mt-3">Something went wrong. Please try again.</p>
+      )}
+      {status !== "error" && (
+        <p className="text-xs text-slate-400 mt-3">
+          {status === "success" ? "You're in! Check your inbox." : "Join 400+ professionals already subscribed."}
+        </p>
+      )}
     </div>
   );
 }
