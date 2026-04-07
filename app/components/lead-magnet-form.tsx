@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { ArrowRight, Check, Download, Loader2 } from "lucide-react";
 import posthog from "posthog-js";
-import { siteConfig } from "@/lib/site";
 
 const PDF_URL =
   "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
@@ -71,9 +70,7 @@ export function LeadMagnetForm() {
           Join the free Skool community to get help using it
         </p>
         <a
-          href={siteConfig.social.skool}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/skool-redirect"
           className="mt-4 inline-flex items-center justify-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white cursor-pointer hover:bg-green-700 transition-colors"
         >
           Join Free Community
