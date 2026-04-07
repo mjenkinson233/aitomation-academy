@@ -420,7 +420,7 @@ export const post: BlogPost = {
         background, your audience, your writing style, your industry &mdash;
         you type it all out again every time you start a new chat. Claude&apos;s{" "}
         <a
-          href="https://support.claude.ai/hc/en-us/articles/35585014824339-Use-Projects-to-give-Claude-more-context"
+          href="https://support.anthropic.com/en/articles/9517075-what-are-projects"
           className="text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
         >
           Projects feature
@@ -503,7 +503,7 @@ export const post: BlogPost = {
         Even with great prompts, Claude&apos;s default voice might not match
         yours. The{" "}
         <a
-          href="https://support.claude.ai/hc/en-us/articles/33783012122899-Create-and-manage-custom-styles"
+          href="https://support.anthropic.com/en/articles/9926628-how-do-i-create-a-custom-style"
           className="text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
         >
           Custom Styles feature
