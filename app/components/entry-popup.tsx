@@ -11,7 +11,6 @@ export function EntryPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   useEffect(() => {
@@ -39,13 +38,13 @@ export function EntryPopup() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, name, phone: phone || undefined, source: "website_lead_magnet_popup" }),
+        body: JSON.stringify({ email, name, source: "website_lead_magnet_popup" }),
       });
       if (!res.ok) throw new Error("Subscribe failed");
     } catch {
       // Still show success and deliver PDF even if Brevo fails
     }
-    posthog.identify(email, { name, email, phone: phone || undefined });
+    posthog.identify(email, { name, email });
     posthog.capture("popup_form_submitted", { name, email, source: "entry_popup" });
     setStatus("success");
     localStorage.setItem("popup_dismissed", "1");
@@ -119,13 +118,6 @@ export function EntryPopup() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
                 />
 

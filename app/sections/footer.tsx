@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { siteConfig } from "@/lib/site";
 
 const footerLinks = {
   product: [
     { label: "Free Content System PDF", href: "#join" },
     { label: "Blog", href: "/blog" },
-    { label: "Community", href: "https://www.skool.com/aitomation-academy" },
-    { label: "YouTube", href: "#" },
+    { label: "Community", href: "/skool-redirect" },
+    { label: "YouTube", href: siteConfig.social.youtube },
   ],
   company: [
     { label: "About", href: "#" },
@@ -23,7 +24,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200">
+    <footer data-section="footer" className="border-t border-slate-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}

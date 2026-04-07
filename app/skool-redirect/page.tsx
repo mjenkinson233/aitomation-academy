@@ -2,11 +2,12 @@
 
 import { useEffect } from "react";
 import posthog from "posthog-js";
+import { siteConfig } from "@/lib/site";
 
 export default function SkoolRedirect() {
   useEffect(() => {
     posthog.capture("skool_redirect_viewed");
-    window.location.href = "https://www.skool.com/claude-academy-5969";
+    window.location.href = siteConfig.social.skool;
   }, []);
 
   return (

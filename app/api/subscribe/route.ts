@@ -16,14 +16,14 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  let body: { email: string; name?: string; phone?: string; source: string };
+  let body: { email: string; name?: string; source: string };
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 
-  const { email, name, phone, source } = body;
+  const { email, name, source } = body;
 
   if (!email || !source) {
     return NextResponse.json(
@@ -42,7 +42,6 @@ export async function POST(request: NextRequest) {
     attributes: {
       FIRSTNAME: firstName,
       LASTNAME: lastName,
-      ...(phone && { SMS: phone }),
       SOURCE: source,
       FUNNEL_STAGE: "lead",
       CUSTOMER_TYPE: "free",

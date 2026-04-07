@@ -10,8 +10,8 @@ export const siteConfig = {
   supportEmail: "markosudar02@gmail.com",
   companyName: "AITOMATION LLC",
   social: {
-    youtube: "https://youtube.com/@aitomationacademy",
-    skool: "https://www.skool.com/aitomation-academy",
+    youtube: "https://www.youtube.com/@MarcoSudar",
+    skool: "https://www.skool.com/claude-academy-5969",
   },
   keywords: [
     "Claude for real work",

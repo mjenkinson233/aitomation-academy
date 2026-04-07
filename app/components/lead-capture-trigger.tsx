@@ -19,7 +19,6 @@ export function LeadCaptureTrigger({
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -30,13 +29,13 @@ export function LeadCaptureTrigger({
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, name, phone: phone || undefined, source: "website_lead_magnet_blog" }),
+        body: JSON.stringify({ email, name, source: "website_lead_magnet_blog" }),
       });
       if (!res.ok) throw new Error("Subscribe failed");
     } catch {
       // Still show success and deliver PDF even if Brevo fails
     }
-    posthog.identify(email, { name, email, phone: phone || undefined });
+    posthog.identify(email, { name, email });
     posthog.capture("blog_lead_capture_submitted", { name, email, source: "blog_cta", blog_slug: blogSlug });
     setStatus("success");
     // Trigger PDF download
@@ -110,13 +109,6 @@ export function LeadCaptureTrigger({
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
                 <button

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 const steps = [
   {
@@ -116,7 +117,7 @@ export function HowItWorks() {
             <div className="flex lg:hidden gap-8 sm:gap-12">
               <div className="shrink-0 w-12 sm:w-16" />
               <a
-                href="https://www.skool.com/aitomation-academy"
+                href={siteConfig.social.skool}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors whitespace-nowrap"
@@ -129,7 +130,7 @@ export function HowItWorks() {
             <div className="hidden lg:block">
               <div className="absolute left-6 sm:left-8 top-0 -translate-x-1/2">
                 <a
-                  href="https://www.skool.com/aitomation-academy"
+                  href={siteConfig.social.skool}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors whitespace-nowrap"

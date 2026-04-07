@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { LeadCaptureTrigger } from "@/app/components/lead-capture-trigger";
 
 export function FinalCTA() {
   return (
@@ -18,13 +18,10 @@ export function FinalCTA() {
             Claude workflows. No coding. No hype. Just real work output.
           </p>
 
-          <Link
-            href="/skool-redirect"
-            className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors"
-          >
+          <LeadCaptureTrigger className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors">
             Get The Free Claude Content System
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Link>
+          </LeadCaptureTrigger>
 
           <p className="mt-6 text-sm text-slate-500">
             No credit card required. Instant access.
