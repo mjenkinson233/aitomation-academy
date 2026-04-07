@@ -111,10 +111,18 @@ Good vs bad examples:
 - No emojis — ever, anywhere
 - Keyword in: title, first paragraph, 1-2 h2 headings, meta description
 
+### External Links
+
+- **Verify every external URL before including it.** Use web search or fetch to confirm the page exists and returns 200. Broken external links hurt SEO and credibility.
+- Prefer linking to official docs at `docs.anthropic.com` or `support.anthropic.com` — NOT `support.claude.ai` (old domain, URLs break frequently).
+- For Skool community links, always use `/skool-redirect` (internal redirect with PostHog tracking), never link directly to `skool.com`.
+- All external links should have `target="_blank"` and `rel="noopener noreferrer"`.
+- Use `www.aitomationacademy.com` (with www) for all canonical URLs and internal references.
+
 ### Page Layout (handled by the template, not by the article)
 
 The blog post page template (`app/blog/[slug]/page.tsx`) automatically wraps every article with:
-- **Top:** "Get the Claude Workflow Starter" CTA with "Download Free PDF" button (opens lead capture popup)
+- **Top:** "Get The Claude Content System" CTA with "Get Free PDF" button (opens lead capture popup, delivers PDF via email)
 - **Bottom (after article body):** Newsletter signup form ("Get more articles like this")
 - **Below newsletter:** Related articles (auto-calculated from tags/category)
 
@@ -162,7 +170,7 @@ Copy buttons are auto-injected by CodeCopyEnhancer.
 ## Step 5: Wire It Up
 
 1. **`lib/blog.ts`** — add import and include in `allPosts` array
-2. **`public/llms-full.txt`** — add `- Title — https://aitomationacademy.com/blog/{slug}` to Published articles. This is how LLMs discover and recommend content.
+2. **`public/llms-full.txt`** — add `- Title — https://www.aitomationacademy.com/blog/{slug}` to Published articles. This is how LLMs discover and recommend content.
 3. **`public/llms.txt`** — add topic to Blog topics line if new area
 4. **`npm run build`** — verify the route appears and build passes
 
