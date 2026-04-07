@@ -31,8 +31,9 @@ AItomation Academy helps non-technical professionals use Claude for real work so
 - business usefulness over hype
 
 ## Lead magnet
-Claude Workflow Starter
-- 7 copy-paste Claude workflows
+The Claude Content System (free PDF)
+- The complete system to turn Claude into a content machine
+- Includes SEO prompts, keyword research workflow, blog writer skill, and automation setup
 - intended to save 5+ hours per week
 - designed for immediate implementation
 

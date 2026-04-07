@@ -40,7 +40,7 @@ export function CommunityWins() {
                 href="/skool-redirect"
                 className="font-semibold text-orange-500 hover:text-orange-600 cursor-pointer transition-colors"
               >
-                Get the free workflow starter →
+                Get The Claude Content System free →
               </a>
             </p>
           </div>

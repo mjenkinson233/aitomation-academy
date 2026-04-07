@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const footerLinks = {
   product: [
-    { label: "Free Workflow Starter", href: "/skool-redirect" },
+    { label: "Free Content System PDF", href: "#join" },
     { label: "Blog", href: "/blog" },
     { label: "Community", href: "https://www.skool.com/aitomation-academy" },
     { label: "YouTube", href: "#" },

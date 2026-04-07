@@ -98,10 +98,10 @@ export default async function BlogPostPage({
             <div className="mb-10 rounded-2xl bg-slate-900 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
                 <h2 className="text-lg font-display text-white mb-1 normal-case">
-                  Get the Claude Workflow Starter
+                  Get The Claude Content System
                 </h2>
                 <p className="text-sm text-slate-400">
-                  7 copy-paste workflows for writing, research, content, and more. Free.
+                  The complete system to turn Claude into your content machine. Free PDF.
                 </p>
               </div>
               <LeadCaptureTrigger className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors shrink-0 cursor-pointer">

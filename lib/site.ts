@@ -23,6 +23,7 @@ export const siteConfig = {
     "Claude AI for consultants",
     "Claude AI for marketers",
     "AItomation Academy",
-    "Claude workflow starter",
+    "Claude content system",
+    "Claude AI for content creation system",
   ],
 };

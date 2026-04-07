@@ -103,7 +103,7 @@ export function homePageSchema() {
             name: "Is this really free?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. The Claude Workflow Starter is free and includes practical workflows plus an invitation to the free community.",
+              text: "Yes. The Claude Content System is a free PDF download that includes the exact prompts, skills, and automation setup to turn Claude into your content machine — plus an invitation to the free community.",
             },
           },
         ],

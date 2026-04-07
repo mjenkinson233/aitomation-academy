@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           <h2>Information We Collect</h2>
           <p>We may collect your name, email address, analytics data, and any information you submit through forms.</p>
           <h2>How We Use Information</h2>
-          <p>We use your information to deliver the Claude Workflow Starter, send educational emails, improve the site, and provide support.</p>
+          <p>We use your information to deliver The Claude Content System, send educational emails, improve the site, and provide support.</p>
           <h2>Analytics</h2>
           <p>We use analytics tools, including PostHog, to understand page views, scroll depth, CTA clicks, and form interactions.</p>
           <h2>Email Communications</h2>

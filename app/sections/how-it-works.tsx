@@ -6,10 +6,10 @@ import { ArrowRight } from "lucide-react";
 const steps = [
   {
     number: "01",
-    title: "Download the Workflows",
-    titleHref: "/skool-redirect",
+    title: "Download The Claude Content System",
+    titleHref: "#join",
     description:
-      "Get 7 copy-paste Claude workflows instantly. Each one is designed for a specific job: research, writing, content creation, and decision-making.",
+      "Get the free PDF with the exact prompts, skills, and automation setup to turn Claude into your content machine.",
   },
   {
     number: "02",

@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { X, ArrowRight, Loader2, Check } from "lucide-react";
 
+const PDF_URL =
+  "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
+
 export function LeadCaptureTrigger({
   children,
   className,
@@ -23,6 +26,15 @@ export function LeadCaptureTrigger({
     // TODO: wire up to Brevo
     await new Promise((r) => setTimeout(r, 1200));
     setStatus("success");
+    // Trigger PDF download
+    const link = document.createElement("a");
+    link.href = PDF_URL;
+    link.download = "The-Claude-Content-System.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     setTimeout(() => setOpen(false), 2000);
   };
 
@@ -51,13 +63,13 @@ export function LeadCaptureTrigger({
 
             <div className="text-center mb-6">
               <span className="inline-block text-xs font-semibold uppercase tracking-wider text-orange-600 mb-2">
-                Free Download
+                Free PDF
               </span>
               <h3 className="text-xl font-bold text-slate-900 normal-case">
-                Get the Claude Workflow Starter
+                Get The Claude Content System
               </h3>
               <p className="text-sm text-slate-500 mt-1">
-                7 copy-paste workflows. No coding. Instant access.
+                The complete system to turn Claude into your content machine. Instant download.
               </p>
             </div>
 
@@ -66,8 +78,8 @@ export function LeadCaptureTrigger({
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                   <Check className="h-6 w-6 text-green-600" />
                 </div>
-                <p className="font-semibold text-slate-900">Check your inbox!</p>
-                <p className="text-sm text-slate-500 mt-1">Your workflows are on the way.</p>
+                <p className="font-semibold text-slate-900">Downloading now!</p>
+                <p className="text-sm text-slate-500 mt-1">Your Claude Content System PDF is downloading.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">

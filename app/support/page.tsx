@@ -17,7 +17,7 @@ export default function SupportPage() {
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-slate-900">Need help?</h2>
             <p>
-              For questions about the Claude Workflow Starter, community access, billing, or technical issues,
+              For questions about The Claude Content System, community access, billing, or technical issues,
               email us at <a className="text-orange-600 hover:text-orange-700" href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>.
             </p>
           </section>

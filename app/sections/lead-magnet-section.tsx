@@ -4,10 +4,10 @@ import { LeadMagnetForm } from "../components/lead-magnet-form";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "7 copy-paste Claude workflows",
-  "Save 5+ hours per week",
-  "No coding required",
-  "Instant download",
+  "The exact prompts to build an SEO content machine",
+  "Keyword research workflow using real data",
+  "A blog writer skill that creates articles on autopilot",
+  "Instant PDF download — no email wait",
 ];
 
 export function LeadMagnetSection() {
@@ -27,14 +27,14 @@ export function LeadMagnetSection() {
               </div>
 
               <h2 className="mb-6 text-3xl font-display tracking-tight sm:text-4xl lg:text-5xl leading-[1.1]">
-                Get the{" "}
-                <span className="text-orange-400">Claude Workflow Starter</span>
+                Get{" "}
+                <span className="text-orange-400">The Claude Content System</span>
               </h2>
 
               <p className="mb-10 text-lg text-slate-400 leading-relaxed max-w-lg">
-                The same workflows I use to research faster, write clearer, and
-                turn messy ideas into polished output. Copy-paste ready. No setup
-                required.
+                The complete system I use to turn Claude into a content machine
+                — from SEO research to automated publishing. Prompts, skills,
+                and setup included.
               </p>
 
               <ul className="space-y-4">
@@ -52,11 +52,11 @@ export function LeadMagnetSection() {
             {/* Right side — Form */}
             <div className="rounded-2xl bg-white p-8 sm:p-10 shadow-2xl">
               <h3 className="mb-2 text-xl font-semibold text-slate-900">
-                Get instant access
+                Download the free PDF
               </h3>
               <p className="mb-6 text-slate-500">
-                Enter your details below and I&apos;ll send the workflows to
-                your inbox.
+                Enter your details below and download The Claude Content System
+                instantly.
               </p>
               <LeadMagnetForm />
             </div>

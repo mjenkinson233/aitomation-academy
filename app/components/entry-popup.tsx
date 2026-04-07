@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import { X, ArrowRight, Loader2, Check } from "lucide-react";
 
+const PDF_URL =
+  "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
+
 export function EntryPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [name, setName] = useState("");
@@ -31,6 +34,15 @@ export function EntryPopup() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     setStatus("success");
     localStorage.setItem("popup_dismissed", "1");
+    // Trigger PDF download
+    const link = document.createElement("a");
+    link.href = PDF_URL;
+    link.download = "The-Claude-Content-System.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   if (!isVisible) return null;
@@ -62,18 +74,18 @@ export function EntryPopup() {
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
                 <Check className="h-7 w-7 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">You&apos;re in!</h3>
-              <p className="text-slate-500">Check your inbox — your free workflows are on the way.</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Downloading now!</h3>
+              <p className="text-slate-500">Your Claude Content System PDF is downloading.</p>
             </div>
           ) : (
             <>
               <div className="mb-6">
-                <p className="text-xs font-semibold text-orange-500 uppercase tracking-widest mb-2">Free Download</p>
+                <p className="text-xs font-semibold text-orange-500 uppercase tracking-widest mb-2">Free PDF</p>
                 <h2 className="text-2xl font-bold text-slate-900 mb-2">
-                  Get the Claude Workflow Starter
+                  Get The Claude Content System
                 </h2>
                 <p className="text-sm text-slate-500">
-                  7 copy-paste workflows. No coding. Instant access.
+                  The complete system to turn Claude into your content machine. Instant download.
                 </p>
               </div>
 

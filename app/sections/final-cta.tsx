@@ -22,7 +22,7 @@ export function FinalCTA() {
             href="/skool-redirect"
             className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors"
           >
-            Get the Free Workflow Starter
+            Get The Free Claude Content System
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
 

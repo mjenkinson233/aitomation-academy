@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Check, Loader2 } from "lucide-react";
+import { ArrowRight, Check, Download, Loader2 } from "lucide-react";
+
+const PDF_URL =
+  "https://2hcvoadnhrt1cvd2.public.blob.vercel-storage.com/the-claude-content-system.pdf";
 
 export function LeadMagnetForm() {
   const [email, setEmail] = useState("");
@@ -19,6 +22,15 @@ export function LeadMagnetForm() {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setStatus("success");
+      // Trigger PDF download
+      const link = document.createElement("a");
+      link.href = PDF_URL;
+      link.download = "The-Claude-Content-System.pdf";
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } catch {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
@@ -32,13 +44,23 @@ export function LeadMagnetForm() {
           <Check className="h-8 w-8 text-green-600" />
         </div>
         <h3 className="mb-2 text-xl font-semibold text-green-900">
-          Check your inbox!
+          Your download has started!
         </h3>
         <p className="text-green-700">
-          Your Claude Workflow Starter is on its way to {email}
+          The Claude Content System is downloading now.
+        </p>
+        <p className="mt-2 text-sm text-green-600">
+          Didn&apos;t start?{" "}
+          <a
+            href={PDF_URL}
+            download="The-Claude-Content-System.pdf"
+            className="underline font-medium"
+          >
+            Click here to download
+          </a>
         </p>
         <p className="mt-4 text-sm text-green-600">
-          Join the free Skool community while you wait
+          Join the free Skool community to get help using it
         </p>
         <a
           href="https://www.skool.com/aitomation-academy"
@@ -111,7 +133,7 @@ export function LeadMagnetForm() {
           </>
         ) : (
           <>
-            Get My Free Workflow Starter
+            Download Free PDF
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </>
         )}
