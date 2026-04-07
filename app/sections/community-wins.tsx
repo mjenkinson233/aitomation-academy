@@ -37,7 +37,7 @@ export function CommunityWins() {
             <p className="mt-10 text-slate-600">
               Want wins like these?{" "}
               <a
-                href="/skool-redirect"
+                href="#join"
                 className="font-semibold text-orange-500 hover:text-orange-600 cursor-pointer transition-colors"
               >
                 Get The Claude Content System free →

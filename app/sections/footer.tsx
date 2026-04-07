@@ -13,7 +13,7 @@ const footerLinks = {
   ],
   company: [
     { label: "About", href: "#" },
-    { label: "Contact", href: "mailto:markosudar02@gmail.com" },
+    { label: "Contact", href: "mailto:contact@markosudar.com" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

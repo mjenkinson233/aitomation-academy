@@ -68,7 +68,7 @@ export function WhatYouGet() {
   }, []);
 
   return (
-    <section id="features" className="relative py-28 overflow-x-hidden">
+    <section id="features" data-section="what_you_get" className="relative py-28 overflow-x-hidden">
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header — left-aligned for editorial feel */}
@@ -190,7 +190,7 @@ export function WhatYouGet() {
         {/* Bottom CTA */}
         <div className="mt-16 flex items-center justify-center">
           <a
-            href="/blog"
+            href="/skool-redirect"
             className="inline-flex items-center gap-3 rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white hover:bg-orange-600 transition-colors"
           >
             <span className="relative flex h-2.5 w-2.5">
