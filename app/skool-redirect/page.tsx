@@ -7,7 +7,10 @@ import { siteConfig } from "@/lib/site";
 export default function SkoolRedirect() {
   useEffect(() => {
     posthog.capture("skool_redirect_viewed");
-    window.location.href = siteConfig.social.skool;
+    // Brief delay to let Google Ads and PostHog tags fire before redirecting
+    setTimeout(() => {
+      window.location.href = siteConfig.social.skool;
+    }, 500);
   }, []);
 
   return (
