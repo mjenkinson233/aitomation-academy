@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 import { blogIndexSchema } from "@/lib/schema";
 import { Navbar } from "@/app/components/navbar";
 import { Footer } from "@/app/sections/footer";
+import { BlogPostsGrid } from "@/app/components/blog-posts-grid";
 
 export const metadata: Metadata = {
   title: "Blog — AItomation Academy",
@@ -59,36 +60,7 @@ export default function BlogPage() {
               </p>
             </div>
 
-            {/* Posts grid */}
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group block rounded-2xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:border-orange-200 hover:shadow-sm"
-                >
-                  <span className="inline-block text-xs font-medium tracking-wide text-orange-600 uppercase mb-3">
-                    {post.category}
-                  </span>
-                  <h2 className="text-lg font-semibold text-slate-900 group-hover:text-orange-600 transition-colors mb-2 normal-case">
-                    {post.title}
-                  </h2>
-                  <p className="text-sm text-slate-500 leading-relaxed mb-4">
-                    {post.description}
-                  </p>
-                  <time
-                    dateTime={post.publishedAt}
-                    className="text-xs text-slate-400"
-                  >
-                    {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
-                </Link>
-              ))}
-            </div>
+            <BlogPostsGrid posts={posts.map(p => ({ slug: p.slug, title: p.title, description: p.description, category: p.category, publishedAt: p.publishedAt }))} />
           </div>
         </section>
 
