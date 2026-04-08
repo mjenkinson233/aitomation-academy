@@ -7,7 +7,16 @@ import { siteConfig } from "@/lib/site";
 export default function SkoolRedirect() {
   useEffect(() => {
     posthog.capture("skool_redirect_viewed");
-    // Brief delay to let Google Ads and PostHog tags fire before redirecting
+
+    // Fire Google Ads conversion event
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+    if (typeof w.gtag === "function") {
+      w.gtag("event", "conversion", {
+        send_to: "AW-18023480264/BYHDCLXt9pccEMj3oZJD",
+      });
+    }
+
+    // Delay redirect to let tags fire
     setTimeout(() => {
       window.location.href = siteConfig.social.skool;
     }, 500);
