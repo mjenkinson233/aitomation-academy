@@ -26,4 +26,4 @@ Blog: https://www.aitomationacademy.com/blog
 Blog topics: Claude prompts for business, Claude pricing, Claude vs ChatGPT, Claude vs Gemini, Claude for writing, Claude for content creation, Claude for consultants, Claude for business, Claude prompting guide, Claude summarization workflows
 
 Canonical URL: https://www.aitomationacademy.com
-Support: mailto:contact@markosudar.com
+Support: mailto:contact@aitomationacademy.com

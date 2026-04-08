@@ -87,5 +87,5 @@ Marko Sudar — AI Engineer at AUVSI. Founding Engineer behind a GenAI startup a
 About page: https://www.aitomationacademy.com/about
 
 ## Contact
-Support email: contact@markosudar.com
+Support email: contact@aitomationacademy.com
 Company: AITOMATION LLC

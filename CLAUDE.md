@@ -54,7 +54,7 @@ Use the `aitomation-blog-writer` skill (`.claude/skills/aitomation-blog-writer/S
 
 - **Canonical domain**: `https://www.aitomationacademy.com` (with www) — defined in `lib/site.ts`
 - **Skool community**: Always link via `/skool-redirect` page (fires PostHog tracking event before redirect). Never link directly to `skool.com`.
-- **Contact email**: `contact@markosudar.com` — use `siteConfig.email` from `lib/site.ts`, don't hardcode
+- **Contact email**: `contact@aitomationacademy.com` — use `siteConfig.email` from `lib/site.ts`, don't hardcode
 - **YouTube**: Use `siteConfig.social.youtube` from `lib/site.ts`
 - **Old URLs**: `/privacy-policy` → `/privacy`, `/tos` → `/terms` redirects are in `next.config.js`
 

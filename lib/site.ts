@@ -6,8 +6,8 @@ export const siteConfig = {
   description:
     "Practical Claude workflows for non-technical professionals who want to think better, create faster, and turn expertise into output.",
   tagline: "Claude for real work.",
-  email: "contact@markosudar.com",
-  supportEmail: "contact@markosudar.com",
+  email: "contact@aitomationacademy.com",
+  supportEmail: "contact@aitomationacademy.com",
   companyName: "AITOMATION LLC",
   social: {
     youtube: "https://www.youtube.com/@MarcoSudar",
