@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
+    "@vercel/analytics": "^2.0.1",
     "lucide-react": "^0.460.0",
     "next": "^16.0.0",
     "posthog-js": "^1.247.0",

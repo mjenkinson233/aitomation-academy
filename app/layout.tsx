@@ -8,6 +8,7 @@ import { StructuredData } from "@/components/structured-data";
 import { PostHogProvider } from "@/components/posthog-provider";
 import { AnalyticsEvents } from "@/components/analytics-events";
 import { EntryPopup } from "@/app/components/entry-popup";
+import { Analytics } from "@vercel/analytics/next";
 
 const barlow = Barlow({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-barlow" });
 
@@ -78,6 +79,7 @@ export default function RootLayout({
         <StructuredData data={organizationSchema()} />
         <PostHogProvider />
         <AnalyticsEvents />
+        <Analytics />
         {children}
       </body>
     </html>
