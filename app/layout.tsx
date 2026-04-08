@@ -67,6 +67,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-CWZ738MZYH');
+            gtag('config', 'AW-18023480264');
           `}
         </Script>
         <EntryPopup />
