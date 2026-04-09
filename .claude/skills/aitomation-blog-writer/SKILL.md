@@ -104,6 +104,7 @@ Good vs bad examples:
 ### Content Rules
 
 - Answer search intent in the first 2 paragraphs
+- **Quotable answers under every H2:** The first 1-2 sentences under each `<h2>` must be a complete, self-contained answer to what that section promises. AI models extract individual paragraphs to cite — if your opening sentence needs context from elsewhere in the article to make sense, rewrite it. Think of it as: if an AI quoted only that sentence as the answer to a user's question, would it hold up on its own?
 - 3-6 h2 sections (auto-populate TOC sidebar)
 - 2000+ words
 - Real examples, real prompt templates, real use cases
@@ -121,7 +122,42 @@ Good vs bad examples:
 
 ### FAQ Section
 
-Add 3-5 FAQs at the bottom of the article (before the closing `</>`), inside an `<h2>` section called "Frequently Asked Questions". These target long-tail search queries and help with featured snippets.
+Add 3-5 FAQs at the bottom of the article (before the closing `</>`), inside an `<h2>` section called "Frequently Asked Questions". These target long-tail search queries, help with featured snippets, and — critically — get quoted by AI models answering user questions (AI SEO).
+
+#### FAQ Research (mandatory — run before writing FAQs)
+
+Before writing FAQs, research what real people are actually asking about the topic. This ensures FAQs match genuine search intent instead of guessing. Run these searches using the article's primary keyword:
+
+**Reddit (via Composio MCP):**
+
+Use `REDDIT_SEARCH_ACROSS_SUBREDDITS` to find real questions. Run 2-3 searches:
+
+1. `"[keyword] how"` or `"[keyword] can I"` — catches how-to questions
+2. `"[keyword] vs"` or `"[keyword] or"` — catches comparison/decision questions
+3. `"[keyword] worth it"` or `"[keyword] problem"` — catches objection/concern questions
+
+Target these subreddits by including them in the query with the `subreddit:` operator:
+- `ClaudeAI`, `ChatGPT`, `artificial`, `nocode`, `smallbusiness`, `marketing`, `freelance`, `Entrepreneurs`
+
+Set `limit` to 10-15 per search, `sort` to `relevance`. Look at both post titles AND the top comments — follow-up questions in comments are often better FAQ candidates than the post itself. Use `REDDIT_RETRIEVE_POST_COMMENTS` on the most relevant posts to find these.
+
+**X / Twitter (via xurl CLI):**
+
+Use xurl search to find questions people tweet about the topic. Run 1-2 searches:
+
+```bash
+xurl search "[keyword] ?" -n 15
+xurl search "how do I [keyword]" -n 15
+```
+
+The `?` in the query catches question-format tweets. Look for questions with engagement (likes/replies) — those indicate genuine interest.
+
+**How to use the research:**
+
+1. Collect all questions found across Reddit and X
+2. Group by theme — you'll see the same questions phrased differently
+3. Pick the 3-5 most common/upvoted that are NOT already answered in the article body
+4. Write the FAQ answer as a direct, quotable response — AI models pull from concise, authoritative answers
 
 **When to add FAQs:**
 - Tutorial/how-to posts — cover prerequisites, limitations, costs people didn't ask yet
@@ -136,8 +172,9 @@ Add 3-5 FAQs at the bottom of the article (before the closing `</>`), inside an 
 - Each FAQ should answer something NOT already covered in the main body
 - Keep answers to 2-3 sentences — concise and direct
 - Use `<h3>` for each question
+- Write questions exactly as a real person would ask them (use the wording from Reddit/X, not formal rewrites)
 - Don't restate what's in the article — add new, related information
-- Think: "what would someone Google after reading this post?"
+- Answers should be self-contained and quotable — an AI model should be able to cite just the answer paragraph as a complete response
 
 **Example format:**
 ```tsx

@@ -11,6 +11,47 @@ export function AnalyticsEvents() {
       try {
         const { default: posthog } = await import("posthog-js");
 
+        const referrer = document.referrer;
+        const aiSources: Record<string, string> = {
+          "chat.openai.com": "chatgpt",
+          "chatgpt.com": "chatgpt",
+          "perplexity.ai": "perplexity",
+          "gemini.google.com": "gemini",
+          "claude.ai": "claude",
+          "copilot.microsoft.com": "copilot",
+          "you.com": "you",
+          "exa.ai": "exa",
+          "kimi.moonshot.cn": "kimi",
+          "kimi.ai": "kimi",
+          "poe.com": "poe",
+          "phind.com": "phind",
+          "meta.ai": "meta-ai",
+          "deepseek.com": "deepseek",
+          "chat.deepseek.com": "deepseek",
+          "huggingface.co": "huggingface",
+          "chat.mistral.ai": "mistral",
+          "grok.x.ai": "grok",
+          "abacus.ai": "abacus",
+          "labs.google.com": "google-labs",
+          "aistudio.google.com": "google-ai-studio",
+        };
+
+        if (referrer) {
+          try {
+            const host = new URL(referrer).hostname;
+            for (const [domain, source] of Object.entries(aiSources)) {
+              if (host === domain || host.endsWith(`.${domain}`)) {
+                posthog.capture("ai_referral", {
+                  source,
+                  referrer,
+                  page: window.location.pathname,
+                });
+                break;
+              }
+            }
+          } catch {}
+        }
+
         const tracked = new Set<number>();
         const marks = [25, 50, 75, 100];
 
