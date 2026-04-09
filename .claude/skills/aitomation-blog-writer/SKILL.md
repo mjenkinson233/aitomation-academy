@@ -119,6 +119,37 @@ Good vs bad examples:
 - All external links should have `target="_blank"` and `rel="noopener noreferrer"`.
 - Use `www.aitomationacademy.com` (with www) for all canonical URLs and internal references.
 
+### FAQ Section
+
+Add 3-5 FAQs at the bottom of the article (before the closing `</>`), inside an `<h2>` section called "Frequently Asked Questions". These target long-tail search queries and help with featured snippets.
+
+**When to add FAQs:**
+- Tutorial/how-to posts — cover prerequisites, limitations, costs people didn't ask yet
+- Comparison posts — handle "which is better for X" follow-ups
+- Guide posts — address objections like "how long does it take" or "do I need to code"
+
+**When to skip FAQs:**
+- Short opinion posts or community updates
+- Posts where you already answered everything comprehensively
+
+**Rules:**
+- Each FAQ should answer something NOT already covered in the main body
+- Keep answers to 2-3 sentences — concise and direct
+- Use `<h3>` for each question
+- Don't restate what's in the article — add new, related information
+- Think: "what would someone Google after reading this post?"
+
+**Example format:**
+```tsx
+<h2>Frequently Asked Questions</h2>
+
+<h3>Do I need a paid Claude plan for this?</h3>
+<p>No. Everything in this guide works on Claude's free tier. Pro gives you more usage and access to Opus, but the workflows work the same.</p>
+
+<h3>How long does it take to set this up?</h3>
+<p>About 15 minutes for the basic setup. Most people see results on their first try.</p>
+```
+
 ### Page Layout (handled by the template, not by the article)
 
 The blog post page template (`app/blog/[slug]/page.tsx`) automatically wraps every article with:
