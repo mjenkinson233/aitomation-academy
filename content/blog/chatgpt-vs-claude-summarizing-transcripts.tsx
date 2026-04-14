@@ -776,6 +776,28 @@ Be specific — reference section numbers and quote exact language when identify
         </a>
       </p>
 
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What file formats can I upload to Claude for summarization?</h3>
+      <p>
+        Claude accepts PDF, TXT, CSV, DOCX, and plain text pasted directly into the chat. For audio and video transcripts, you need to convert them to text first using a transcription tool like Otter.ai, Descript, or your meeting platform&apos;s built-in transcript export. Claude cannot process audio or video files directly.
+      </p>
+
+      <h3>How accurate are AI-generated meeting summaries?</h3>
+      <p>
+        AI summaries capture the main topics and decisions reliably, but they can miss nuance, sarcasm, or implied context. Always review AI-generated summaries before sharing with stakeholders. Claude tends to be more conservative and accurate than ChatGPT for summarization, particularly with longer documents where maintaining context matters.
+      </p>
+
+      <h3>Can Claude summarize a transcript in a different language than the original?</h3>
+      <p>
+        Yes. You can upload a transcript in one language and ask Claude to summarize it in another. For example, you can paste a Spanish meeting transcript and request an English summary. Quality is best between major languages like English, Spanish, French, German, and Portuguese.
+      </p>
+
+      <h3>What should I do if my transcript is too long for Claude?</h3>
+      <p>
+        Claude&apos;s context window handles most transcripts easily, including multi-hour meetings. If you somehow exceed the limit, split the transcript into chronological chunks with some overlap, summarize each chunk separately, then ask Claude to combine the summaries into a single cohesive document.
+      </p>
+
       {/* ── Reference links ── */}
       <div className="mt-10 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-6 text-sm text-slate-600">
         <p className="font-semibold text-slate-700 mb-3">

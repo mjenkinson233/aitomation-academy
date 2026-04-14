@@ -259,16 +259,13 @@ Format as a table with columns:
 - Anything that sounded like a potential problem, disagreement, or misalignment
 - Things that were said diplomatically but might be red flags`}</code></pre>
 
-      <div className="not-prose my-8 rounded-lg bg-orange-50 border border-orange-200 p-4 sm:p-5">
-        <p className="text-sm sm:text-base text-slate-700 mb-2">
-          These prompts are just the start. <strong>400+ professionals</strong> share their best Claude workflows in our free community.
+      <div className="not-prose my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
+        <p className="text-sm text-amber-900">
+          These prompts are just the start. <strong>400+ professionals</strong> share their best Claude workflows in our free community.{" "}
+          <a href="/skool-redirect" className="font-semibold text-amber-700 underline underline-offset-2">
+            Join the free AItomation Academy community &rarr;
+          </a>
         </p>
-        <a
-          href="/skool-redirect"
-          className="inline-block text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors no-underline hover:underline"
-        >
-          Join the free AItomation Academy community &rarr;
-        </a>
       </div>
 
       <h2>6. SOW/scope document from vague client request</h2>
@@ -530,16 +527,13 @@ After you write the sequence, add a section called "SEQUENCE STRATEGY NOTES" exp
 - How to A/B test the most important elements
 - When to move non-converters to a different sequence`}</code></pre>
 
-      <div className="not-prose my-8 rounded-lg bg-orange-50 border border-orange-200 p-4 sm:p-5">
-        <p className="text-sm sm:text-base text-slate-700 mb-2">
-          Want more templates like these? Our community members share prompt libraries, workflows, and real results every day.
+      <div className="not-prose my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
+        <p className="text-sm text-amber-900">
+          Want more templates like these? Our community members share prompt libraries, workflows, and real results every day.{" "}
+          <a href="/skool-redirect" className="font-semibold text-amber-700 underline underline-offset-2">
+            Join the free AItomation Academy community &rarr;
+          </a>
         </p>
-        <a
-          href="/skool-redirect"
-          className="inline-block text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors no-underline hover:underline"
-        >
-          Join the free AItomation Academy community &rarr;
-        </a>
       </div>
 
       <h2>11. Quarterly business review preparation</h2>
@@ -831,6 +825,28 @@ Be opinionated about priorities. If I listed 20 ideas but only 3 matter, tell me
       </ol>
       <p>
         The goal isn't to have Claude do your thinking. It's to have Claude do the structured work so you can focus on the thinking that actually matters — strategy, relationships, and decisions that require your judgment. For more on using <a href="/blog/how-to-use-claude-for-writing">Claude for writing</a> specifically, we have a dedicated walkthrough.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Can I use these prompts on Claude&apos;s free plan?</h3>
+      <p>
+        Yes. Every prompt in this article works on Claude&apos;s free tier. The free plan has usage limits that reset on a rolling window, so you may hit a cap if you run several long prompts back to back. But the prompts themselves don&apos;t require Pro or any paid features.
+      </p>
+
+      <h3>How do I customize these prompts for my specific industry?</h3>
+      <p>
+        Replace the placeholder context sections with your actual business details: your industry, target market, pricing, competitors, and past examples. The more specific context you provide, the better Claude&apos;s output. Create a Claude Project and upload your brand docs so you don&apos;t have to repeat this context every time.
+      </p>
+
+      <h3>Should I use one long prompt or break tasks into multiple steps?</h3>
+      <p>
+        For most business tasks, a single detailed prompt works better than a chain of short ones. Claude handles long, structured prompts well and produces more coherent output when it sees the full picture. Break into steps only when the task has genuinely separate phases, like research followed by writing.
+      </p>
+
+      <h3>Can I use these same prompts with ChatGPT instead of Claude?</h3>
+      <p>
+        You can try, but the results will differ. These prompts are structured to take advantage of Claude&apos;s strengths: long context handling, instruction-following precision, and Projects. ChatGPT handles some tasks well but tends to produce more generic output with complex, multi-section prompts.
       </p>
     </>
   ),

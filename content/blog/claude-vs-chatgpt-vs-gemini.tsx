@@ -883,6 +883,28 @@ export const post: BlogPost = {
         </a>
       </p>
 
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Which AI is best for someone completely new to AI?</h3>
+      <p>
+        Start with Claude or ChatGPT&apos;s free plan. Claude is easier to get good results from because it follows instructions more precisely and produces less generic output. ChatGPT has more features (image generation, web browsing) but can be overwhelming. Gemini is best saved for users already deep in Google Workspace.
+      </p>
+
+      <h3>Do these tools share my data with other users?</h3>
+      <p>
+        No. Your conversations are private. By default, Anthropic and OpenAI may use free-tier conversations to improve their models, but paid plans on both services opt you out of training data usage. Gemini&apos;s data handling depends on your Google Workspace settings. None of the three share your actual conversations with other users.
+      </p>
+
+      <h3>How often do Claude, ChatGPT, and Gemini update their models?</h3>
+      <p>
+        All three update frequently. Major model releases happen every few months, with smaller capability updates in between. Claude and ChatGPT both release new model versions roughly quarterly. Gemini updates are tied to Google&apos;s broader AI release cycle. Features and pricing can shift with each update, so check the official pages below for the latest.
+      </p>
+
+      <h3>Can I use all three tools at the same time?</h3>
+      <p>
+        Yes, and many professionals do. A common setup is Claude for writing and analysis, ChatGPT for research and image generation, and Gemini for Google Workspace tasks. Start with one, learn it well, then add a second tool for the specific gaps you notice.
+      </p>
+
       {/* ── Official links ── */}
       <div className="mt-10 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-6 text-sm text-slate-600">
         <p className="font-semibold text-slate-700 mb-2">

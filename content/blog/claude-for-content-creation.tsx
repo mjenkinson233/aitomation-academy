@@ -886,6 +886,28 @@ Important: I'd rather rank position 4 with an article I'm proud of than rank pos
           Join AItomation Academy and build your Claude content system &rarr;
         </a>
       </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Will Google penalize AI-written content?</h3>
+      <p>
+        Google&apos;s policy is that content quality matters more than how it was produced. AI-generated content is not automatically penalized, but thin, generic, or mass-produced AI content will rank poorly. The key is adding your expertise, editing for accuracy, and ensuring the content genuinely helps readers. The workflows in this guide are designed to produce that kind of quality.
+      </p>
+
+      <h3>How much content can I realistically produce with Claude per week?</h3>
+      <p>
+        Most professionals using these workflows produce 3-5 polished pieces per week, including blog posts, newsletters, and social content. The bottleneck shifts from writing to editing and strategic planning. Claude handles the first draft and repurposing; you handle quality control and the ideas worth writing about.
+      </p>
+
+      <h3>Can Claude create images or videos for my content?</h3>
+      <p>
+        Claude cannot generate images or videos. For visual content, use a dedicated tool like ChatGPT (DALL-E), Midjourney, or Canva AI. Claude excels at the text side of content creation: writing, repurposing, structuring, and strategic planning. Pair it with an image tool for a complete content workflow.
+      </p>
+
+      <h3>Do I need Claude Pro for content creation, or is the free plan enough?</h3>
+      <p>
+        The free plan works for occasional content creation, but serious content producers will hit usage limits quickly. If you&apos;re producing content regularly (3+ pieces per week), Pro is worth it for the higher limits and access to Claude&apos;s most capable model. The workflows themselves work identically on both plans.
+      </p>
     </>
   ),
 };

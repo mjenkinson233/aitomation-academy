@@ -884,6 +884,28 @@ export const post: BlogPost = {
         </a>
       </p>
 
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Can I switch from ChatGPT Plus to Claude Pro mid-month?</h3>
+      <p>
+        Yes. Both subscriptions are independent and can be started or cancelled at any time. Cancel ChatGPT Plus in your OpenAI account settings and sign up for Claude Pro at claude.ai/pricing. There is no migration tool, but your ChatGPT conversation history stays in your OpenAI account if you ever want to go back.
+      </p>
+
+      <h3>Do Claude Pro and ChatGPT Plus both work on mobile?</h3>
+      <p>
+        Yes. Both have iOS and Android apps with full access to paid features. Claude&apos;s mobile app supports Projects and file uploads, while ChatGPT&apos;s app includes voice mode and image generation. Both work well for on-the-go use.
+      </p>
+
+      <h3>Can I share my Claude Pro subscription with my team?</h3>
+      <p>
+        No. Claude Pro is a single-user plan. If you need multiple seats, Anthropic offers a Team plan at $30 per person per month (billed annually) with shared Projects, higher usage limits, and admin controls. There is no family or shared plan for individual Pro accounts.
+      </p>
+
+      <h3>Will my ChatGPT conversations transfer to Claude?</h3>
+      <p>
+        No. There is no way to import ChatGPT conversation history into Claude. However, you can export your ChatGPT data from OpenAI&apos;s settings and upload relevant documents or notes into a Claude Project to preserve important context from past work.
+      </p>
+
       {/* ── Pricing links reference ── */}
       <div className="mt-10 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-6 text-sm text-slate-600">
         <p className="font-semibold text-slate-700 mb-2">

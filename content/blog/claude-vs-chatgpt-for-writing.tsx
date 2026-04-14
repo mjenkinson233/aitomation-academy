@@ -826,6 +826,28 @@ export const post: BlogPost = {
           workflows &rarr;
         </a>
       </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Can Claude write in languages other than English?</h3>
+      <p>
+        Yes. Claude supports dozens of languages and can write, translate, and edit in most major languages including Spanish, French, German, Portuguese, Japanese, and Chinese. Writing quality is strongest in English, but Claude handles multilingual business content well for most professional use cases.
+      </p>
+
+      <h3>Does Claude plagiarize or copy existing content?</h3>
+      <p>
+        Claude generates original text rather than copying from its training data. However, like all AI models, it can occasionally produce phrases that resemble existing published content. For high-stakes writing like client deliverables or published articles, run the output through a plagiarism checker and always add your own perspective.
+      </p>
+
+      <h3>How do I prevent Claude from sounding too formal or robotic?</h3>
+      <p>
+        Use Claude&apos;s Custom Styles feature. Upload 3-5 examples of your own writing and create a style profile. Claude will match your tone, sentence structure, and vocabulary. You can also include tone instructions directly in your prompt: &quot;Write in a conversational, first-person tone. Short sentences. No corporate jargon.&quot;
+      </p>
+
+      <h3>Can I upload my previous writing samples to Claude for reference?</h3>
+      <p>
+        Yes. Create a Claude Project and upload your best writing samples, brand guidelines, and style notes as project files. Claude will reference these automatically in every conversation within that Project, producing output that stays consistent with your existing body of work.
+      </p>
     </>
   ),
 };

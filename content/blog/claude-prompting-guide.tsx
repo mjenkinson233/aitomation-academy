@@ -982,6 +982,28 @@ export const post: BlogPost = {
           Join AItomation Academy and master Claude prompting &rarr;
         </a>
       </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How long should a Claude prompt be for best results?</h3>
+      <p>
+        There is no ideal length. Simple tasks need 1-2 sentences. Complex business tasks benefit from detailed prompts with context, constraints, and examples, which can be several paragraphs. The key is specificity, not brevity. A 200-word prompt that gives Claude everything it needs will outperform a vague 20-word prompt every time.
+      </p>
+
+      <h3>What is the difference between a system prompt and a regular prompt?</h3>
+      <p>
+        A system prompt (set through Claude Projects or the API) is persistent instructions that apply to every message in a conversation. A regular prompt is what you type in the chat. For non-technical users, Claude Projects serve the same purpose as system prompts: upload your context and write custom instructions once, and Claude follows them automatically in every conversation within that Project.
+      </p>
+
+      <h3>Does Claude remember what I told it in previous conversations?</h3>
+      <p>
+        Claude does not carry context between separate conversations by default. Each new chat starts fresh. To maintain continuity, use Claude Projects: upload reference documents and write persistent instructions that apply to every conversation within the Project. This is far more reliable than expecting Claude to &quot;remember&quot; past chats.
+      </p>
+
+      <h3>Should I use bullet points or paragraphs in my prompts?</h3>
+      <p>
+        Use bullet points or numbered lists for constraints, requirements, and multi-part instructions. Use paragraphs for context and background information. Structured prompts with clear sections (context, task, constraints, output format) consistently produce better results than a single block of text, regardless of whether you use bullets or prose.
+      </p>
     </>
   ),
 };

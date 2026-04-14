@@ -767,6 +767,28 @@ export const post: BlogPost = {
       </p>
 
       {/* --------------- CTA --------------- */}
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Does Claude&apos;s free plan have a daily message limit?</h3>
+      <p>
+        Claude&apos;s free plan uses a rolling usage window rather than a fixed daily cap. You get a set amount of usage that gradually refills over time. The exact number of messages depends on conversation length and which model you&apos;re using, but most casual users can get through a full workday without hitting the limit.
+      </p>
+
+      <h3>Can I use Claude for work without creating an account?</h3>
+      <p>
+        No. Claude requires a free account to use, even on the free tier. You sign up with an email address or Google account at claude.ai. There is no anonymous or guest mode.
+      </p>
+
+      <h3>Is Claude Pro worth it if I only use AI a few times a week?</h3>
+      <p>
+        Probably not. The free plan is generous enough for occasional use. Pro makes sense when you hit the free usage limit regularly, need priority access during peak hours, or rely on Claude&apos;s most capable model (Opus) for high-stakes work like proposals and strategy documents.
+      </p>
+
+      <h3>Does Claude offer student or nonprofit discounts?</h3>
+      <p>
+        Not currently. Anthropic does not offer discounted pricing tiers for students, educators, or nonprofits as of April 2026. The free plan is the most cost-effective option for budget-constrained users, and it covers most light-to-moderate use cases well.
+      </p>
+
       <div className="not-prose my-12 rounded-2xl bg-slate-900 p-6 sm:p-10 text-center">
         <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
           Learn to get more from Claude — free or paid

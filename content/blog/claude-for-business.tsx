@@ -846,6 +846,28 @@ export const post: BlogPost = {
         the right AI. For non-technical business teams in 2026, that answer is
         Claude.
       </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How many people can use Claude&apos;s Team plan?</h3>
+      <p>
+        The Team plan requires a minimum of 2 seats and scales up from there, with no maximum. Each seat costs $30 per month billed annually or $35 monthly. Team admins can add or remove members at any time from the admin dashboard, and all members get shared access to Projects.
+      </p>
+
+      <h3>Can Claude integrate with our existing business tools like Slack or Salesforce?</h3>
+      <p>
+        Claude does not have native integrations with third-party business tools in the way ChatGPT has plugins. However, you can use Claude through Anthropic&apos;s API to build custom integrations, and third-party automation platforms like Zapier and Make support Claude as a step in workflows. For most non-technical teams, copy-paste workflows between Claude and your existing tools work well.
+      </p>
+
+      <h3>Is Claude HIPAA compliant for healthcare businesses?</h3>
+      <p>
+        Anthropic offers a HIPAA-compliant environment through its Enterprise plan with a signed Business Associate Agreement (BAA). The standard Pro and Team plans are not HIPAA compliant. If you handle protected health information, contact Anthropic&apos;s sales team directly to discuss Enterprise options.
+      </p>
+
+      <h3>How does Claude handle proprietary business data I upload?</h3>
+      <p>
+        On paid plans (Pro, Team, Enterprise), Anthropic does not use your inputs or outputs to train its models. Data uploaded to Projects is stored securely and only accessible within your account. For the free plan, Anthropic may use conversations for model improvement. Review Anthropic&apos;s current privacy policy for the latest data handling details.
+      </p>
     </>
   ),
 };

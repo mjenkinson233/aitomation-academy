@@ -831,6 +831,28 @@ ALSO GENERATE:
           toolkit &rarr;
         </a>
       </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is it ethical to use AI for client deliverables?</h3>
+      <p>
+        Yes, as long as you are adding genuine expertise and quality control. AI is a tool like any other. The ethical line is passing off unreviewed AI output as your expert work. Use Claude to draft, research, and structure, then apply your professional judgment, industry knowledge, and client-specific context that no AI can replicate.
+      </p>
+
+      <h3>Do I need to tell my clients I use AI?</h3>
+      <p>
+        There is no universal legal requirement, but transparency builds trust. Many consultants include a brief note in their process overview that they use AI tools to accelerate research and drafting. Clients care about the quality of your deliverables and your expertise, not whether you typed every word yourself.
+      </p>
+
+      <h3>Can Claude handle confidential client information securely?</h3>
+      <p>
+        Claude Pro does not use your conversations to train its models. For additional security, the Team and Enterprise plans offer stronger data handling guarantees and admin controls. If you work with highly sensitive data (healthcare, legal, financial), review Anthropic&apos;s data handling policies and consider whether your client contracts allow third-party tool usage.
+      </p>
+
+      <h3>What happens if Claude gives incorrect advice that I pass to a client?</h3>
+      <p>
+        You are responsible for everything you deliver to clients, whether you wrote it yourself or used AI. Claude can produce plausible-sounding but incorrect information, especially for niche industry facts or recent developments. Always verify claims, check numbers, and apply your domain expertise before including AI-generated content in client deliverables.
+      </p>
     </>
   ),
 };
