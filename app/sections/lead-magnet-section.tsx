@@ -4,10 +4,10 @@ import { LeadMagnetForm } from "../components/lead-magnet-form";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "The exact prompts to build an SEO content machine",
-  "Keyword research workflow using real data",
-  "A blog writer skill that creates articles on autopilot",
-  "Instant PDF download — no email wait",
+  "Step-by-step prompts that actually get useful results",
+  "A complete workflow from research to published content",
+  "Reusable skills that save hours every week",
+  "Free PDF delivered straight to your inbox",
 ];
 
 export function LeadMagnetSection() {
@@ -55,8 +55,7 @@ export function LeadMagnetSection() {
                 Download the free PDF
               </h3>
               <p className="mb-6 text-slate-500">
-                Enter your details below and download The Claude Content System
-                instantly.
+                Join 400+ professionals already using this system.
               </p>
               <LeadMagnetForm />
             </div>

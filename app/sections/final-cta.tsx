@@ -14,8 +14,8 @@ export function FinalCTA() {
             <span className="text-orange-400">real work</span>?
           </h2>
           <p className="mb-10 text-lg text-slate-400 max-w-2xl mx-auto">
-            Join 400+ professionals who are already saving time with practical
-            Claude workflows. No coding. No hype. Just real work output.
+            Join 400+ professionals who save hours every week with Claude.
+            Get the free system — prompts, workflows, and setup included.
           </p>
 
           <LeadCaptureTrigger className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white cursor-pointer hover:bg-orange-600 transition-colors">
@@ -24,7 +24,7 @@ export function FinalCTA() {
           </LeadCaptureTrigger>
 
           <p className="mt-6 text-sm text-slate-500">
-            No credit card required. Instant access.
+            No credit card required. Free PDF to your inbox.
           </p>
         </div>
       </div>
