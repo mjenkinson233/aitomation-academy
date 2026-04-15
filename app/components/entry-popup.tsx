@@ -88,7 +88,7 @@ export function EntryPopup() {
                   Get The Claude Content System
                 </h2>
                 <p className="text-sm text-slate-500">
-                  7 prompts, a keyword workflow, and an autopilot skill — the exact system behind this site&apos;s blog. Free PDF to your inbox.
+                  The complete system to turn Claude into your content machine. Delivered to your inbox.
                 </p>
               </div>
 

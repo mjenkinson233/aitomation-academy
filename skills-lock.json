@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "xurl": {
+      "source": "xdevplatform/xurl",
+      "sourceType": "github",
+      "computedHash": "d02b1d535cf9ef919be902ec536b8b9597c773e25a38b09a33eef15d37547dd7"
+    }
+  }
+}

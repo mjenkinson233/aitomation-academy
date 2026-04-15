@@ -4,10 +4,10 @@ import { LeadMagnetForm } from "../components/lead-magnet-form";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "7 production-ready prompts for SEO blog posts",
-  "Step-by-step keyword research workflow using Semrush data",
-  "A Claude Code skill that writes and publishes articles automatically",
-  "The exact system behind every article on this site",
+  "The exact prompts to build an SEO content machine",
+  "Keyword research workflow using real data",
+  "A blog writer skill that creates articles on autopilot",
+  "Instant PDF download — no email wait",
 ];
 
 export function LeadMagnetSection() {
@@ -32,9 +32,9 @@ export function LeadMagnetSection() {
               </h2>
 
               <p className="mb-10 text-lg text-slate-400 leading-relaxed max-w-lg">
-                Go from zero to publishing SEO-optimized blog posts with Claude
-                in one afternoon. Prompts, skills, and the full workflow
-                — ready to copy and use.
+                The complete system I use to turn Claude into a content machine
+                — from SEO research to automated publishing. Prompts, skills,
+                and setup included.
               </p>
 
               <ul className="space-y-4">
