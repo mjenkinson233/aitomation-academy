@@ -27,7 +27,7 @@ Before filming talking head, do ONE local run of the site optimizer in Claude Co
 [SECTION: CREDIBILITY + PROMISE]
 [VISUAL]: Talking head with subtle text overlay: "2000+ hrs production Claude | 10 B+ tokens"
 [SPOKEN]:
-"I've spent over 2000 hours building production systems with Claude and burned through more than 10 billion tokens doing it. What I'm about to show you is the exact system I use on my own site. By the end of this video, your website will monitor its own performance and fix itself — fully automated."
+"I've spent over 2000 hours building production systems with Claude andInburned through more than 10 billion tokens doing it. What I'm about to show you is the exact system I use on my own site. By the end of this video, your website will monitor its own performance and fix itself — fully automated."
 
 [TIMESTAMP: 0:30-0:40]
 [SECTION: QUICK TRANSITION]
@@ -83,25 +83,21 @@ Before filming talking head, do ONE local run of the site optimizer in Claude Co
 
 [TIMESTAMP: 3:45-5:30]
 [SECTION: CORE — Step 3: The Site Optimizer Skill]
-[VISUAL]: Screen recording — creating a new file in the project
+[VISUAL]: Screen recording — open the skill file, show the top with placeholders
 [SPOKEN]:
-"Step three. We give Claude a skill — a set of instructions it follows every time. Create a file in your project. I put mine in .claude/skills and call it site-optimizer. Here's what goes inside."
+"This is the skill I was talking about in the last step. I made this as a template for you — there are a couple placeholders you need to fill out. This IP field — enter your own IP so we filter out your visits and don't mess up the data. And if you have a custom conversion funnel, you can define those events here. Here's the example I use on my website."
 
-[VISUAL]: Show the skill file, slowly scroll through each section as you explain it
+[VISUAL]: Scroll to Step 1 of the skill
 [SPOKEN]:
-"Section one: the queries. We tell Claude exactly what data to pull. Traffic overview, page-level performance, conversion events, traffic sources, and your funnel metrics. These are all HogQL queries — PostHog's SQL dialect. I'm giving you all of these for free in the description."
+"Now let's quickly cover the steps. Step one — we pull current performance data from PostHog. Self-explanatory. We're collecting all the real traffic data from real customers that we set up with the wizard in the previous step."
 
-[VISUAL]: Highlight the analysis section of the skill
+[VISUAL]: Highlight the analysis section and thresholds table
 [SPOKEN]:
-"Section two: the analysis. We define thresholds. If your conversion rate drops below 5%, that's a red flag. If your lead form has more than 70% drop-off, that's a problem. Claude checks every metric against these thresholds and prioritizes by impact — high-traffic pages first."
+"Step two — we analyze the data and identify issues. I set up some metrics with red flags so it's easier to follow — conversion rate below 5%, funnel drop-off above 70%. You can add your own metrics and red flags here. We also tell Claude to prioritize issues by impact — biggest potential gain first."
 
-[VISUAL]: Highlight the change rules section
+[VISUAL]: Highlight the change plan, rules, implement, verify, and report sections as you scroll through them
 [SPOKEN]:
-"Section three: the rules. This is critical. We tell Claude what it CAN change — copy, CTA text, section layout. And what it can NEVER touch — your tracking code, your analytics setup, your API routes. Maximum three changes per run. Small, targeted, data-backed edits. No guessing."
-
-[VISUAL]: Highlight the verify and report sections
-[SPOKEN]:
-"And finally, it runs the build to make sure nothing breaks, then generates a full report — what it found, what it changed, and what to watch next week."
+"Then it generates a change plan, follows the rules for what it can and can't touch, implements the changes, and verifies that everything works by running the build. If everything passes, Claude creates a new branch, commits the changes, and you get a report of what was done. You review the branch, and if it looks good, you just merge it and test the new version of your site."
 
 [PATTERN INTERRUPT]: Cut to talking head
 [SPOKEN]:
@@ -109,7 +105,7 @@ Before filming talking head, do ONE local run of the site optimizer in Claude Co
 
 ---
 
-[TIMESTAMP: 5:30-7:00]
+[TIMESTAMP: 5:30-7:00]ru
 [SECTION: VALUE BOMB — Live Demo]
 [VISUAL]: Screen recording — Claude Code running the full optimizer. Show it pulling data, analyzing, finding an issue, making a change, running the build.
 [SPOKEN]:

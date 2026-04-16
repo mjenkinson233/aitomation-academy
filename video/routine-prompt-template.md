@@ -7,41 +7,51 @@ Use this template to set up your own self-updating website with Claude Code Rout
 1. Go to claude.ai/code/routines
 2. Create a new routine
 3. Link your GitHub repo
-4. If you have PostHog MCP connected: use Option A (simpler)
-5. If you don't have PostHog MCP: use Option B (uses API directly)
+4. Add PostHog as an MCP connector
+5. Paste the prompt below
 6. Set trigger to Weekly
 
 ---
 
-## Customize Before Using
+## Routine Prompt
 
-Replace every `{{placeholder}}` with your own values:
+If you have the site-optimizer skill installed in your repo (`.claude/skills/site-optimizer/SKILL.md`), the prompt is just:
 
-| Placeholder | Where to Find It | Example |
-|-------------|-------------------|---------|
-| `{{YOUR_SITE}}` | Your website URL | mysite.com |
-| `{{YOUR_POSTHOG_HOST}}` | PostHog > Settings > Project | us.posthog.com or eu.posthog.com |
-| `{{YOUR_POSTHOG_API_KEY}}` | PostHog > Settings > Personal API Keys > + Create | phx_abc123... |
-| `{{YOUR_PROJECT_ID}}` | The number in your PostHog URL after /project/ | 12345 |
-| `{{YOUR_IP}}` | Google "what is my IP" | 123.45.67.89 |
-| `{{YOUR_EVENTS}}` | Your custom PostHog event names (see below) | signup_clicked, form_submitted |
+```
+Read .claude/skills/site-optimizer/SKILL.md and follow those instructions. Open a PR with the results.
+```
+
+That's it. The skill file contains all the queries, analysis logic, change rules, and report format. Claude reads it from your repo, pulls PostHog data via MCP, makes changes, and opens a PR.
+
+Note: Don't use `/site-optimizer` as a slash command — Routines run in the cloud and only have built-in slash commands. Instead, point Claude at the file directly and it works the same way.
+
+---
+
+## Without the Skill
+
+If you don't want to commit the skill file to your repo, paste this full prompt instead. Replace every `{{placeholder}}` with your own values.
+
+### Placeholders
+
+| Placeholder                | Where to Find It                                  | Example                          |
+| -------------------------- | ------------------------------------------------- | -------------------------------- |
+| `{{YOUR_SITE}}`            | Your website URL                                  | mysite.com                       |
+| `{{YOUR_IP}}`              | Google "what is my IP"                            | 123.45.67.89                     |
+| `{{YOUR_EVENTS}}`          | Your custom PostHog event names (see below)       | signup_clicked, form_submitted   |
 
 ### About Custom Events
 
 Your site probably tracks different events than this template. Open your PostHog dashboard, go to Events, and look at your custom events (the ones that DON'T start with $). Replace the event names in the queries below with yours.
 
 Common patterns:
+
 - Form submissions: signup_form_submitted, contact_form_sent, newsletter_subscribed
 - CTA clicks: cta_clicked, button_clicked, link_clicked
 - Key pages: pricing_viewed, demo_requested, checkout_started
 
 If you only have PostHog's default autocapture events and no custom events yet, simplify the prompt — remove the funnel queries and just use pageview data.
 
----
-
-## Option A: With PostHog MCP Connected (Recommended)
-
-If you connected PostHog as an MCP connector in your routine, Claude can query it directly. Use this simpler prompt:
+### Full Prompt
 
 ```
 You are the weekly site optimizer for {{YOUR_SITE}}. Pull analytics from PostHog using the MCP connector, find what's underperforming, make targeted code changes, and open a PR.
@@ -102,9 +112,17 @@ If everything looks healthy, still open the PR with just the analytics report.
 
 ---
 
-## Option B: Without PostHog MCP (Using API Directly)
+## Without PostHog MCP (Using API Directly)
 
-If you can't connect PostHog MCP, use curl to query the API. Same prompt as above but replace Step 1 with:
+If you can't connect PostHog as an MCP connector, add these to your placeholders and use curl in Step 1:
+
+| Placeholder                | Where to Find It                                  | Example                          |
+| -------------------------- | ------------------------------------------------- | -------------------------------- |
+| `{{YOUR_POSTHOG_HOST}}`    | PostHog > Settings > Project                      | us.posthog.com or eu.posthog.com |
+| `{{YOUR_POSTHOG_API_KEY}}` | PostHog > Settings > Personal API Keys > + Create | phx_abc123...                    |
+| `{{YOUR_PROJECT_ID}}`      | The number in your PostHog URL after /project/    | 12345                            |
+
+Replace Step 1 with:
 
 ```
 ## Step 1: Pull Data (last 7 days)
@@ -120,31 +138,34 @@ Results are in .results (array of arrays) and .columns (column names) in the JSO
 
 Always exclude owner traffic in every query: AND properties.$ip != '{{YOUR_IP}}'
 
-Run these queries:
-[same queries as Option A]
+Run the same queries as above.
 ```
 
 ---
 
 ## How to Get Your Values
 
-### PostHog Personal API Key
-1. Go to PostHog (app.posthog.com or us.posthog.com)
-2. Click your avatar > Settings > Personal API Keys
-3. Click "+ Create Personal API Key"
-4. Name it "Claude Routine" and create
-5. Copy the key (starts with phx_)
-
-### Project ID
-1. Open your PostHog project
-2. Look at the URL: https://us.posthog.com/project/**12345**/
-3. The number is your project ID
-
 ### Your IP Address
+
 1. Google "what is my IP"
 2. This filters out your own visits from analytics
 
 ### Your Custom Events
+
 1. Go to PostHog > Data Management > Events
 2. Look for events that don't start with $ — those are your custom ones
 3. Replace the event names in the funnel queries with yours
+
+### PostHog Personal API Key (only needed without MCP)
+
+1. Go to PostHog (app.posthog.com or us.posthog.com)
+2. Click your avatar > Settings > Personal API Keys
+3. Click "+ Create Personal API Key"
+4. Name it "Claude Routine" and create
+5. Copy the key (starts with phx\_)
+
+### Project ID (only needed without MCP)
+
+1. Open your PostHog project
+2. Look at the URL: https://us.posthog.com/project/**12345**/
+3. The number is your project ID

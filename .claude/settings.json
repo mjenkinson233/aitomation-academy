@@ -34,11 +34,15 @@
       "WebSearch",
       "WebFetch",
       "TodoWrite",
-      "Agent"
+      "Agent",
+      "Edit(/.claude/skills/site-optimizer/**)"
     ],
     "deny": [
       "Bash(rm -rf:*)",
       "Bash(rm -r:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/MSudar/Desktop/aitomation-academy/.claude/skills"
     ]
   }
 }
