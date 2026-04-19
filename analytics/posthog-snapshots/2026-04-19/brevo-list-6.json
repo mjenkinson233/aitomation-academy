@@ -1,0 +1,20 @@
+{
+  "window_start": "2026-03-29",
+  "window_end": "2026-04-19",
+  "source": "Brevo MCP (contact_import_export_get_contacts_from_list, modifiedSince filter)",
+  "list_id": 6,
+  "list_name": "Website Lead Magnet",
+  "new_contacts_total": 27,
+  "new_contacts_by_source": {
+    "website_lead_magnet_popup": 18,
+    "website_lead_magnet": 4,
+    "skool": 4,
+    "website_lead_magnet_blog": 2,
+    "discovery_group_link": 1
+  },
+  "notes": [
+    "Counts are aggregate. Raw contact records (emails, names) are intentionally NOT stored here per analytics/README.md PII rule.",
+    "'skool' source = user joined community and Brevo synced them back into this list.",
+    "Newsletter list (5) gained 0 contacts in window; total = 1."
+  ]
+}

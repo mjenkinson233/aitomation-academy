@@ -1,0 +1,8 @@
+{
+  "window_start": "2026-03-29",
+  "window_end": "2026-04-19",
+  "owner_ip_filtered": true,
+  "query": "WITH s AS (SELECT properties.$session_id AS sid, min(timestamp) AS first_ts, max(timestamp) AS last_ts, count() AS pageviews FROM events WHERE event = '$pageview' AND timestamp >= '2026-03-29' AND timestamp <= '2026-04-19' AND properties.$ip != '137.103.50.217' GROUP BY sid) SELECT round(avg(pageviews),2) AS avg_pv_per_session, round(avg(dateDiff('second', first_ts, last_ts)),1) AS avg_duration_sec, countIf(pageviews = 1) AS single_page_sessions, count() AS total_sessions, round(100.0 * countIf(pageviews = 1) / count(), 1) AS bounce_rate_pct FROM s",
+  "columns": ["avg_pv_per_session", "avg_duration_sec", "single_page_sessions", "total_sessions", "bounce_rate_pct"],
+  "results": [[1.32, 42.9, 236, 290, 81.4]]
+}

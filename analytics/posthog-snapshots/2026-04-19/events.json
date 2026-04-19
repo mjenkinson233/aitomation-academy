@@ -1,0 +1,24 @@
+{
+  "window_start": "2026-03-29",
+  "window_end": "2026-04-19",
+  "owner_ip_filtered": true,
+  "query": "SELECT event, count() AS total, count(DISTINCT properties.$session_id) AS sessions FROM events WHERE timestamp >= '2026-03-29' AND timestamp <= '2026-04-19' AND properties.$ip != '137.103.50.217' AND event NOT IN ('$pageview','$pageleave','$autocapture','$web_vitals','$feature_flag_called','$opt_in','$identify','$groupidentify','$set','$exception') GROUP BY event ORDER BY total DESC",
+  "columns": ["event", "total", "sessions"],
+  "results": [
+    ["popup_shown", 256, 248],
+    ["scroll_depth", 182, 87],
+    ["popup_dismissed", 153, 153],
+    ["skool_redirect_viewed", 44, 38],
+    ["cta_click", 36, 31],
+    ["video_progress", 34, 19],
+    ["lead_form_section_viewed", 31, 30],
+    ["popup_form_submitted", 19, 19],
+    ["lead_form_started", 6, 5],
+    ["lead_form_submit_attempt", 5, 5],
+    ["lead_form_submitted", 5, 5],
+    ["ai_referral", 4, 4],
+    ["video_unmuted", 4, 4],
+    ["blog_lead_capture_opened", 3, 3],
+    ["blog_lead_capture_submitted", 1, 1]
+  ]
+}

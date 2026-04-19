@@ -1,0 +1,22 @@
+{
+  "window_start": "2026-03-29",
+  "window_end": "2026-04-19",
+  "owner_ip_filtered": true,
+  "query": "SELECT properties.$pathname AS path, countIf(event='popup_shown') AS shown, countIf(event='popup_form_submitted') AS submits, countIf(event='popup_dismissed') AS dismisses FROM events WHERE event IN ('popup_shown','popup_form_submitted','popup_dismissed') AND timestamp >= '2026-03-29' AND timestamp <= '2026-04-19' AND properties.$ip != '137.103.50.217' GROUP BY path ORDER BY shown DESC",
+  "columns": ["path", "shown", "submits", "dismisses"],
+  "results": [
+    ["/", 145, 13, 76],
+    ["/blog/is-claude-ai-free-pricing-guide", 61, 3, 55],
+    ["/blog", 12, 2, 9],
+    ["/blog/chatgpt-vs-claude-summarizing-transcripts", 10, 0, 3],
+    ["/blog/claude-for-content-creation", 8, 0, 0],
+    ["/blog/claude-prompting-guide", 5, 0, 3],
+    ["/skool-redirect", 4, 1, 1],
+    ["/blog/claude-vs-chatgpt-for-real-work", 4, 0, 4],
+    ["/blog/claude-vs-chatgpt-vs-gemini", 3, 0, 2],
+    ["/terms", 1, 0, 0],
+    ["/about", 1, 0, 0],
+    ["/blog/claude-prompts-for-business", 1, 0, 0],
+    ["/blog/claude-vs-chatgpt-for-writing", 1, 0, 0]
+  ]
+}

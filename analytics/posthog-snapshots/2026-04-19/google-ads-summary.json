@@ -1,0 +1,31 @@
+{
+  "window": "30 days ending ~2026-04-19",
+  "source": "Adspirer MCP (list_campaigns)",
+  "account_id": "7132552239",
+  "account_status": "needs_reauth",
+  "free_tier_quota_exhausted": true,
+  "campaigns": [
+    {
+      "campaign_id": "23682638106",
+      "name": "Master Claude AI for Work",
+      "type": "PERFORMANCE_MAX",
+      "status": "ENABLED",
+      "daily_budget_usd": 8.00,
+      "metrics_30d": {
+        "spend_usd": 87.24,
+        "clicks": 184,
+        "conversions": 18,
+        "cpa_usd": 4.85,
+        "cpc_usd": 0.47,
+        "cvr": 0.098,
+        "avg_daily_spend_usd": 2.91,
+        "budget_utilization_pct": 36
+      }
+    }
+  ],
+  "notes": [
+    "Google Ads final URLs have no UTMs — paid traffic must be detected in PostHog via gclid or gad_source in URL.",
+    "What Google Ads counts as a 'conversion' is not confirmed — likely /api/subscribe form POST but needs verification.",
+    "Adspirer free tier resets May 1, 2026 — 15/15 calls used."
+  ]
+}

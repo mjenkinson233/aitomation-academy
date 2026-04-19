@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_posthog_posthog__projects-get",
+      "mcp__plugin_adspirer_adspirer__list_connected_accounts",
+      "mcp__brevo__lists_get_lists",
+      "mcp__brevo__contact_import_export_get_contacts_from_list",
+      "mcp__plugin_adspirer_adspirer__list_campaigns",
+      "mcp__plugin_adspirer_adspirer__get_campaign_performance",
+      "Edit(/.claude/skills/site-optimizer/**)"
+    ]
+  }
+}

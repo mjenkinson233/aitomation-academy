@@ -1,0 +1,26 @@
+{
+  "window_start": "2026-03-29",
+  "window_end": "2026-04-19",
+  "owner_ip_filtered": true,
+  "query": "SELECT properties.$pathname AS path, count() AS pageviews, count(DISTINCT properties.$session_id) AS sessions, count(DISTINCT person_id) AS visitors FROM events WHERE event = '$pageview' AND timestamp >= '2026-03-29' AND timestamp <= '2026-04-19' AND properties.$ip != '137.103.50.217' GROUP BY path ORDER BY pageviews DESC",
+  "columns": ["path", "pageviews", "sessions", "visitors"],
+  "results": [
+    ["/", 181, 165, 164],
+    ["/blog/is-claude-ai-free-pricing-guide", 76, 71, 66],
+    ["/skool-redirect", 46, 38, 38],
+    ["/blog", 23, 18, 13],
+    ["/blog/chatgpt-vs-claude-summarizing-transcripts", 12, 12, 12],
+    ["/blog/claude-for-content-creation", 10, 10, 10],
+    ["/blog/claude-prompts-for-business", 8, 7, 4],
+    ["/blog/claude-vs-chatgpt-vs-gemini", 6, 6, 5],
+    ["/blog/claude-vs-chatgpt-for-real-work", 6, 6, 5],
+    ["/blog/claude-prompting-guide", 5, 5, 5],
+    ["/about", 4, 4, 4],
+    ["/terms", 2, 2, 2],
+    ["/support", 1, 1, 1],
+    ["/privacy", 1, 1, 1],
+    ["/dashboard/scripts", 1, 1, 1],
+    ["/blog/claude-for-business", 1, 1, 1],
+    ["/blog/claude-vs-chatgpt-for-writing", 1, 1, 1]
+  ]
+}

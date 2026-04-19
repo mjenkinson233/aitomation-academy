@@ -1,6 +1,6 @@
 ---
 name: site-optimizer
-description: "Weekly site optimizer — pulls PostHog analytics, identifies underperforming pages, and makes targeted code changes to improve conversions. Use this skill when the user says: optimize the site, run the weekly optimization, check what's underperforming, improve conversions, site optimizer, what should we change, CRO pass, weekly CRO, optimize for conversions, fix drop-offs, or any request to use analytics data to improve site performance. Also trigger when a scheduled agent runs weekly optimization. This skill handles the full loop: pull data, analyze, make code changes, verify build, commit, and report."
+description: "Weekly site optimizer — pulls PostHog analytics, identifies underperforming pages, and makes targeted code changes to improve conversions. Use this skill when the user says: optimize the site, run the weekly optimization, check what's underperforming, improve conversions, site optimizer, what should we change, CRO pass, weekly CRO, optimize for conversions, fix drop-offs, or any request to use analytics data to improve site performance. Also trigger when a scheduled agent runs weekly optimization. This skill handles the full loop: load last week's baseline from analytics/, pull fresh data, analyze, make code changes, verify build, commit, and archive the new snapshot. Respects in-flight A/B tests recorded in analytics/ab-tests/."
 ---
 
 # Site Optimizer
@@ -16,6 +16,32 @@ The site owner browses the site frequently across multiple browsers and devices,
 ```
 AND properties.$ip != '137.103.50.217'
 ```
+
+## Analytics Archive
+
+All weekly runs write to `analytics/` at the project root. Read `analytics/README.md` first if you haven't before — it describes the folder structure, the weekly file format, and the PII rule (never store raw emails or contact data, only aggregate counts).
+
+The archive has three purposes:
+1. **Diff week-over-week** — Step 0 reads the last weekly file; Step 7 writes this week's.
+2. **Avoid stepping on in-flight A/B tests** — Step 3 checks `analytics/ab-tests/` before proposing changes.
+3. **Raw PostHog data retention** — each weekly run saves raw query results as JSON under `analytics/posthog-snapshots/YYYY-MM-DD/` so future runs can re-analyze historical data without re-querying.
+
+## Step 0: Load Previous Week
+
+Before running any PostHog query, load the most recent weekly file and the list of in-flight A/B tests.
+
+1. **Find the latest weekly snapshot**: list `analytics/weekly/` and read the file with the most recent date in its name. Extract key numbers for comparison:
+   - Total sessions, unique visitors, bounce rate
+   - Source split (paid vs organic session counts)
+   - Funnel counts (popup_form_submitted, lead_form_submitted, skool_redirect_viewed)
+   - CTA clicks by section
+   - Brevo List 6 new contacts
+
+2. **Find in-flight A/B tests**: list `analytics/ab-tests/` and read every file whose frontmatter has `status: running`. Note which components/pages are under test — do NOT propose changes to those in Step 3 (would contaminate the test).
+
+3. **Note changes shipped since the last snapshot**: check the previous weekly file's "Changes made this week" section and the git log (`git log --since="7 days ago" --oneline`). These are what to attribute week-over-week metric deltas to.
+
+If `analytics/weekly/` is empty, this is the first run — skip the diff and write a baseline instead.
 
 ## Step 1: Pull Current Performance Data
 
@@ -151,6 +177,8 @@ Calculate these metrics from the data you pulled:
 3. **Dead CTAs** — sections with zero or near-zero cta_click events
 4. **Paid traffic with no conversions** — pages receiving Google Ads traffic that produce zero form submissions (wasted ad spend)
 
+**Compare to last week.** For each metric, compute the delta vs the values loaded in Step 0. A metric getting worse week-over-week is a higher-priority issue than a flat one, even if the absolute number looks fine. If you shipped a change last week targeting a specific metric, explicitly verify whether it moved — if the change didn't work, don't ship a similar one this week.
+
 ## Step 3: Generate a Change Plan
 
 For each issue, propose a specific, minimal change:
@@ -179,6 +207,7 @@ RISK: Low/Medium/High
 - Functionality (API routes, form submission logic, PostHog initialization)
 - Pages/sections that are performing well — don't fix what isn't broken
 - Links, URLs, or navigation structure
+- **Any component under an active A/B test** — Step 0 loaded the list from `analytics/ab-tests/`. Editing a component mid-test invalidates the result. If you see a clear win in the data that's unrelated to the test, note it in the "Watch list" of the weekly file and address it next week.
 
 ### Guardrails
 
@@ -283,6 +312,69 @@ Output this report so the user can review what happened:
 
 ### Build Status: PASS/FAIL
 ```
+
+## Step 7: Archive to analytics/
+
+After the commit lands, write this week's results to the archive so next week's run can diff against it. **Do this even if no code changes were made** — the archive records what the site looked like this week regardless.
+
+### 7a. Write the weekly markdown file
+
+Create `analytics/weekly/YYYY-MM-DD.md` where the date is the end of the window (the day you ran the skill). Use the structure described in `analytics/README.md`. Required sections:
+
+- Frontmatter (`window_start`, `window_end`, `window_length_days`, `owner_ip_filtered: true`)
+- Traffic overview
+- Device split
+- Source split (paid vs organic via `gclid`)
+- Top 10 pages
+- Entry pages
+- Conversion events table
+- Funnels (homepage → lead form, any pageview → popup, popup by page)
+- CTA clicks by section
+- Scroll depth (top 2 pages)
+- Brevo List 6 new contacts (aggregate counts only — no emails)
+- Google Ads summary (from Adspirer MCP if available)
+- **Week-over-week deltas** vs the previous weekly file
+- **Changes made this week** (list each edit with file path and the commit SHA)
+- **Watch list for next week**
+
+### 7b. Save raw query results
+
+For every HogQL query run in Step 1, save the raw result as JSON in `analytics/posthog-snapshots/YYYY-MM-DD/<query-name>.json` with this shape:
+
+```json
+{
+  "window_start": "YYYY-MM-DD",
+  "window_end": "YYYY-MM-DD",
+  "owner_ip_filtered": true,
+  "query": "<the HogQL string>",
+  "columns": ["col1", "col2", ...],
+  "results": [[...], [...], ...]
+}
+```
+
+Suggested filenames: `traffic-overview.json`, `top-pages.json`, `source-split.json`, `events.json`, `session-metrics.json`, `cta-clicks-by-section.json`, `popup-by-page.json`, `entry-pages.json`, `scroll-depth.json`. Add more as the skill evolves — the folder is append-only.
+
+### 7c. PII rule
+
+Never write raw email addresses, contact names, or Brevo per-contact records to `analytics/`. Aggregate counts only. The `brevo-list-6.json` snapshot format in `analytics/README.md` shows the correct shape: `{ new_contacts_total: N, new_contacts_by_source: { source: N } }`.
+
+### 7d. Commit the archive
+
+```bash
+git add analytics/weekly/YYYY-MM-DD.md analytics/posthog-snapshots/YYYY-MM-DD/
+git commit -m "analytics: archive weekly snapshot YYYY-MM-DD"
+```
+
+Commit this separately from any site code changes so the archive commits are easy to find in `git log`.
+
+### 7e. Update in-flight A/B test files
+
+For each file in `analytics/ab-tests/` with `status: running`:
+- Re-pull the primary metric for control vs treatment
+- Append the week's numbers to the file
+- If the test has reached its sample size target, change status to `concluded` and fill in the Result section
+
+If you shipped an A/B test winner this week (status moved from `concluded` → `shipped`), note the commit SHA in the test file's Result section.
 
 ## Event Names Reference
 
