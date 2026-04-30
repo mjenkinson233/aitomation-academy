@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 
 const footerLinks = {
@@ -25,6 +26,29 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer data-section="footer" className="border-t border-slate-200">
+      {/* Prominent community CTA — top of footer */}
+      <div className="bg-slate-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
+            <div>
+              <h2 className="text-xl font-display text-white normal-case sm:text-2xl">
+                Join 400+ people learning Claude
+              </h2>
+              <p className="mt-1 text-sm text-slate-400">
+                Free community. No credit card required.
+              </p>
+            </div>
+            <Link
+              href="/skool-redirect"
+              className="group inline-flex shrink-0 items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+            >
+              Join Free Community
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}

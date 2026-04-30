@@ -4,7 +4,17 @@ import { useState } from "react";
 import { ArrowRight, Check, Loader2, Mail } from "lucide-react";
 import posthog from "posthog-js";
 
-export function LeadMagnetForm() {
+type LeadMagnetFormProps = {
+  variant?: "default" | "hero";
+  source?: string;
+  postHogSource?: string;
+};
+
+export function LeadMagnetForm({
+  variant = "default",
+  source = "website_lead_magnet",
+  postHogSource = "lead_magnet_section",
+}: LeadMagnetFormProps = {}) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState<
@@ -20,17 +30,69 @@ export function LeadMagnetForm() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, name, source: "website_lead_magnet" }),
+        body: JSON.stringify({ email, name, source }),
       });
       if (!res.ok) throw new Error("Subscribe failed");
       posthog.identify(email, { name, email });
-      posthog.capture("lead_form_submitted", { name, email, source: "lead_magnet_section" });
+      posthog.capture("lead_form_submitted", { name, email, source: postHogSource });
       setStatus("success");
     } catch {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }
   };
+
+  if (variant === "hero") {
+    if (status === "success") {
+      return (
+        <div className="mx-auto max-w-md rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800 flex items-center gap-2 justify-center">
+          <Check className="h-4 w-4 shrink-0" />
+          <span>Check your email! The PDF is on its way to <strong>{email}</strong>.</span>
+        </div>
+      );
+    }
+
+    return (
+      <div className="w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="mx-auto flex w-full max-w-md flex-col sm:flex-row gap-2"
+        >
+          <input
+            type="email"
+            id="email-hero"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+            required
+            aria-label="Email address"
+            className="flex-1 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
+          />
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="group inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 cursor-pointer hover:border-orange-500 hover:text-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {status === "loading" ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                Get Free PDF
+                <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </>
+            )}
+          </button>
+        </form>
+        {status === "error" && (
+          <p className="mt-2 text-center text-xs text-red-600">{errorMessage}</p>
+        )}
+      </div>
+    );
+  }
 
   if (status === "success") {
     return (

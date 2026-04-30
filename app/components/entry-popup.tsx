@@ -14,10 +14,15 @@ export function EntryPopup() {
     const dismissed = localStorage.getItem("popup_dismissed");
     if (dismissed) return;
 
+    // On blog pages, delay popup so the inline sticky-bar CTA gets first shot.
+    // Dismiss:submit ratio on blog was 18:1 with a 2s delay — too intrusive.
+    const isBlog = window.location.pathname.startsWith("/blog/");
+    const delayMs = isBlog ? 20000 : 2000;
+
     const timer = setTimeout(() => {
       setIsVisible(true);
       posthog.capture("popup_shown");
-    }, 2000);
+    }, delayMs);
     return () => clearTimeout(timer);
   }, []);
 

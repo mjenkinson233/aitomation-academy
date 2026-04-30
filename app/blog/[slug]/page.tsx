@@ -9,7 +9,7 @@ import { Footer } from "@/app/sections/footer";
 import { BlogPostLayout } from "@/app/components/blog-post-layout";
 import { RelatedArticles } from "@/app/components/related-articles";
 import { CodeCopyEnhancer } from "@/app/components/code-copy-enhancer";
-import { NewsletterForm } from "@/app/components/newsletter-form";
+import { BlogPostFooter } from "@/app/components/blog-post-footer";
 import { LeadCaptureTrigger } from "@/app/components/lead-capture-trigger";
 
 export function generateStaticParams() {
@@ -110,13 +110,16 @@ export default async function BlogPostPage({
             </div>
 
             {/* TOC sidebar + content */}
-            <BlogPostLayout>
+            <BlogPostLayout blogSlug={slug}>
               {/* Post body */}
               <CodeCopyEnhancer>
                 <div className="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:tracking-tight prose-a:text-orange-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-orange-400 prose-blockquote:bg-slate-50 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:px-6">
                   {post.body}
                 </div>
               </CodeCopyEnhancer>
+
+              {/* End-of-article dual CTA (community + lead magnet) */}
+              <BlogPostFooter blogSlug={slug} />
 
               {/* Tags */}
               {post.tags.length > 0 && (
@@ -133,9 +136,6 @@ export default async function BlogPostPage({
                   </div>
                 </div>
               )}
-
-              {/* Newsletter signup */}
-              <NewsletterForm blogSlug={slug} />
 
               {/* Related articles */}
               <RelatedArticles current={post} />

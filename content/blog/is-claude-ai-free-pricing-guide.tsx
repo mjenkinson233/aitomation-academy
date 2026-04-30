@@ -565,7 +565,8 @@ export const post: BlogPost = {
       <p>
         For most individual professionals, Pro is enough. Max makes sense when
         Claude usage is a core part of your revenue-generating workflow and
-        running out of messages costs you real money.
+        running out of messages costs you real money. If you&apos;re evaluating Claude
+        against other AI tools before committing to a paid tier, our <a href="/blog/claude-vs-chatgpt-vs-gemini">Claude vs ChatGPT vs Gemini comparison</a> walks through the trade-offs.
       </p>
 
       <h2>Team and Enterprise plans</h2>

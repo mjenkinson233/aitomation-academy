@@ -19,10 +19,10 @@ export default function Home() {
         <Navbar />
         <Hero />
         <SocialProof />
+        <LeadMagnetSection />
         <WhatYouGet />
         <HowItWorks />
         <CommunityWins />
-        <LeadMagnetSection />
         <FAQ />
         <FinalCTA />
         <Footer />

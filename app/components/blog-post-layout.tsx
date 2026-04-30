@@ -2,17 +2,34 @@
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { List, X } from "lucide-react";
+import { LeadCaptureTrigger } from "./lead-capture-trigger";
 
 type TocItem = { id: string; text: string };
 
 const NAVBAR_HEIGHT = 80;
 
-export function BlogPostLayout({ children }: { children: ReactNode }) {
+export function BlogPostLayout({ children, blogSlug }: { children: ReactNode; blogSlug?: string }) {
   const contentRef = useRef<HTMLDivElement>(null);
   const isClickScrolling = useRef(false);
   const [headings, setHeadings] = useState<TocItem[] | null>(null);
   const [activeId, setActiveId] = useState<string>("");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [stickyBarVisible, setStickyBarVisible] = useState(false);
+  const [stickyBarDismissed, setStickyBarDismissed] = useState(false);
+
+  // Show sticky CTA bar after 40% scroll, hide when near bottom (>= 95%)
+  useEffect(() => {
+    if (stickyBarDismissed) return;
+    const onScroll = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      const pct = window.scrollY / scrollable;
+      setStickyBarVisible(pct >= 0.4 && pct < 0.95);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [stickyBarDismissed]);
 
   // Lock body scroll when mobile TOC overlay is open
   useEffect(() => {
@@ -103,7 +120,7 @@ export function BlogPostLayout({ children }: { children: ReactNode }) {
           {!mobileOpen && (
             <button
               onClick={() => setMobileOpen(true)}
-              className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-lg cursor-pointer"
+              className={`fixed ${stickyBarVisible ? "bottom-24" : "bottom-6"} right-6 z-40 flex items-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-lg cursor-pointer transition-[bottom] duration-200`}
             >
               <List className="h-4 w-4" />
               Contents
@@ -198,6 +215,35 @@ export function BlogPostLayout({ children }: { children: ReactNode }) {
           {children}
         </div>
       </div>
+
+      {/* Sticky bottom CTA bar — scroll-triggered after 40% */}
+      {stickyBarVisible && (
+        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white shadow-[0_-8px_24px_-8px_rgba(0,0,0,0.1)]">
+          <div className="container mx-auto flex items-center gap-3 px-4 py-3 sm:px-6 sm:py-3.5">
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-semibold text-slate-900">
+                Grab the free Claude playbook
+              </p>
+              <p className="truncate text-xs text-slate-500 sm:text-sm">
+                The complete Claude Content System — PDF to your inbox.
+              </p>
+            </div>
+            <LeadCaptureTrigger
+              blogSlug={blogSlug}
+              className="inline-flex shrink-0 items-center justify-center rounded-lg bg-orange-500 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-600 transition-colors cursor-pointer"
+            >
+              Get PDF
+            </LeadCaptureTrigger>
+            <button
+              onClick={() => setStickyBarDismissed(true)}
+              aria-label="Dismiss"
+              className="shrink-0 rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600 cursor-pointer"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

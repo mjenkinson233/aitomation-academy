@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Volume2, X } from "lucide-react";
 import posthog from "posthog-js";
+import { LeadMagnetForm } from "../components/lead-magnet-form";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -195,6 +196,20 @@ export function Hero() {
           <p className="mt-3 text-sm text-slate-500">
             Join 400+ members. No credit card required.
           </p>
+
+          {/* Secondary path — lead magnet email capture */}
+          <div className="mx-auto mt-8 max-w-md">
+            <div className="mb-3 flex items-center gap-3 text-xs uppercase tracking-widest text-slate-400">
+              <div className="h-px flex-1 bg-slate-200" />
+              <span>Or grab the free PDF</span>
+              <div className="h-px flex-1 bg-slate-200" />
+            </div>
+            <LeadMagnetForm
+              variant="hero"
+              source="website_lead_magnet"
+              postHogSource="hero"
+            />
+          </div>
 
         </div>
       </div>
