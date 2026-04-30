@@ -1,0 +1,24 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT CASE WHEN properties.$current_url LIKE '%gclid%' OR properties.$current_url LIKE '%gad_source%' THEN 'Google Ads (paid)' WHEN properties.$referring_domain = 'www.google.com' THEN 'Google Organic' WHEN properties.$referring_domain = 'www.youtube.com' THEN 'YouTube' WHEN properties.$referring_domain = 'app.brevo.com' THEN 'Brevo (email)' WHEN properties.$referring_domain = 'www.facebook.com' THEN 'Facebook' WHEN properties.$referring_domain = 'l.instagram.com' THEN 'Instagram' WHEN properties.$referring_domain = 'www.aitomationacademy.com' THEN 'Self-referral' WHEN properties.$referring_domain IN ('$direct', '') OR properties.$referring_domain IS NULL THEN 'Direct' ELSE properties.$referring_domain END as source, count() as pageviews, count(DISTINCT person_id) as unique_visitors FROM events WHERE event = '$pageview' AND timestamp >= now() - INTERVAL 7 DAY AND properties.$ip != '137.103.50.217' GROUP BY source ORDER BY pageviews DESC",
+  "columns": ["source", "pageviews", "unique_visitors"],
+  "results": [
+    ["Direct", 101, 81],
+    ["chatgpt.com", 28, 14],
+    ["instagram.com", 27, 18],
+    ["Instagram", 19, 14],
+    ["Google Organic", 18, 14],
+    ["claude.ai", 6, 3],
+    ["YouTube", 3, 2],
+    ["www.skool.com", 3, 1],
+    ["m.facebook.com", 2, 2],
+    ["duckduckgo.com", 2, 2],
+    ["Self-referral", 1, 1],
+    ["Google Ads (paid)", 1, 1],
+    ["www.perplexity.ai", 1, 1],
+    ["copilot.microsoft.com", 1, 1],
+    ["com.google.android.googlequicksearchbox", 1, 1]
+  ]
+}

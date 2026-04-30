@@ -1,0 +1,19 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT properties.$pathname as page, count(if(event='popup_shown', 1, NULL)) as shown, count(if(event='popup_form_submitted', 1, NULL)) as submitted, count(if(event='popup_dismissed', 1, NULL)) as dismissed FROM events WHERE event IN ('popup_shown','popup_form_submitted','popup_dismissed') AND timestamp >= now() - INTERVAL 7 DAY AND properties.$ip != '137.103.50.217' GROUP BY page ORDER BY shown DESC LIMIT 10",
+  "columns": ["page", "shown", "submitted", "dismissed"],
+  "results": [
+    ["/", 57, 9, 38],
+    ["/blog/is-claude-ai-free-pricing-guide", 45, 4, 23],
+    ["/blog/chatgpt-vs-claude-summarizing-transcripts", 22, 0, 7],
+    ["/blog/claude-for-content-creation", 13, 0, 4],
+    ["/blog/claude-vs-chatgpt-for-writing", 5, 0, 2],
+    ["/blog", 1, 0, 1],
+    ["/skool-redirect", 1, 0, 0],
+    ["/is-claude-ai-free", 1, 0, 0],
+    ["/blog/claude-prompting-guide", 1, 0, 1],
+    ["/blog/claude-prompts-for-business", 1, 0, 1]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT event, count() as count FROM events WHERE timestamp >= now() - INTERVAL 7 DAY AND event NOT LIKE '$%' AND properties.$ip != '137.103.50.217' GROUP BY event ORDER BY count DESC LIMIT 20",
+  "columns": ["event", "count"],
+  "results": [
+    ["popup_shown", 147],
+    ["scroll_depth", 130],
+    ["popup_dismissed", 77],
+    ["ai_referral", 27],
+    ["cta_click", 23],
+    ["skool_redirect_viewed", 23],
+    ["video_progress", 20],
+    ["lead_form_section_viewed", 19],
+    ["popup_form_submitted", 13],
+    ["video_unmuted", 7],
+    ["lead_form_started", 6],
+    ["blog_lead_capture_opened", 5],
+    ["lead_form_submit_attempt", 4],
+    ["lead_form_submitted", 4],
+    ["blog_lead_capture_submitted", 3],
+    ["newsletter_subscribe_clicked", 1]
+  ]
+}

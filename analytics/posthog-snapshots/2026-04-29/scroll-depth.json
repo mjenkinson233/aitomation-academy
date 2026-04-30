@@ -1,0 +1,16 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT properties.$pathname as page, properties.percent as percent, count(DISTINCT person_id) as visitors FROM events WHERE event = 'scroll_depth' AND timestamp >= now() - INTERVAL 7 DAY AND properties.$ip != '137.103.50.217' AND properties.$pathname IN ('/', '/blog/is-claude-ai-free-pricing-guide') GROUP BY page, percent ORDER BY page, percent",
+  "columns": ["page", "percent", "visitors"],
+  "results": [
+    ["/", 25, 23],
+    ["/", 50, 16],
+    ["/", 75, 12],
+    ["/", 100, 5],
+    ["/blog/is-claude-ai-free-pricing-guide", 25, 6],
+    ["/blog/is-claude-ai-free-pricing-guide", 50, 5],
+    ["/blog/is-claude-ai-free-pricing-guide", 75, 4]
+  ]
+}

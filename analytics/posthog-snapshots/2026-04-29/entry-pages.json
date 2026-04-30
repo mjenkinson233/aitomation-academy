@@ -1,0 +1,19 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT properties.$session_entry_pathname as entry, count(DISTINCT properties.$session_id) as sessions FROM events WHERE event = '$pageview' AND timestamp >= now() - INTERVAL 7 DAY AND properties.$ip != '137.103.50.217' AND properties.$session_entry_pathname IS NOT NULL GROUP BY entry ORDER BY sessions DESC LIMIT 10",
+  "columns": ["entry", "sessions"],
+  "results": [
+    ["/", 64],
+    ["/blog/is-claude-ai-free-pricing-guide", 47],
+    ["/blog/chatgpt-vs-claude-summarizing-transcripts", 24],
+    ["/blog/claude-for-content-creation", 14],
+    ["/blog/claude-vs-chatgpt-for-writing", 5],
+    ["/blog/5-claude-workflows-for-non-technical-professionals", 3],
+    ["/blog/claude-prompts-for-business", 3],
+    ["/skool-redirect", 2],
+    ["/blog", 1],
+    ["/privacy", 1]
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT properties.source as source, count() as count FROM events WHERE event = 'ai_referral' AND timestamp >= now() - INTERVAL 7 DAY AND properties.$ip != '137.103.50.217' GROUP BY source ORDER BY count DESC",
+  "columns": ["source", "count"],
+  "results": [
+    ["chatgpt", 21],
+    ["claude", 4],
+    ["copilot", 1],
+    ["perplexity", 1]
+  ]
+}

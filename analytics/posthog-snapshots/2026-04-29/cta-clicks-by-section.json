@@ -1,0 +1,14 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT properties.section as section, properties.text as cta_text, count() as clicks FROM events WHERE event = 'cta_click' AND timestamp >= now() - INTERVAL 7 DAY AND properties.$ip != '137.103.50.217' GROUP BY section, cta_text ORDER BY clicks DESC",
+  "columns": ["section", "cta_text", "clicks"],
+  "results": [
+    ["navbar", "Get Free Access", 12],
+    ["hero", "JOIN THE FREE COMMUNITY", 4],
+    ["lead_magnet", "Get Free PDF", 4],
+    ["how_it_works", "Get Free Access", 2],
+    ["navbar", "Получите бесплатный доступ", 1]
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "window_start": "2026-04-22",
+  "window_end": "2026-04-29",
+  "owner_ip_filtered": true,
+  "query": "SELECT event, count() as count FROM events WHERE event IN ('lead_form_section_viewed','lead_form_started','lead_form_submit_attempt','lead_form_submitted','popup_shown','popup_dismissed','popup_form_submitted','blog_lead_capture_opened','newsletter_subscribe_clicked','skool_redirect_viewed') AND timestamp >= now() - INTERVAL 7 DAY AND properties.$ip != '137.103.50.217' GROUP BY event ORDER BY count DESC",
+  "columns": ["event", "count"],
+  "results": [
+    ["popup_shown", 147],
+    ["popup_dismissed", 77],
+    ["skool_redirect_viewed", 23],
+    ["lead_form_section_viewed", 19],
+    ["popup_form_submitted", 13],
+    ["lead_form_started", 6],
+    ["blog_lead_capture_opened", 5],
+    ["lead_form_submit_attempt", 4],
+    ["lead_form_submitted", 4],
+    ["newsletter_subscribe_clicked", 1]
+  ]
+}
