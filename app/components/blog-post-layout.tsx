@@ -17,14 +17,14 @@ export function BlogPostLayout({ children, blogSlug }: { children: ReactNode; bl
   const [stickyBarVisible, setStickyBarVisible] = useState(false);
   const [stickyBarDismissed, setStickyBarDismissed] = useState(false);
 
-  // Show sticky CTA bar after 40% scroll, hide when near bottom (>= 95%)
+  // Show sticky CTA bar after 15% scroll (just past intro), hide when near bottom (>= 95%)
   useEffect(() => {
     if (stickyBarDismissed) return;
     const onScroll = () => {
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       if (scrollable <= 0) return;
       const pct = window.scrollY / scrollable;
-      setStickyBarVisible(pct >= 0.4 && pct < 0.95);
+      setStickyBarVisible(pct >= 0.15 && pct < 0.95);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
