@@ -120,7 +120,7 @@ export function BlogPostLayout({ children, blogSlug }: { children: ReactNode; bl
           {!mobileOpen && (
             <button
               onClick={() => setMobileOpen(true)}
-              className={`fixed ${stickyBarVisible ? "bottom-24" : "bottom-6"} right-6 z-40 flex items-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-lg cursor-pointer transition-[bottom] duration-200`}
+              className={`fixed ${stickyBarVisible && !stickyBarDismissed ? "bottom-24" : "bottom-6"} right-6 z-40 flex items-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-lg cursor-pointer transition-[bottom] duration-200`}
             >
               <List className="h-4 w-4" />
               Contents
@@ -216,8 +216,8 @@ export function BlogPostLayout({ children, blogSlug }: { children: ReactNode; bl
         </div>
       </div>
 
-      {/* Sticky bottom CTA bar — scroll-triggered after 40% */}
-      {stickyBarVisible && (
+      {/* Sticky bottom CTA bar — scroll-triggered, dismiss-aware */}
+      {stickyBarVisible && !stickyBarDismissed && (
         <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white shadow-[0_-8px_24px_-8px_rgba(0,0,0,0.1)]">
           <div className="container mx-auto flex items-center gap-3 px-4 py-3 sm:px-6 sm:py-3.5">
             <div className="min-w-0 flex-1">
