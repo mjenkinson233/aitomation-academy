@@ -202,7 +202,7 @@ export default function AboutPage() {
                 Ready to start?
               </h2>
               <p className="text-lg text-slate-400 mb-8 max-w-lg mx-auto">
-                Join 400+ professionals who are already using Claude for real
+                Join 700+ professionals who are already using Claude for real
                 work. No coding required.
               </p>
               <Link

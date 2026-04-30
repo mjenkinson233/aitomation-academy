@@ -57,7 +57,7 @@ Create a blog post file following your project's blog format. The content should
 **Mid-article CTAs (2-3):**
 - Subtle callout boxes — not aggressive sales pitches
 - Link to your main conversion page
-- Tone: helpful ("400+ people use these workflows" not "BUY NOW")
+- Tone: helpful ("700+ people use these workflows" not "BUY NOW")
 
 **Quality checklist:**
 - No generic filler ("In today's fast-paced world...")

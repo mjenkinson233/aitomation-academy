@@ -197,7 +197,7 @@ export function WhatYouGet() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white" />
             </span>
-            Join 400 professionals already learning →
+            Join 700+ professionals already learning →
           </a>
         </div>
       </div>

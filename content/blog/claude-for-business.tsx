@@ -316,7 +316,7 @@ export const post: BlogPost = {
       {/* ── CTA 1 ── */}
       <div className="not-prose mt-10 mb-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-amber-900">
-          See how 400+ professionals are using Claude for business workflows every day.{" "}
+          See how 700+ professionals are using Claude for business workflows every day.{" "}
           <a
             href="/skool-redirect"
             className="font-semibold text-amber-700 underline underline-offset-2 hover:text-amber-800 transition-colors"

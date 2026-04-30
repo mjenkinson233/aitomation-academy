@@ -32,7 +32,7 @@ export function Footer() {
           <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
             <div>
               <h2 className="text-xl font-display text-white normal-case sm:text-2xl">
-                Join 400+ people learning Claude
+                Join 700+ people learning Claude
               </h2>
               <p className="mt-1 text-sm text-slate-400">
                 Free community. No credit card required.

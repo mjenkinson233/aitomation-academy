@@ -538,7 +538,7 @@ export const post: BlogPost = {
       {/* --------------- Subtle CTA 2 --------------- */}
       <div className="not-prose my-8 rounded-xl border border-amber-200 bg-amber-50/60 p-4 sm:p-5">
         <p className="text-sm text-amber-900">
-          400+ professionals in our free community are already using these
+          700+ professionals in our free community are already using these
           workflows daily to get more from Claude.{" "}
           <a
             href="/skool-redirect"

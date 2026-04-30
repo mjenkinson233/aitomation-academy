@@ -309,7 +309,7 @@ Do NOT write the other sections yet — just this one.`}</code></pre>
       {/* ── Mid-article CTA 1 ── */}
       <div className="my-8 rounded-xl border border-amber-200 bg-amber-50/60 p-4 md:p-6">
         <p className="text-sm text-amber-900">
-          These workflows are part of what 400+ professionals use inside our free community to create content faster with Claude.{" "}
+          These workflows are part of what 700+ professionals use inside our free community to create content faster with Claude.{" "}
           <a
             href="/skool-redirect"
             className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"

@@ -260,7 +260,7 @@ export const post: BlogPost = {
       {/* ── CTA: Writing workflows ── */}
       <div className="not-prose mt-10 mb-8 rounded-lg border border-orange-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-slate-700">
-          See the exact Claude writing workflows 400+ professionals use daily.{" "}
+          See the exact Claude writing workflows 700+ professionals use daily.{" "}
           <a
             href="/skool-redirect"
             className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
@@ -662,7 +662,7 @@ export const post: BlogPost = {
       {/* ── CTA: Post-verdict ── */}
       <div className="my-8 rounded-lg border border-orange-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-slate-700">
-          Ready to make the switch? Join our free community for Claude workflow templates and see how 400+ professionals use Claude Pro daily.{" "}
+          Ready to make the switch? Join our free community for Claude workflow templates and see how 700+ professionals use Claude Pro daily.{" "}
           <a
             href="/skool-redirect"
             className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"

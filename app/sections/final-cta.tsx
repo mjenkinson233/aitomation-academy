@@ -14,7 +14,7 @@ export function FinalCTA() {
             <span className="text-orange-400">real work</span>?
           </h2>
           <p className="mb-10 text-lg text-slate-400 max-w-2xl mx-auto">
-            Join 400+ professionals who are already saving time with practical
+            Join 700+ professionals who are already saving time with practical
             Claude workflows. No coding. No hype. Just real work output.
           </p>
 

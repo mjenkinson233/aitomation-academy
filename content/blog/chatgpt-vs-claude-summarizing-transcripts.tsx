@@ -244,7 +244,7 @@ export const post: BlogPost = {
             href="/skool-redirect"
             className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
           >
-            See how 400+ professionals use Claude for document analysis &rarr;
+            See how 700+ professionals use Claude for document analysis &rarr;
           </a>
         </p>
       </div>
@@ -745,7 +745,7 @@ Be specific — reference section numbers and quote exact language when identify
             href="/skool-redirect"
             className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"
           >
-            Join 400+ professionals mastering Claude for real business workflows &rarr;
+            Join 700+ professionals mastering Claude for real business workflows &rarr;
           </a>
         </p>
       </div>

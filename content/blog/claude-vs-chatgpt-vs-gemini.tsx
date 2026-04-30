@@ -247,7 +247,7 @@ export const post: BlogPost = {
       {/* ── Subtle CTA 1 ── */}
       <div className="not-prose mt-10 mb-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-amber-900">
-          Want to see Claude in action? 400+ professionals are already using these workflows.{" "}
+          Want to see Claude in action? 700+ professionals are already using these workflows.{" "}
           <a
             href="/skool-redirect"
             className="font-semibold text-orange-600 underline decoration-orange-300 underline-offset-4 hover:text-orange-700 hover:decoration-orange-400 transition-colors"

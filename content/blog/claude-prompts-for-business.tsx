@@ -261,7 +261,7 @@ Format as a table with columns:
 
       <div className="not-prose my-8 rounded-lg border border-amber-200 bg-amber-50/60 p-4 sm:p-6">
         <p className="text-sm text-amber-900">
-          These prompts are just the start. <strong>400+ professionals</strong> share their best Claude workflows in our free community.{" "}
+          These prompts are just the start. <strong>700+ professionals</strong> share their best Claude workflows in our free community.{" "}
           <a href="/skool-redirect" className="font-semibold text-amber-700 underline underline-offset-2">
             Join the free AItomation Academy community &rarr;
           </a>

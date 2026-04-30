@@ -19,7 +19,7 @@ export function BlogPostFooter({ blogSlug }: { blogSlug?: string }) {
           Join the free community
         </h3>
         <p className="mb-3 text-sm text-slate-500">
-          400+ professionals learning Claude together. Free to join.
+          700+ professionals learning Claude together. Free to join.
         </p>
         <span className="inline-flex items-center gap-1 text-sm font-semibold text-orange-600 group-hover:underline">
           Open community

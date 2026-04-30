@@ -37,7 +37,7 @@ export function Navbar() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
             </span>
             <span className="text-sm text-slate-500">
-              400+ professionals already learning
+              700+ professionals already learning
             </span>
           </div>
           <Link

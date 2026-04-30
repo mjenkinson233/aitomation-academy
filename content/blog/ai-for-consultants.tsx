@@ -296,7 +296,7 @@ LENGTH: 4-6 pages when formatted.`}</code></pre>
           See the exact workflows consultants use in our free community
         </p>
         <p className="text-sm text-amber-800">
-          400+ consultants and professionals are already sharing prompt templates, proposal frameworks, and time-saving setups inside AItomation Academy.
+          700+ consultants and professionals are already sharing prompt templates, proposal frameworks, and time-saving setups inside AItomation Academy.
         </p>
         <a
           href="/skool-redirect"
@@ -461,7 +461,7 @@ OUTPUT 2: INTERNAL ENGAGEMENT NOTES
       {/* ── CTA 2 ── */}
       <div className="my-8 rounded-xl border border-amber-200 bg-amber-50/70 p-4 md:p-6">
         <p className="text-sm font-semibold text-amber-900 mb-1">
-          400+ consultants and professionals are already saving hours weekly
+          700+ consultants and professionals are already saving hours weekly
         </p>
         <p className="text-sm text-amber-800">
           Get access to ready-made prompt libraries, live workflow demos, and a community of people who actually use these tools daily.

@@ -704,7 +704,7 @@ export const post: BlogPost = {
       {/* ── CTA 2 ── */}
       <div className="my-8 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4 md:p-6">
         <p className="text-sm md:text-base text-slate-800">
-          400+ professionals are using these techniques daily in our free community. See what they are building with Claude.
+          700+ professionals are using these techniques daily in our free community. See what they are building with Claude.
         </p>
         <a
           href="/skool-redirect"
