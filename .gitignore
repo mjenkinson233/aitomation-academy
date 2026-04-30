@@ -8,3 +8,6 @@ dist
 .env*.local
 public/videos/intro.mp4
 public/videos/intro-compressed.mp4
+
+# Personal scratch notes — never commit (often contains real API keys)
+video/
